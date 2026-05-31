@@ -1,0 +1,14 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+openai-whisper @ git+https://github.com/openai/whisper.git
+imageio-ffmpeg
+torch
+transformers
+joblib
+xgboost
+scikit-learn
+pydantic
+python-dotenv
+eng_to_ipa
+deep-translator

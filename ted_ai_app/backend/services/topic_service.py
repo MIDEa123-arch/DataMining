@@ -1,0 +1,73 @@
+import os
+import joblib
+
+model_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "models", "yahoo_10topics_tfidf_linearsvc.joblib")
+labels_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "models", "labels.txt")
+
+topic_model = None
+topic_labels = []
+
+# Mapping defined by user
+TOPIC_MAP = {
+    "Computers & Internet": "Technology",
+    "Education & Reference": "Education",
+    "Business & Finance": "Business",
+    "Health": "Health",
+    "Science & Mathematics": "Science",
+    "Sports": "Sports",
+    "Entertainment & Music": "Entertainment",
+    "Politics & Government": "Politics",
+    "Family & Relationships": "Society",
+    "Society & Culture": "Society"
+}
+
+def load_topic_model():
+    global topic_model, topic_labels
+    
+    if not topic_labels:
+        try:
+            if os.path.exists(labels_path):
+                with open(labels_path, "r", encoding="utf-8") as f:
+                    topic_labels = [line.strip() for line in f if line.strip()]
+            else:
+                print("Warning: Topic labels file not found.")
+        except Exception as e:
+            print(f"Error loading topic labels: {e}")
+
+    if topic_model is None:
+        try:
+            if os.path.exists(model_path):
+                topic_model = joblib.load(model_path)
+                print("Topic model loaded via joblib.")
+            else:
+                print("Warning: Topic model file not found.")
+        except Exception as e:
+            print(f"Error loading topic model: {e}")
+
+def predict_topic(text: str) -> str:
+    load_topic_model()
+    
+    # Fallback if model missing
+    if topic_model is None:
+        return "Technology" # Default
+        
+    try:
+        # Assuming topic_model is a scikit-learn pipeline (TFIDF + LinearSVC)
+        prediction_idx = topic_model.predict([text])[0]
+        
+        # Determine the raw label
+        if isinstance(prediction_idx, str):
+            raw_label = prediction_idx
+        else:
+            # If it's an integer index, map it
+            if 0 <= int(prediction_idx) < len(topic_labels):
+                raw_label = topic_labels[int(prediction_idx)]
+            else:
+                raw_label = str(prediction_idx)
+                
+        # Map to standard category using user's map
+        mapped_label = TOPIC_MAP.get(raw_label, "Society")
+        return mapped_label
+    except Exception as e:
+        print(f"Error predicting topic: {e}")
+        return "Society"
