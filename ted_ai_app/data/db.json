@@ -1,1 +1,3796 @@
-[]
+[
+    {
+        "filename": "1532_-_will_ai_and_robots_help_or_harm_society_ (240p).mp4",
+        "cefr_level": "B2",
+        "topic": "Business",
+        "transcript": [
+            {
+                "start": 0.0,
+                "end": 5.96,
+                "text": "Hello, my name is Amar and I'm from Lebanon. My question is, do you think that artificial"
+            },
+            {
+                "start": 5.96,
+                "end": 11.36,
+                "text": "intelligence will be more helpful or harmful in the future? Well, in my opinion, anything"
+            },
+            {
+                "start": 11.36,
+                "end": 16.56,
+                "text": "and everything is good or bad depending on how we use it. So for example, in the last"
+            },
+            {
+                "start": 16.56,
+                "end": 23.8,
+                "text": "few years, its undeniable how helpful AI has been. It has helped many businesses, many"
+            },
+            {
+                "start": 23.8,
+                "end": 30.28,
+                "text": "fields like banking, medicine. It has helped reduce human error. It has helped complete"
+            },
+            {
+                "start": 30.28,
+                "end": 36.8,
+                "text": "competitive tasks. And a lot of things, it has made people's lives a lot easier. But"
+            },
+            {
+                "start": 36.8,
+                "end": 43.480000000000004,
+                "text": "on the other hand, if we depend a lot on it, people become lazy and dependent. Also businesses"
+            },
+            {
+                "start": 43.480000000000004,
+                "end": 50.16,
+                "text": "will start laying off people and unemployment rate will rise. And finally, robots work"
+            },
+            {
+                "start": 50.16,
+                "end": 57.16,
+                "text": "will never match a human's touch and the creativity of it. So I do believe that in the future,"
+            },
+            {
+                "start": 57.16,
+                "end": 63.31999999999999,
+                "text": "if people become too dependent on robots and AI, then it will definitely be harmful. But"
+            },
+            {
+                "start": 63.31999999999999,
+                "end": 66.84,
+                "text": "it is always good if used in moderation and appropriately."
+            }
+        ],
+        "questions": {
+            "multiple_choice": [
+                {
+                    "question": "What has it made a lot easier?",
+                    "options": [
+                        "A. depend",
+                        "B. human's",
+                        "C. people's lives",
+                        "D. touch"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What do people become if they depend a lot on it?",
+                    "options": [
+                        "A. become",
+                        "B. dependent",
+                        "C. businesses",
+                        "D. fields"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "I do believe that if people become too dependent on robots and AI, then it will be harmful?",
+                    "options": [
+                        "A. undeniable",
+                        "B. helpful",
+                        "C. become",
+                        "D. definitely"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "How do I determine if something is good or bad?",
+                    "options": [
+                        "A. match",
+                        "B. depending",
+                        "C. unemployment rate",
+                        "D. people"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "How is it always good if it is used?",
+                    "options": [
+                        "A. everything",
+                        "B. undeniable",
+                        "C. years",
+                        "D. appropriately"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "Where is Amar from?",
+                    "options": [
+                        "A. helped",
+                        "B. anything",
+                        "C. everything",
+                        "D. Lebanon"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "What does a human touch have in common with robots?",
+                    "options": [
+                        "A. opinion anything",
+                        "B. creativity",
+                        "C. harmful",
+                        "D. artificial intelligence"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "What do you think will be more helpful or harmful in the future?",
+                    "options": [
+                        "A. appropriately",
+                        "B. people become lazy",
+                        "C. intelligence",
+                        "D. banking medicine"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "How helpful has AI been in the last few years?",
+                    "options": [
+                        "A. Hello",
+                        "B. undeniable",
+                        "C. Lebanon",
+                        "D. moderation"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "Who will start laying off people?",
+                    "options": [
+                        "A. creativity",
+                        "B. people",
+                        "C. unemployment rate",
+                        "D. businesses"
+                    ],
+                    "answer": "D"
+                }
+            ],
+            "cloze_test": {
+                "passage": "Hello, my name is Amar and I'm from ___(1)___. My question is, do you think that ___(2)___ intelligence will be more helpful or harmful in the future? Well, in my opinion, anything and everything is good or bad ___(3)___ on how we use it. So for example, in the last few years, its ___(4)___ how helpful AI has been. It has helped many ___(5)___, many fields like banking, medicine. And a lot of things, it has made ___(6)___ a lot easier. But on the other hand, if we depend a lot on it, people become lazy and ___(7)___. Also businesses will start laying off people and ___(8)___ rate will rise. And finally, robots work will never match a ___(9)___ and the creativity of it. So I do believe that in the future, if people become too dependent on robots and AI, then it will ___(10)___ be harmful. But it is always good if used in moderation and appropriately.",
+                "questions": [
+                    {
+                        "number": 1,
+                        "options": [
+                            "A. finally",
+                            "B. easier",
+                            "C. Lebanon",
+                            "D. future"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 2,
+                        "options": [
+                            "A. question",
+                            "B. dependent",
+                            "C. artificial",
+                            "D. opinion anything"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 3,
+                        "options": [
+                            "A. depending",
+                            "B. anything",
+                            "C. years",
+                            "D. people become lazy"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 4,
+                        "options": [
+                            "A. people",
+                            "B. harmful",
+                            "C. people's lives",
+                            "D. undeniable"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 5,
+                        "options": [
+                            "A. businesses",
+                            "B. never",
+                            "C. never match",
+                            "D. always"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 6,
+                        "options": [
+                            "A. easier",
+                            "B. people become lazy",
+                            "C. people's lives",
+                            "D. creativity"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 7,
+                        "options": [
+                            "A. dependent",
+                            "B. definitely",
+                            "C. become",
+                            "D. bad depending"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 8,
+                        "options": [
+                            "A. unemployment",
+                            "B. robots",
+                            "C. start laying",
+                            "D. people's"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 9,
+                        "options": [
+                            "A. businesses",
+                            "B. finally",
+                            "C. future",
+                            "D. human's touch"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 10,
+                        "options": [
+                            "A. banking medicine",
+                            "B. Lebanon",
+                            "C. laying",
+                            "D. definitely"
+                        ],
+                        "answer": "D"
+                    }
+                ]
+            }
+        },
+        "vocabulary": [
+            {
+                "word": "businesses",
+                "ipa": "/ˈbɪznɪsɪz/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "doanh nghiệp"
+            },
+            {
+                "word": "undeniable",
+                "ipa": "/ˌəndɪˈnaɪəbəl/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "không thể phủ nhận"
+            },
+            {
+                "word": "dependent",
+                "ipa": "/dɪˈpɛndənt/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "sự phụ thuộc"
+            },
+            {
+                "word": "moderation",
+                "ipa": "/ˌmɑdərˈeɪʃən/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "điều độ"
+            },
+            {
+                "word": "people",
+                "ipa": "/ˈpipəl/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "mọi người"
+            },
+            {
+                "word": "lebanon",
+                "ipa": "/ˈlɛbənən/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "lebanon"
+            },
+            {
+                "word": "competitive",
+                "ipa": "/kəmˈpɛtɪtɪv/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "cạnh tranh"
+            },
+            {
+                "word": "unemployment",
+                "ipa": "/ˌənɪmˈplɔɪmənt/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "nạn thất nghiệp"
+            },
+            {
+                "word": "helpful",
+                "ipa": "/ˈhɛlpfəl/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "hữu ích"
+            },
+            {
+                "word": "harmful",
+                "ipa": "/ˈhɑrmfəl/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "có hại"
+            },
+            {
+                "word": "human",
+                "ipa": "/ˈjumən/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "nhân loại"
+            },
+            {
+                "word": "robots",
+                "ipa": "/ˈroʊˌbəts/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "robot"
+            },
+            {
+                "word": "future",
+                "ipa": "/fˈjuʧər/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "tương lai"
+            },
+            {
+                "word": "good",
+                "ipa": "/gʊd/",
+                "has_stress": false,
+                "cefr": "A1",
+                "meaning": "Tốt"
+            },
+            {
+                "word": "many",
+                "ipa": "/ˈmɛni/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "nhiều"
+            }
+        ],
+        "video_url": "/uploads/1532_-_will_ai_and_robots_help_or_harm_society_ (240p).mp4",
+        "full_text": "Hello, my name is Amar and I'm from Lebanon. My question is, do you think that artificial intelligence will be more helpful or harmful in the future? Well, in my opinion, anything and everything is good or bad depending on how we use it. So for example, in the last few years, its undeniable how helpful AI has been. It has helped many businesses, many fields like banking, medicine. It has helped reduce human error. It has helped complete competitive tasks. And a lot of things, it has made people's lives a lot easier. But on the other hand, if we depend a lot on it, people become lazy and dependent. Also businesses will start laying off people and unemployment rate will rise. And finally, robots work will never match a human's touch and the creativity of it. So I do believe that in the future, if people become too dependent on robots and AI, then it will definitely be harmful. But it is always good if used in moderation and appropriately.",
+        "id": "ba57584e-218b-4789-888d-d4d720235806"
+    },
+    {
+        "filename": "(60) Little Red Riding Hood - Fairy Tales - Gigglebox - YouTube.mp4",
+        "cefr_level": "A2",
+        "topic": "Entertainment",
+        "transcript": [
+            {
+                "start": 0.0,
+                "end": 4.64,
+                "text": "Kigabawks!"
+            },
+            {
+                "start": 13.84,
+                "end": 17.84,
+                "text": "This is the story of Little Red Riding Hood."
+            },
+            {
+                "start": 20.080000000000002,
+                "end": 25.6,
+                "text": "Once upon a time, there was a little girl who lived in a village near a big forest."
+            },
+            {
+                "start": 25.76,
+                "end": 30.880000000000003,
+                "text": "Her grandmother had made her a beautiful red cloak with a big red hood,"
+            },
+            {
+                "start": 30.880000000000003,
+                "end": 33.68,
+                "text": "which she wore every time she went outside."
+            },
+            {
+                "start": 33.68,
+                "end": 37.92,
+                "text": "And so everyone in the village called her Little Red Riding Hood."
+            },
+            {
+                "start": 38.72,
+                "end": 42.08,
+                "text": "One day, Little Red Riding Hood's mother said,"
+            },
+            {
+                "start": 42.08,
+                "end": 44.32,
+                "text": "Grandmother isn't feeling very well."
+            },
+            {
+                "start": 44.32,
+                "end": 47.92,
+                "text": "Will you take this basket of food through the forest to her cottage?"
+            },
+            {
+                "start": 47.92,
+                "end": 49.040000000000006,
+                "text": "Yes, mother."
+            },
+            {
+                "start": 49.040000000000006,
+                "end": 50.64,
+                "text": "Said Little Red Riding Hood."
+            },
+            {
+                "start": 50.64,
+                "end": 52.8,
+                "text": "I sure would love to see Grandma."
+            },
+            {
+                "start": 52.879999999999995,
+                "end": 56.8,
+                "text": "She put on her red cloak and she pulled up her red hood"
+            },
+            {
+                "start": 56.8,
+                "end": 59.839999999999996,
+                "text": "and she took the basket of food into the forest."
+            },
+            {
+                "start": 59.839999999999996,
+                "end": 60.64,
+                "text": "Remember?"
+            },
+            {
+                "start": 60.64,
+                "end": 62.08,
+                "text": "Her mother called after her."
+            },
+            {
+                "start": 62.08,
+                "end": 64.32,
+                "text": "Don't talk to any strangers along the way."
+            },
+            {
+                "start": 64.32,
+                "end": 65.44,
+                "text": "I won't."
+            },
+            {
+                "start": 65.44,
+                "end": 69.84,
+                "text": "Little Red Riding Hood promised and she skipped down the path and into the woods."
+            },
+            {
+                "start": 70.56,
+                "end": 74.47999999999999,
+                "text": "Little Red Riding Hood did not have to worry about getting lost in the forest,"
+            },
+            {
+                "start": 75.03999999999999,
+                "end": 77.75999999999999,
+                "text": "because she knew the way to Grandmother's house very well."
+            },
+            {
+                "start": 78.4,
+                "end": 83.44,
+                "text": "But along the way, she saw some beautiful wild flowers growing near the path."
+            },
+            {
+                "start": 83.44,
+                "end": 86.08000000000001,
+                "text": "I bet Grandma would really love these."
+            },
+            {
+                "start": 86.08000000000001,
+                "end": 89.04,
+                "text": "She said to herself and she stopped to pick a few."
+            },
+            {
+                "start": 89.60000000000001,
+                "end": 91.76,
+                "text": "Hello, Little Girl."
+            },
+            {
+                "start": 92.72,
+                "end": 95.36000000000001,
+                "text": "Said a deep, growling voice from behind her."
+            },
+            {
+                "start": 95.92,
+                "end": 98.64,
+                "text": "Little Red Riding Hood was very startled."
+            },
+            {
+                "start": 98.64,
+                "end": 104.16000000000001,
+                "text": "She spun around and saw a big, bad wolf standing in the shadows between two trees."
+            },
+            {
+                "start": 104.16000000000001,
+                "end": 105.44,
+                "text": "Hello."
+            },
+            {
+                "start": 105.52,
+                "end": 109.12,
+                "text": "Said Little Red Riding Hood, she didn't know that the wolf was bad."
+            },
+            {
+                "start": 109.67999999999999,
+                "end": 113.75999999999999,
+                "text": "And she had already forgotten her mother's words about talking to strangers."
+            },
+            {
+                "start": 113.75999999999999,
+                "end": 117.28,
+                "text": "Where are you going on this fine day?"
+            },
+            {
+                "start": 117.28,
+                "end": 118.88,
+                "text": "Ask the big, bad wolf."
+            },
+            {
+                "start": 118.88,
+                "end": 122.96,
+                "text": "I'm going to my grandma's cottage on the other side of the forest."
+            },
+            {
+                "start": 123.68,
+                "end": 125.12,
+                "text": "Said Little Red Riding Hood."
+            },
+            {
+                "start": 125.12,
+                "end": 130.88,
+                "text": "She isn't feeling very well, so I'm bringing her these basket of food and these flowers."
+            },
+            {
+                "start": 131.44,
+                "end": 133.52,
+                "text": "What a sweet girl you are."
+            },
+            {
+                "start": 134.48000000000002,
+                "end": 136.16,
+                "text": "Said the big, bad wolf."
+            },
+            {
+                "start": 136.16,
+                "end": 139.68,
+                "text": "He smiled and showed his mouthful of sharp teeth."
+            },
+            {
+                "start": 139.68,
+                "end": 144.72,
+                "text": "The big, bad wolf was quite hungry and he was not interested in the basket of food."
+            },
+            {
+                "start": 144.72,
+                "end": 146.56,
+                "text": "I had better be going."
+            },
+            {
+                "start": 146.56,
+                "end": 148.0,
+                "text": "Said Little Red Riding Hood."
+            },
+            {
+                "start": 148.0,
+                "end": 149.04000000000002,
+                "text": "Bye."
+            },
+            {
+                "start": 149.04000000000002,
+                "end": 150.8,
+                "text": "And she skipped off down the path."
+            },
+            {
+                "start": 151.60000000000002,
+                "end": 155.04000000000002,
+                "text": "The big, bad wolf stomach grumbled and growled with hunger."
+            },
+            {
+                "start": 155.60000000000002,
+                "end": 157.36,
+                "text": "And suddenly he had an idea."
+            },
+            {
+                "start": 157.92000000000002,
+                "end": 161.84,
+                "text": "As quick as he could, he ran through the forest all the way to Grandmother's cottage."
+            },
+            {
+                "start": 162.4,
+                "end": 168.08,
+                "text": "The sneaky wolf opened the door very quietly and found grandma sleeping her bed."
+            },
+            {
+                "start": 168.08,
+                "end": 173.84,
+                "text": "He picked up the old woman, opened his great big mouth and he swallowed poor grandma in one gulp."
+            },
+            {
+                "start": 175.28,
+                "end": 180.16,
+                "text": "Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin."
+            },
+            {
+                "start": 180.8,
+                "end": 185.68,
+                "text": "He put on Grandmother's glasses and her night camp and he waited for the little girl to arrive"
+            },
+            {
+                "start": 185.68,
+                "end": 187.76,
+                "text": "with her flowers and basket of food."
+            },
+            {
+                "start": 188.72,
+                "end": 191.36,
+                "text": "When Little Red Riding Hood arrived at the cottage,"
+            },
+            {
+                "start": 191.36,
+                "end": 195.04000000000002,
+                "text": "she opened the door quietly and found Grandma lying in bed."
+            },
+            {
+                "start": 195.04000000000002,
+                "end": 196.56,
+                "text": "Hello Grandma."
+            },
+            {
+                "start": 196.56,
+                "end": 197.28,
+                "text": "She said,"
+            },
+            {
+                "start": 197.28,
+                "end": 199.76000000000002,
+                "text": "Mother told me you weren't feeling well."
+            },
+            {
+                "start": 199.76000000000002,
+                "end": 202.72000000000003,
+                "text": "So I brought some food and some flowers."
+            },
+            {
+                "start": 202.72000000000003,
+                "end": 204.08,
+                "text": "Do you like them?"
+            },
+            {
+                "start": 204.08,
+                "end": 206.96,
+                "text": "What a sweet little girl you are."
+            },
+            {
+                "start": 206.96,
+                "end": 209.76000000000002,
+                "text": "Said the wolf in his fake grandma voice."
+            },
+            {
+                "start": 209.76000000000002,
+                "end": 212.56,
+                "text": "Come closer, my dear."
+            },
+            {
+                "start": 212.56,
+                "end": 218.72000000000003,
+                "text": "Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma."
+            },
+            {
+                "start": 218.72000000000003,
+                "end": 219.60000000000002,
+                "text": "My."
+            },
+            {
+                "start": 219.6,
+                "end": 220.23999999999998,
+                "text": "She said,"
+            },
+            {
+                "start": 220.23999999999998,
+                "end": 222.96,
+                "text": "What big eyes you have Grandma."
+            },
+            {
+                "start": 222.96,
+                "end": 226.07999999999998,
+                "text": "All the better to see you with."
+            },
+            {
+                "start": 226.07999999999998,
+                "end": 227.44,
+                "text": "Said the big, bad wolf."
+            },
+            {
+                "start": 227.44,
+                "end": 230.07999999999998,
+                "text": "Come closer, my dear."
+            },
+            {
+                "start": 230.07999999999998,
+                "end": 233.51999999999998,
+                "text": "Little Red Riding Hood took another step closer to the bed."
+            },
+            {
+                "start": 233.51999999999998,
+                "end": 234.4,
+                "text": "My."
+            },
+            {
+                "start": 234.4,
+                "end": 235.12,
+                "text": "She said,"
+            },
+            {
+                "start": 235.12,
+                "end": 237.44,
+                "text": "What big ears you have Grandma."
+            },
+            {
+                "start": 237.44,
+                "end": 240.16,
+                "text": "All the better to hear you with."
+            },
+            {
+                "start": 240.16,
+                "end": 241.44,
+                "text": "Reply the wolf."
+            },
+            {
+                "start": 241.44,
+                "end": 243.92,
+                "text": "Come closer, my dear."
+            },
+            {
+                "start": 243.92,
+                "end": 247.2,
+                "text": "Little Red Riding Hood took one more step closer."
+            },
+            {
+                "start": 247.28,
+                "end": 247.76,
+                "text": "My."
+            },
+            {
+                "start": 247.76,
+                "end": 250.0,
+                "text": "What big teeth you have Grandma."
+            },
+            {
+                "start": 250.0,
+                "end": 251.51999999999998,
+                "text": "She said in surprise,"
+            },
+            {
+                "start": 251.51999999999998,
+                "end": 255.11999999999998,
+                "text": "All the better to eat you with."
+            },
+            {
+                "start": 255.11999999999998,
+                "end": 257.2,
+                "text": "Growl the big, bad wolf."
+            },
+            {
+                "start": 257.2,
+                "end": 260.56,
+                "text": "He jumped out of the bed and as he opened his great big mouth."
+            },
+            {
+                "start": 260.56,
+                "end": 263.28,
+                "text": "Little Red Riding Hood shrieked and tried to run,"
+            },
+            {
+                "start": 263.28,
+                "end": 268.32,
+                "text": "but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal."
+            },
+            {
+                "start": 270.4,
+                "end": 271.76,
+                "text": "Outside the cottage,"
+            },
+            {
+                "start": 271.76,
+                "end": 274.56,
+                "text": "a woodsman happened to be walking through the forest."
+            },
+            {
+                "start": 274.56,
+                "end": 277.76,
+                "text": "When he heard Little Red Riding Hood shriek of surprise,"
+            },
+            {
+                "start": 277.76,
+                "end": 282.16,
+                "text": "he hurried inside and he saw the wolf with his huge round belly."
+            },
+            {
+                "start": 282.16,
+                "end": 286.88,
+                "text": "The woodsman grabbed the big, bad wolf, turned him upside down and shook him by his feet."
+            },
+            {
+                "start": 287.52,
+                "end": 292.16,
+                "text": "Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed."
+            },
+            {
+                "start": 292.16,
+                "end": 295.76,
+                "text": "The three of them chased the big, bad wolf out of the cottage,"
+            },
+            {
+                "start": 295.76,
+                "end": 298.08,
+                "text": "out of the forest and over the hill."
+            },
+            {
+                "start": 298.08,
+                "end": 302.4,
+                "text": "The big, bad wolf ran for his life and was never seen again."
+            },
+            {
+                "start": 302.96,
+                "end": 306.56,
+                "text": "Little Red Riding Hood learned her lesson and she never,"
+            },
+            {
+                "start": 306.56,
+                "end": 308.64,
+                "text": "ever talked to strangers again."
+            },
+            {
+                "start": 309.52,
+                "end": 310.0,
+                "text": "The end."
+            }
+        ],
+        "questions": {
+            "multiple_choice": [
+                {
+                    "question": "What kind of eyes did Grandma have?",
+                    "options": [
+                        "A. surprise",
+                        "B. interested",
+                        "C. basket",
+                        "D. big eyes"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "What was the name of the wolf?",
+                    "options": [
+                        "A. big bad wolf standing",
+                        "B. big forest",
+                        "C. hurried inside",
+                        "D. upside"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "question": "What did she pull up to take the basket of food?",
+                    "options": [
+                        "A. wolf's mouth",
+                        "B. red hood",
+                        "C. everyone",
+                        "D. found Grandma lying"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "Where did Little Red Riding Hood find Grandma?",
+                    "options": [
+                        "A. Grandmother's glasses",
+                        "B. already",
+                        "C. cloak",
+                        "D. found Grandma lying"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "What did he open as he jumped out of the bed?",
+                    "options": [
+                        "A. flowers",
+                        "B. picked",
+                        "C. great big mouth",
+                        "D. waited"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "Who followed Little Red Riding Hood?",
+                    "options": [
+                        "A. hurried",
+                        "B. any strangers along",
+                        "C. hurried inside",
+                        "D. Grandma followed"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "What glasses did he put on for the little girl?",
+                    "options": [
+                        "A. fake grandma voice",
+                        "B. food into",
+                        "C. Grandmother's",
+                        "D. quite"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What do I bring to her?",
+                    "options": [
+                        "A. food into",
+                        "B. red cloak",
+                        "C. I'm bringing",
+                        "D. hungry"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What did the woodsman do to the big bad wolf?",
+                    "options": [
+                        "A. hungry wolf grabbed",
+                        "B. hurried inside",
+                        "C. big bad wolf turned",
+                        "D. grandma's cottage"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "Whose cottage am I going to?",
+                    "options": [
+                        "A. grandma's",
+                        "B. strangers",
+                        "C. mother's",
+                        "D. shriek"
+                    ],
+                    "answer": "A"
+                }
+            ],
+            "cloze_test": {
+                "passage": "And she had already ___(1)___ her mother's words about talking to strangers. Where are you going on this ___(2)___? I'm going to my ___(3)___ cottage on the other side of the forest. She isn't feeling very well, so ___(4)___ her these basket of food and these flowers. He smiled and showed his mouthful of ___(5)___. The big, bad wolf was quite hungry and he was not interested in the basket of food. The big, bad wolf stomach grumbled and growled with hunger. As quick as he could, he ran through the forest all the way to ___(6)___ cottage. The ___(7)___ the door very quietly and found grandma sleeping her bed. He picked up the old woman, opened his great big mouth and he ___(8)___ poor grandma in one gulp. Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin. He put on ___(9)___ and her night camp and he waited for the little girl to arrive with her flowers and basket of food. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. She said, Mother told me you weren't feeling well.",
+                "questions": [
+                    {
+                        "number": 1,
+                        "options": [
+                            "A. forgotten",
+                            "B. arrive",
+                            "C. growling",
+                            "D. never seen"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 2,
+                        "options": [
+                            "A. round",
+                            "B. already",
+                            "C. fine day",
+                            "D. getting"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 3,
+                        "options": [
+                            "A. step closer",
+                            "B. feeling",
+                            "C. grandma's",
+                            "D. grumbled"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 4,
+                        "options": [
+                            "A. different",
+                            "B. found grandma sleeping",
+                            "C. great big mouth",
+                            "D. I'm bringing"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 5,
+                        "options": [
+                            "A. big red hood",
+                            "B. sharp teeth",
+                            "C. fake grandma voice",
+                            "D. talked"
+                        ],
+                        "answer": "B"
+                    },
+                    {
+                        "number": 6,
+                        "options": [
+                            "A. climbed",
+                            "B. big forest",
+                            "C. Grandmother's",
+                            "D. chased"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 7,
+                        "options": [
+                            "A. beautiful red cloak",
+                            "B. big forest",
+                            "C. sneaky wolf opened",
+                            "D. found Grandma lying"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 8,
+                        "options": [
+                            "A. swallowed",
+                            "B. Don't",
+                            "C. tumbling",
+                            "D. promised"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 9,
+                        "options": [
+                            "A. Grandmother's glasses",
+                            "B. quietly",
+                            "C. pulled",
+                            "D. little girl"
+                        ],
+                        "answer": "A"
+                    }
+                ]
+            }
+        },
+        "vocabulary": [
+            {
+                "word": "hood",
+                "ipa": "/hʊd/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "Mui xe"
+            },
+            {
+                "word": "wolf",
+                "ipa": "/wʊlf/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "chó sói"
+            },
+            {
+                "word": "cottage",
+                "ipa": "/ˈkɑtɪʤ/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "ngôi nhà tranh"
+            },
+            {
+                "word": "little",
+                "ipa": "/ˈlɪtəl/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "nhỏ bé"
+            },
+            {
+                "word": "riding",
+                "ipa": "/ˈraɪdɪŋ/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "cưỡi"
+            },
+            {
+                "word": "strangers",
+                "ipa": "/ˈstreɪnʤərz/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "người lạ"
+            },
+            {
+                "word": "grandma",
+                "ipa": "/ˈgrændmɑ/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "bà"
+            },
+            {
+                "word": "flowers",
+                "ipa": "/flaʊərz/",
+                "has_stress": false,
+                "cefr": "B1",
+                "meaning": "hoa"
+            },
+            {
+                "word": "forest",
+                "ipa": "/ˈfɔrɪst/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "rừng"
+            },
+            {
+                "word": "basket",
+                "ipa": "/ˈbæskət/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "rổ"
+            },
+            {
+                "word": "food",
+                "ipa": "/fud/",
+                "has_stress": false,
+                "cefr": "A1",
+                "meaning": "đồ ăn"
+            },
+            {
+                "word": "kigabawks",
+                "ipa": "/kigabawks/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "kigabawks"
+            },
+            {
+                "word": "girl",
+                "ipa": "/gərl/",
+                "has_stress": false,
+                "cefr": "A1",
+                "meaning": "con gái"
+            },
+            {
+                "word": "grandmother",
+                "ipa": "/ˈgrændˌməðər/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "bà ngoại"
+            },
+            {
+                "word": "mother",
+                "ipa": "/ˈməðər/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "mẹ"
+            }
+        ],
+        "video_url": "/uploads/(60) Little Red Riding Hood - Fairy Tales - Gigglebox - YouTube.mp4",
+        "full_text": "Kigabawks! This is the story of Little Red Riding Hood. Once upon a time, there was a little girl who lived in a village near a big forest. Her grandmother had made her a beautiful red cloak with a big red hood, which she wore every time she went outside. And so everyone in the village called her Little Red Riding Hood. One day, Little Red Riding Hood's mother said, Grandmother isn't feeling very well. Will you take this basket of food through the forest to her cottage? Yes, mother. Said Little Red Riding Hood. I sure would love to see Grandma. She put on her red cloak and she pulled up her red hood and she took the basket of food into the forest. Remember? Her mother called after her. Don't talk to any strangers along the way. I won't. Little Red Riding Hood promised and she skipped down the path and into the woods. Little Red Riding Hood did not have to worry about getting lost in the forest, because she knew the way to Grandmother's house very well. But along the way, she saw some beautiful wild flowers growing near the path. I bet Grandma would really love these. She said to herself and she stopped to pick a few. Hello, Little Girl. Said a deep, growling voice from behind her. Little Red Riding Hood was very startled. She spun around and saw a big, bad wolf standing in the shadows between two trees. Hello. Said Little Red Riding Hood, she didn't know that the wolf was bad. And she had already forgotten her mother's words about talking to strangers. Where are you going on this fine day? Ask the big, bad wolf. I'm going to my grandma's cottage on the other side of the forest. Said Little Red Riding Hood. She isn't feeling very well, so I'm bringing her these basket of food and these flowers. What a sweet girl you are. Said the big, bad wolf. He smiled and showed his mouthful of sharp teeth. The big, bad wolf was quite hungry and he was not interested in the basket of food. I had better be going. Said Little Red Riding Hood. Bye. And she skipped off down the path. The big, bad wolf stomach grumbled and growled with hunger. And suddenly he had an idea. As quick as he could, he ran through the forest all the way to Grandmother's cottage. The sneaky wolf opened the door very quietly and found grandma sleeping her bed. He picked up the old woman, opened his great big mouth and he swallowed poor grandma in one gulp. Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin. He put on Grandmother's glasses and her night camp and he waited for the little girl to arrive with her flowers and basket of food. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. Hello Grandma. She said, Mother told me you weren't feeling well. So I brought some food and some flowers. Do you like them? What a sweet little girl you are. Said the wolf in his fake grandma voice. Come closer, my dear. Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma. My. She said, What big eyes you have Grandma. All the better to see you with. Said the big, bad wolf. Come closer, my dear. Little Red Riding Hood took another step closer to the bed. My. She said, What big ears you have Grandma. All the better to hear you with. Reply the wolf. Come closer, my dear. Little Red Riding Hood took one more step closer. My. What big teeth you have Grandma. She said in surprise, All the better to eat you with. Growl the big, bad wolf. He jumped out of the bed and as he opened his great big mouth. Little Red Riding Hood shrieked and tried to run, but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal. Outside the cottage, a woodsman happened to be walking through the forest. When he heard Little Red Riding Hood shriek of surprise, he hurried inside and he saw the wolf with his huge round belly. The woodsman grabbed the big, bad wolf, turned him upside down and shook him by his feet. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed. The three of them chased the big, bad wolf out of the cottage, out of the forest and over the hill. The big, bad wolf ran for his life and was never seen again. Little Red Riding Hood learned her lesson and she never, ever talked to strangers again. The end.",
+        "id": "a2325a99-b157-45f5-9ae3-7701176ecbed"
+    },
+    {
+        "filename": "SirKenRobinson_2006-light.mp4",
+        "cefr_level": "B1",
+        "topic": "Society",
+        "transcript": [
+            {
+                "start": 0.0,
+                "end": 22.44,
+                "text": "Good morning. How are you? It's been great, isn't it? I've been blown away by the whole thing."
+            },
+            {
+                "start": 22.44,
+                "end": 33.44,
+                "text": "In fact, I'm leaving. There would be three themes having a running through the conference,"
+            },
+            {
+                "start": 33.44,
+                "end": 40.44,
+                "text": "which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity"
+            },
+            {
+                "start": 40.44,
+                "end": 47.44,
+                "text": "in all of the presentations that we've had and in all the people here. Just a variety of this and the range of it."
+            },
+            {
+                "start": 48.44,
+                "end": 54.44,
+                "text": "The second is that it's put us in a place where we have no idea what's going to happen in terms of the future."
+            },
+            {
+                "start": 54.44,
+                "end": 63.44,
+                "text": "No idea how this may play out. I have an interest in education. Actually, what I find is everybody has an interest in education."
+            },
+            {
+                "start": 63.44,
+                "end": 69.44,
+                "text": "Don't you? I find this very interesting. If you did it at a dinner party and you say you're working in education,"
+            },
+            {
+                "start": 69.44,
+                "end": 79.44,
+                "text": "actually you're not often at dinner parties. If you're working in education, you're not asked."
+            },
+            {
+                "start": 79.44,
+                "end": 88.44,
+                "text": "And you'll never ask back curiously. But if you are and you say to somebody,"
+            },
+            {
+                "start": 88.44,
+                "end": 96.44,
+                "text": "you can see the blood run from their face. They're like, oh my god, why me?"
+            },
+            {
+                "start": 97.44,
+                "end": 105.44,
+                "text": "My one night out all week. But if you ask for their education, they pin you to the wall."
+            },
+            {
+                "start": 105.44,
+                "end": 112.44,
+                "text": "Because it's one of those things that goes deep with people. Am I right? Like religion and money and other things."
+            },
+            {
+                "start": 112.44,
+                "end": 118.44,
+                "text": "So I have a big interest in education and I think we all do. We have a huge vested interest in it."
+            },
+            {
+                "start": 118.44,
+                "end": 123.44,
+                "text": "Partly because it's education that's meant to take us into this future that we can't grasp."
+            },
+            {
+                "start": 123.44,
+                "end": 131.44,
+                "text": "If you think of it, children starting school this year will be retiring in 2065."
+            },
+            {
+                "start": 131.44,
+                "end": 137.44,
+                "text": "Nobody has a clue. Despite all the expertise that's been on parade for the past four days,"
+            },
+            {
+                "start": 137.44,
+                "end": 141.44,
+                "text": "what the world will look like in five years time. And yet we're meant to be educating them for it."
+            },
+            {
+                "start": 141.44,
+                "end": 144.44,
+                "text": "So the unpredictability, I think, is extraordinary."
+            },
+            {
+                "start": 144.44,
+                "end": 152.44,
+                "text": "And the third part of this is that we've all agreed nonetheless on the really extraordinary capacities that children have."
+            },
+            {
+                "start": 152.44,
+                "end": 157.44,
+                "text": "Their capacities for innovation. I mean, Serena last night was a marvel."
+            },
+            {
+                "start": 157.44,
+                "end": 161.44,
+                "text": "Wasn't she just seeing what she could do? And she's exceptional."
+            },
+            {
+                "start": 161.44,
+                "end": 167.44,
+                "text": "But I think she's not, so to speak, exceptional in the whole of childhood."
+            },
+            {
+                "start": 167.44,
+                "end": 171.44,
+                "text": "What you have there is a person of extraordinary dedication who found the talent."
+            },
+            {
+                "start": 171.44,
+                "end": 177.44,
+                "text": "And my contention is all kids have tremendous talents and we squander them pretty ruthlessly."
+            },
+            {
+                "start": 178.44,
+                "end": 181.44,
+                "text": "So I want to talk about education and I want to talk about creativity."
+            },
+            {
+                "start": 181.44,
+                "end": 187.44,
+                "text": "My contention is that creativity now is as important in education as literacy."
+            },
+            {
+                "start": 187.44,
+                "end": 191.44,
+                "text": "And we should treat it with the same status."
+            },
+            {
+                "start": 191.44,
+                "end": 194.44,
+                "text": "Thank you."
+            },
+            {
+                "start": 197.44,
+                "end": 201.44,
+                "text": "That was it. Thank you very much."
+            },
+            {
+                "start": 201.44,
+                "end": 204.44,
+                "text": "So 15 minutes left."
+            },
+            {
+                "start": 205.44,
+                "end": 208.44,
+                "text": "Well, I was born."
+            },
+            {
+                "start": 208.44,
+                "end": 211.44,
+                "text": "No, the..."
+            },
+            {
+                "start": 211.44,
+                "end": 214.44,
+                "text": "I had a great story recently. I love telling it."
+            },
+            {
+                "start": 214.44,
+                "end": 218.44,
+                "text": "Of a little girl who was in a drawing lesson, she was six and she was at the back drawing."
+            },
+            {
+                "start": 218.44,
+                "end": 221.44,
+                "text": "And the teacher said, this little girl had to ever pay attention."
+            },
+            {
+                "start": 221.44,
+                "end": 223.44,
+                "text": "And in this drawing lesson she did."
+            },
+            {
+                "start": 223.44,
+                "end": 227.44,
+                "text": "And the teacher was fascinated. She went over to and she said, what are you drawing?"
+            },
+            {
+                "start": 227.44,
+                "end": 231.44,
+                "text": "And the girl said, I'm drawing a picture of God."
+            },
+            {
+                "start": 231.44,
+                "end": 234.44,
+                "text": "And the teacher said, but nobody knows what God looks like."
+            },
+            {
+                "start": 234.44,
+                "end": 238.44,
+                "text": "And the girl said, they will in a minute."
+            },
+            {
+                "start": 238.44,
+                "end": 243.44,
+                "text": "OK."
+            },
+            {
+                "start": 243.44,
+                "end": 248.44,
+                "text": "When?"
+            },
+            {
+                "start": 248.44,
+                "end": 253.44,
+                "text": "When my son was four in England, after he was four everywhere to be honest."
+            },
+            {
+                "start": 253.44,
+                "end": 255.44,
+                "text": "I mean, really."
+            },
+            {
+                "start": 255.44,
+                "end": 257.44,
+                "text": "We've been strict about it, wherever he went, he was four out here."
+            },
+            {
+                "start": 257.44,
+                "end": 259.44,
+                "text": "But he was in the Nativity play."
+            },
+            {
+                "start": 259.44,
+                "end": 262.44,
+                "text": "Do you remember the story?"
+            },
+            {
+                "start": 262.44,
+                "end": 264.44,
+                "text": "No, it was big. It was big story."
+            },
+            {
+                "start": 264.44,
+                "end": 267.44,
+                "text": "Mel Gibson, at the sea pool, you may have seen it."
+            },
+            {
+                "start": 267.44,
+                "end": 270.44,
+                "text": "Nativity too."
+            },
+            {
+                "start": 270.44,
+                "end": 273.44,
+                "text": "But James got the part of Joseph, which we were thrilled about."
+            },
+            {
+                "start": 273.44,
+                "end": 276.44,
+                "text": "We consider this three one of the lead parts."
+            },
+            {
+                "start": 276.44,
+                "end": 278.44,
+                "text": "We had the place crammed full of agents in T-shirts."
+            },
+            {
+                "start": 278.44,
+                "end": 280.44,
+                "text": "You know, James Robinson is Joseph."
+            },
+            {
+                "start": 280.44,
+                "end": 281.44,
+                "text": "We had..."
+            },
+            {
+                "start": 281.44,
+                "end": 282.44,
+                "text": "He didn't have to speak."
+            },
+            {
+                "start": 282.44,
+                "end": 284.44,
+                "text": "But you know the bit where the three kings come in."
+            },
+            {
+                "start": 284.44,
+                "end": 286.44,
+                "text": "Now they come in bearing gifts."
+            },
+            {
+                "start": 286.44,
+                "end": 288.44,
+                "text": "They bring gold, frankincense and meh."
+            },
+            {
+                "start": 288.44,
+                "end": 290.44,
+                "text": "This really happened. We're sitting there."
+            },
+            {
+                "start": 290.44,
+                "end": 292.44,
+                "text": "And they... I think just went out of sequence."
+            },
+            {
+                "start": 292.44,
+                "end": 295.44,
+                "text": "Because we talked to little boy after it and said, you know, you're OK with that?"
+            },
+            {
+                "start": 295.44,
+                "end": 297.44,
+                "text": "And they said, yeah, why was that wrong?"
+            },
+            {
+                "start": 297.44,
+                "end": 298.44,
+                "text": "They just switched. I think it was it."
+            },
+            {
+                "start": 298.44,
+                "end": 300.44,
+                "text": "Anyway, the three boys came in."
+            },
+            {
+                "start": 300.44,
+                "end": 302.44,
+                "text": "Little four-year-olds with two towns on their heads."
+            },
+            {
+                "start": 302.44,
+                "end": 303.44,
+                "text": "And they put these boxes down."
+            },
+            {
+                "start": 303.44,
+                "end": 305.44,
+                "text": "The first boy said, I bring you gold."
+            },
+            {
+                "start": 305.44,
+                "end": 308.44,
+                "text": "And the second boy said, I bring you meh."
+            },
+            {
+                "start": 308.44,
+                "end": 311.44,
+                "text": "And the third boy said, frankincense."
+            },
+            {
+                "start": 311.44,
+                "end": 313.44,
+                "text": "What's wrong with you?"
+            },
+            {
+                "start": 313.44,
+                "end": 315.44,
+                "text": "What's wrong with you?"
+            },
+            {
+                "start": 315.44,
+                "end": 317.44,
+                "text": "What's wrong with you?"
+            },
+            {
+                "start": 317.44,
+                "end": 319.44,
+                "text": "What's wrong with you?"
+            },
+            {
+                "start": 319.44,
+                "end": 321.44,
+                "text": "What's wrong with you?"
+            },
+            {
+                "start": 321.44,
+                "end": 325.44,
+                "text": "What these things have in common is that kids will take a chance."
+            },
+            {
+                "start": 325.44,
+                "end": 328.44,
+                "text": "If they don't know, they'll have a go."
+            },
+            {
+                "start": 328.44,
+                "end": 329.44,
+                "text": "Am I right?"
+            },
+            {
+                "start": 329.44,
+                "end": 332.44,
+                "text": "They're not frightened of being wrong."
+            },
+            {
+                "start": 332.44,
+                "end": 336.44,
+                "text": "Now, I don't mean to say that being wrong is the same thing as being creative."
+            },
+            {
+                "start": 336.44,
+                "end": 339.44,
+                "text": "What we do know is, if you're not prepared to be wrong,"
+            },
+            {
+                "start": 339.44,
+                "end": 342.44,
+                "text": "you'll never come up with anything original."
+            },
+            {
+                "start": 342.44,
+                "end": 344.44,
+                "text": "If you're not prepared to be wrong."
+            },
+            {
+                "start": 344.44,
+                "end": 349.44,
+                "text": "And by the time they get to be adults, most kids have lost that capacity."
+            },
+            {
+                "start": 349.44,
+                "end": 351.44,
+                "text": "They have become frightened of being wrong."
+            },
+            {
+                "start": 351.44,
+                "end": 353.44,
+                "text": "And we run our companies, by the way."
+            },
+            {
+                "start": 353.44,
+                "end": 355.44,
+                "text": "We stigmatize mistakes."
+            },
+            {
+                "start": 355.44,
+                "end": 357.44,
+                "text": "And we're now running national education systems"
+            },
+            {
+                "start": 357.44,
+                "end": 360.44,
+                "text": "where mistakes are the worst thing you can make."
+            },
+            {
+                "start": 360.44,
+                "end": 365.44,
+                "text": "And the result is that we are educating people out of their creative capacities."
+            },
+            {
+                "start": 365.44,
+                "end": 367.44,
+                "text": "Picasso once said this."
+            },
+            {
+                "start": 367.44,
+                "end": 370.44,
+                "text": "He said that all children are born artists."
+            },
+            {
+                "start": 370.44,
+                "end": 373.44,
+                "text": "The problem is to remain an artist as we grow up."
+            },
+            {
+                "start": 373.44,
+                "end": 376.44,
+                "text": "I believe this passionately, that we don't grow into creativity."
+            },
+            {
+                "start": 376.44,
+                "end": 378.44,
+                "text": "We grow out of it."
+            },
+            {
+                "start": 378.44,
+                "end": 381.44,
+                "text": "Or rather, we get educated out of it."
+            },
+            {
+                "start": 381.44,
+                "end": 383.44,
+                "text": "So why is this?"
+            },
+            {
+                "start": 383.44,
+                "end": 386.44,
+                "text": "I lived in Stratford, on Avon, until about five years ago."
+            },
+            {
+                "start": 386.44,
+                "end": 389.44,
+                "text": "In fact, we moved from Stratford to Los Angeles."
+            },
+            {
+                "start": 389.44,
+                "end": 392.44,
+                "text": "So you can imagine what a seamless transition, you know, this was, from..."
+            },
+            {
+                "start": 393.44,
+                "end": 396.44,
+                "text": "Actually, we lived in Post-Colson, in the field, where at Stratford,"
+            },
+            {
+                "start": 396.44,
+                "end": 399.44,
+                "text": "which is where Shakespeare's father was born."
+            },
+            {
+                "start": 399.44,
+                "end": 401.44,
+                "text": "Are you struck by a new thought?"
+            },
+            {
+                "start": 401.44,
+                "end": 402.44,
+                "text": "I was."
+            },
+            {
+                "start": 402.44,
+                "end": 404.44,
+                "text": "You don't think of Shakespeare having a father, do you?"
+            },
+            {
+                "start": 404.44,
+                "end": 406.44,
+                "text": "Do you?"
+            },
+            {
+                "start": 406.44,
+                "end": 408.44,
+                "text": "Because you don't think of Shakespeare being a child."
+            },
+            {
+                "start": 408.44,
+                "end": 410.44,
+                "text": "Do Shakespeare being seven?"
+            },
+            {
+                "start": 410.44,
+                "end": 411.44,
+                "text": "I never thought of it."
+            },
+            {
+                "start": 411.44,
+                "end": 412.44,
+                "text": "I mean, he was a seven at some point."
+            },
+            {
+                "start": 412.44,
+                "end": 414.44,
+                "text": "He was in somebody's English class, wasn't he?"
+            },
+            {
+                "start": 414.44,
+                "end": 416.44,
+                "text": "Two different."
+            },
+            {
+                "start": 422.44,
+                "end": 424.44,
+                "text": "How annoying would that be?"
+            },
+            {
+                "start": 431.44,
+                "end": 433.44,
+                "text": "Must try harder."
+            },
+            {
+                "start": 436.44,
+                "end": 439.44,
+                "text": "Being sent to bed by his dad, don't you Shakespeare?"
+            },
+            {
+                "start": 439.44,
+                "end": 441.44,
+                "text": "Go to bed now, you know, to William Shakespeare, you know."
+            },
+            {
+                "start": 441.44,
+                "end": 443.44,
+                "text": "And put the pencil down."
+            },
+            {
+                "start": 443.44,
+                "end": 445.44,
+                "text": "And stop speaking like that."
+            },
+            {
+                "start": 445.44,
+                "end": 447.44,
+                "text": "You know, it's..."
+            },
+            {
+                "start": 448.44,
+                "end": 451.44,
+                "text": "It's confusing everybody."
+            },
+            {
+                "start": 452.44,
+                "end": 461.44,
+                "text": "Anyway, we moved from Stratford to Los Angeles."
+            },
+            {
+                "start": 461.44,
+                "end": 463.44,
+                "text": "And I just want to say what about the transition?"
+            },
+            {
+                "start": 463.44,
+                "end": 465.44,
+                "text": "Actually, my son didn't want to come."
+            },
+            {
+                "start": 465.44,
+                "end": 466.44,
+                "text": "I've got two kids."
+            },
+            {
+                "start": 466.44,
+                "end": 468.44,
+                "text": "He was 21 now and my daughter's 16."
+            },
+            {
+                "start": 468.44,
+                "end": 470.44,
+                "text": "He didn't want to come to Los Angeles."
+            },
+            {
+                "start": 470.44,
+                "end": 473.44,
+                "text": "He loved it, but he had a girlfriend in England."
+            },
+            {
+                "start": 473.44,
+                "end": 475.44,
+                "text": "This was the love of his life."
+            },
+            {
+                "start": 475.44,
+                "end": 478.44,
+                "text": "Sarah, he'd known her for a month."
+            },
+            {
+                "start": 478.44,
+                "end": 481.44,
+                "text": "Imagine they'd had their fourth anniversary."
+            },
+            {
+                "start": 481.44,
+                "end": 482.44,
+                "text": "But it meant it."
+            },
+            {
+                "start": 482.44,
+                "end": 484.44,
+                "text": "Because it's a long time when you're 16."
+            },
+            {
+                "start": 484.44,
+                "end": 486.44,
+                "text": "Anyway, he was really upset on the plane."
+            },
+            {
+                "start": 486.44,
+                "end": 488.44,
+                "text": "He said, I'll never find another girl like Sarah."
+            },
+            {
+                "start": 488.44,
+                "end": 490.44,
+                "text": "And we were all the pleased about that, frankly."
+            },
+            {
+                "start": 490.44,
+                "end": 491.44,
+                "text": "Because..."
+            },
+            {
+                "start": 499.44,
+                "end": 501.44,
+                "text": "She was the main reason we were leaving the country."
+            },
+            {
+                "start": 507.44,
+                "end": 509.44,
+                "text": "But something strikes you when you move to America"
+            },
+            {
+                "start": 509.44,
+                "end": 511.44,
+                "text": "and when you travel around the world,"
+            },
+            {
+                "start": 511.44,
+                "end": 515.44,
+                "text": "every education system on Earth has the same hierarchy of subjects."
+            },
+            {
+                "start": 515.44,
+                "end": 517.44,
+                "text": "Everyone doesn't matter where you go."
+            },
+            {
+                "start": 517.44,
+                "end": 519.44,
+                "text": "You think it would be otherwise, but it isn't."
+            },
+            {
+                "start": 519.44,
+                "end": 521.44,
+                "text": "At the top are mathematics and languages."
+            },
+            {
+                "start": 521.44,
+                "end": 523.44,
+                "text": "Then the humanity isn't at the bottom of the arts."
+            },
+            {
+                "start": 523.44,
+                "end": 524.44,
+                "text": "Everywhere on Earth."
+            },
+            {
+                "start": 524.44,
+                "end": 526.44,
+                "text": "And in pretty much every system too,"
+            },
+            {
+                "start": 526.44,
+                "end": 529.44,
+                "text": "there's a hierarchy within the arts."
+            },
+            {
+                "start": 529.44,
+                "end": 532.44,
+                "text": "Art and music are normally given the highest status in schools"
+            },
+            {
+                "start": 532.44,
+                "end": 533.44,
+                "text": "than drama and dance."
+            },
+            {
+                "start": 533.44,
+                "end": 536.44,
+                "text": "There isn't an education system on the planet that teaches dance"
+            },
+            {
+                "start": 536.44,
+                "end": 538.44,
+                "text": "every day to children the way we teach them mathematics."
+            },
+            {
+                "start": 538.44,
+                "end": 539.44,
+                "text": "Why?"
+            },
+            {
+                "start": 539.44,
+                "end": 540.44,
+                "text": "Why not?"
+            },
+            {
+                "start": 540.44,
+                "end": 542.44,
+                "text": "I think this is rather important."
+            },
+            {
+                "start": 542.44,
+                "end": 544.44,
+                "text": "I think math is very important, but so is dance."
+            },
+            {
+                "start": 544.44,
+                "end": 546.44,
+                "text": "Children dance all the time, if they're allowed to."
+            },
+            {
+                "start": 546.44,
+                "end": 547.44,
+                "text": "We all do."
+            },
+            {
+                "start": 547.44,
+                "end": 548.44,
+                "text": "We all have bodies, don't we?"
+            },
+            {
+                "start": 548.44,
+                "end": 549.44,
+                "text": "Did I miss a meeting?"
+            },
+            {
+                "start": 549.44,
+                "end": 550.44,
+                "text": "I mean, I think..."
+            },
+            {
+                "start": 550.44,
+                "end": 552.44,
+                "text": "Too few of what happens is as children grow up,"
+            },
+            {
+                "start": 552.44,
+                "end": 555.44,
+                "text": "we start to educate them progressively from the way stuff."
+            },
+            {
+                "start": 555.44,
+                "end": 561.44,
+                "text": "And then we focus on their heads and slightly to one side."
+            },
+            {
+                "start": 561.44,
+                "end": 564.44,
+                "text": "If you were to visit education as an alien and say,"
+            },
+            {
+                "start": 564.44,
+                "end": 565.44,
+                "text": "what's it for?"
+            },
+            {
+                "start": 565.44,
+                "end": 566.44,
+                "text": "Public education."
+            },
+            {
+                "start": 566.44,
+                "end": 569.44,
+                "text": "I think you'd have to conclude if you look at the output,"
+            },
+            {
+                "start": 569.44,
+                "end": 570.44,
+                "text": "who really succeeds by this?"
+            },
+            {
+                "start": 570.44,
+                "end": 571.44,
+                "text": "Who does everything they should?"
+            },
+            {
+                "start": 571.44,
+                "end": 573.44,
+                "text": "Who gets all the brownie points?"
+            },
+            {
+                "start": 573.44,
+                "end": 574.44,
+                "text": "Who are the winners?"
+            },
+            {
+                "start": 574.44,
+                "end": 578.44,
+                "text": "I think you'd have to conclude the whole purpose of public education"
+            },
+            {
+                "start": 578.44,
+                "end": 582.44,
+                "text": "throughout the world is to produce university professors."
+            },
+            {
+                "start": 582.44,
+                "end": 583.44,
+                "text": "Isn't it?"
+            },
+            {
+                "start": 583.44,
+                "end": 584.44,
+                "text": "There are the people who come out the top."
+            },
+            {
+                "start": 584.44,
+                "end": 585.44,
+                "text": "Now, I used to be one."
+            },
+            {
+                "start": 585.44,
+                "end": 586.44,
+                "text": "So there."
+            },
+            {
+                "start": 586.44,
+                "end": 587.44,
+                "text": "You know."
+            },
+            {
+                "start": 587.44,
+                "end": 589.44,
+                "text": "And I like university professors, but you know,"
+            },
+            {
+                "start": 589.44,
+                "end": 591.44,
+                "text": "we shouldn't help them up with the way they do."
+            },
+            {
+                "start": 591.44,
+                "end": 593.44,
+                "text": "But I think that's the way they do."
+            },
+            {
+                "start": 593.44,
+                "end": 595.44,
+                "text": "And I like university professors, but you know,"
+            },
+            {
+                "start": 595.44,
+                "end": 599.44,
+                "text": "we shouldn't help them up with the high watermark of all human achievement."
+            },
+            {
+                "start": 599.44,
+                "end": 601.44,
+                "text": "They're just a form of life."
+            },
+            {
+                "start": 601.44,
+                "end": 603.44,
+                "text": "You know, another form of life."
+            },
+            {
+                "start": 603.44,
+                "end": 604.44,
+                "text": "But they're rather curious."
+            },
+            {
+                "start": 604.44,
+                "end": 606.44,
+                "text": "And I say this out of affection for them."
+            },
+            {
+                "start": 606.44,
+                "end": 607.44,
+                "text": "There's some curious about professors."
+            },
+            {
+                "start": 607.44,
+                "end": 609.44,
+                "text": "In my experience, not all of them, but typically,"
+            },
+            {
+                "start": 609.44,
+                "end": 611.44,
+                "text": "they live in their heads."
+            },
+            {
+                "start": 611.44,
+                "end": 614.44,
+                "text": "They live up there and slightly to one side."
+            },
+            {
+                "start": 614.44,
+                "end": 618.44,
+                "text": "They're disembodied in a kind of literal way."
+            },
+            {
+                "start": 618.44,
+                "end": 622.44,
+                "text": "They look upon their body as a form of transport for their heads."
+            },
+            {
+                "start": 622.44,
+                "end": 625.44,
+                "text": "You know, it's..."
+            },
+            {
+                "start": 625.44,
+                "end": 628.44,
+                "text": "Don't they?"
+            },
+            {
+                "start": 628.44,
+                "end": 631.44,
+                "text": "It's a way of getting their head to meetings."
+            },
+            {
+                "start": 631.44,
+                "end": 639.44,
+                "text": "If you want real evidence of out-of-body experiences, by the way,"
+            },
+            {
+                "start": 639.44,
+                "end": 643.44,
+                "text": "get yourself along to a residential conference for senior academics"
+            },
+            {
+                "start": 643.44,
+                "end": 646.44,
+                "text": "and pop into the discotek on the final night."
+            },
+            {
+                "start": 646.44,
+                "end": 649.44,
+                "text": "And there you will see it."
+            },
+            {
+                "start": 649.44,
+                "end": 652.44,
+                "text": "Brom men and women riding uncontrollably."
+            },
+            {
+                "start": 652.44,
+                "end": 655.44,
+                "text": "Off the beat."
+            },
+            {
+                "start": 655.44,
+                "end": 660.44,
+                "text": "Wait until it ends so they can go on right to paper about it."
+            },
+            {
+                "start": 660.44,
+                "end": 666.44,
+                "text": "Now, our education system is predicated on the idea of academic ability."
+            },
+            {
+                "start": 666.44,
+                "end": 668.44,
+                "text": "And there's a reason."
+            },
+            {
+                "start": 668.44,
+                "end": 670.44,
+                "text": "The whole system was invented around the world."
+            },
+            {
+                "start": 670.44,
+                "end": 673.44,
+                "text": "There were no public systems of education really before the 19th century."
+            },
+            {
+                "start": 673.44,
+                "end": 676.44,
+                "text": "They all came into being to meet the needs of industrialism."
+            },
+            {
+                "start": 676.44,
+                "end": 679.44,
+                "text": "So the hierarchy is reaching on two ideas."
+            },
+            {
+                "start": 679.44,
+                "end": 683.44,
+                "text": "Number one, the most useful subjects for work are at the top."
+            },
+            {
+                "start": 683.44,
+                "end": 687.44,
+                "text": "So you were probably stayed benignly away from things at school when you were a kid."
+            },
+            {
+                "start": 687.44,
+                "end": 690.44,
+                "text": "Things you liked on the ground you would never get a job doing that."
+            },
+            {
+                "start": 690.44,
+                "end": 692.44,
+                "text": "Is that right?"
+            },
+            {
+                "start": 692.44,
+                "end": 694.44,
+                "text": "Don't do music. You're not going to be a musician."
+            },
+            {
+                "start": 694.44,
+                "end": 696.44,
+                "text": "Don't do art. You won't be an artist."
+            },
+            {
+                "start": 696.44,
+                "end": 699.44,
+                "text": "Benign advice. Now, profoundly mistaken."
+            },
+            {
+                "start": 699.44,
+                "end": 702.44,
+                "text": "The whole world is engulfed in revolution."
+            },
+            {
+                "start": 702.44,
+                "end": 704.44,
+                "text": "And the second is academic ability,"
+            },
+            {
+                "start": 704.44,
+                "end": 709.44,
+                "text": "which has really come to dominate our view of intelligence because the universities designed the system in their image."
+            },
+            {
+                "start": 709.44,
+                "end": 715.44,
+                "text": "If you think of it, the whole system of public education around the world is a protracted process of university entrance."
+            },
+            {
+                "start": 715.44,
+                "end": 720.44,
+                "text": "And the consequence is that many highly talented, brilliant, creative people think they're not."
+            },
+            {
+                "start": 720.44,
+                "end": 725.44,
+                "text": "Because they think they're a good at it school, wasn't valued, always actually stigmatized."
+            },
+            {
+                "start": 725.44,
+                "end": 727.44,
+                "text": "And I think we can't afford to go on that way."
+            },
+            {
+                "start": 727.44,
+                "end": 733.44,
+                "text": "In the next 30 years, according to UNESCO, more people worldwide will be graduating through education"
+            },
+            {
+                "start": 733.44,
+                "end": 735.44,
+                "text": "since the beginning of history."
+            },
+            {
+                "start": 735.44,
+                "end": 740.44,
+                "text": "More people. And it's the combination of all the things we've talked about, technology and its transformation effect on work,"
+            },
+            {
+                "start": 740.44,
+                "end": 744.44,
+                "text": "and demography and the huge explosion in population."
+            },
+            {
+                "start": 744.44,
+                "end": 748.44,
+                "text": "Suddenly, degrees aren't worth anything. Isn't that true?"
+            },
+            {
+                "start": 748.44,
+                "end": 751.44,
+                "text": "When I was a student, if you had a degree, you had a job."
+            },
+            {
+                "start": 751.44,
+                "end": 754.44,
+                "text": "If you didn't have a job, it's because you didn't want one."
+            },
+            {
+                "start": 754.44,
+                "end": 756.44,
+                "text": "And I didn't want one."
+            },
+            {
+                "start": 756.44,
+                "end": 758.44,
+                "text": "Frankly, so."
+            },
+            {
+                "start": 758.44,
+                "end": 763.44,
+                "text": "But now, kids with degrees are often heading home to carry on playing video games."
+            },
+            {
+                "start": 763.44,
+                "end": 768.44,
+                "text": "Because you need an MA where the previous job required a BA, and now you need a PhD for the other."
+            },
+            {
+                "start": 768.44,
+                "end": 773.44,
+                "text": "It's a process of academic inflation, and it indicates the whole structure of education is shifting beneath our feet."
+            },
+            {
+                "start": 773.44,
+                "end": 776.44,
+                "text": "We need to radically rethink our view of intelligence."
+            },
+            {
+                "start": 776.44,
+                "end": 779.44,
+                "text": "We know three things about intelligence. One, it's diverse."
+            },
+            {
+                "start": 779.44,
+                "end": 781.44,
+                "text": "We think about the world in all the ways that we experience it."
+            },
+            {
+                "start": 781.44,
+                "end": 784.44,
+                "text": "We think visually, we think in sound, we think kinesthetically."
+            },
+            {
+                "start": 785.44,
+                "end": 788.44,
+                "text": "We think in abstract terms, we think in movement."
+            },
+            {
+                "start": 788.44,
+                "end": 791.44,
+                "text": "Secondly, intelligence is dynamic."
+            },
+            {
+                "start": 791.44,
+                "end": 796.44,
+                "text": "If you look at the interactions of a human brain, as we heard yesterday from a number of presentations,"
+            },
+            {
+                "start": 796.44,
+                "end": 801.44,
+                "text": "intelligence is wonderfully interactive. The brain isn't divided into compartments."
+            },
+            {
+                "start": 801.44,
+                "end": 807.44,
+                "text": "In fact, creativity, which I define as the process of having original ideas that have value,"
+            },
+            {
+                "start": 807.44,
+                "end": 813.44,
+                "text": "more often than not, comes about through the interaction of different discipline-wise of seeing things."
+            },
+            {
+                "start": 814.44,
+                "end": 818.44,
+                "text": "The brain is intense. By the way, there's a shaft of nerves that joins the two hours of the brain,"
+            },
+            {
+                "start": 818.44,
+                "end": 820.44,
+                "text": "called the corpus colosum. It's thick in women."
+            },
+            {
+                "start": 820.44,
+                "end": 825.44,
+                "text": "Following off from Hellenius, I think this is probably why women are better at multitasking,"
+            },
+            {
+                "start": 825.44,
+                "end": 831.44,
+                "text": "because you are. On two, there's a raft of research, but I know it's my personal life."
+            },
+            {
+                "start": 831.44,
+                "end": 836.44,
+                "text": "If my wife is cooking a meal at home, which is not often, thankfully."
+            },
+            {
+                "start": 836.44,
+                "end": 838.44,
+                "text": "But if she's saying..."
+            },
+            {
+                "start": 838.44,
+                "end": 840.44,
+                "text": "No, she's good at something."
+            },
+            {
+                "start": 840.44,
+                "end": 844.44,
+                "text": "But if she's cooking, she's dealing with people on the phone, she's talking to the kids,"
+            },
+            {
+                "start": 844.44,
+                "end": 849.44,
+                "text": "she's painting the ceiling, she's doing open heart surgery over here."
+            },
+            {
+                "start": 849.44,
+                "end": 853.44,
+                "text": "If I'm cooking, the door is shut. The kids are out, the phones on the hook."
+            },
+            {
+                "start": 853.44,
+                "end": 858.44,
+                "text": "If she comes in, I get annoyed. I say, Terry, please, I'm trying to fry an egg in here."
+            },
+            {
+                "start": 858.44,
+                "end": 860.44,
+                "text": "You know, really?"
+            },
+            {
+                "start": 865.44,
+                "end": 867.44,
+                "text": "Give me a break."
+            },
+            {
+                "start": 868.44,
+                "end": 873.44,
+                "text": "Actually, there was a philosophical thing. If a tree falls in a forest, and nobody hears it,"
+            },
+            {
+                "start": 873.44,
+                "end": 876.44,
+                "text": "did it happen? Remember that old chestnut?"
+            },
+            {
+                "start": 876.44,
+                "end": 878.44,
+                "text": "I saw a great t-shirt really recently, which said,"
+            },
+            {
+                "start": 878.44,
+                "end": 883.44,
+                "text": "if a man speaks his mind in a forest, and no woman hears him, is he still wrong?"
+            },
+            {
+                "start": 891.44,
+                "end": 895.44,
+                "text": "And the third thing about intelligence is, it's distinct."
+            },
+            {
+                "start": 896.44,
+                "end": 900.44,
+                "text": "I'm doing a new book at the moment called Epiphany, which is based on a series of interviews with people"
+            },
+            {
+                "start": 900.44,
+                "end": 904.44,
+                "text": "about how they discovered their talent, and fascinating about how people got to be there."
+            },
+            {
+                "start": 904.44,
+                "end": 907.44,
+                "text": "It's really prompted by a conversation I had with a wonderful woman who,"
+            },
+            {
+                "start": 907.44,
+                "end": 910.44,
+                "text": "most people have never heard of, she's called Jillian Lin, have you heard of her?"
+            },
+            {
+                "start": 910.44,
+                "end": 913.44,
+                "text": "She's a choreographer, and everybody knows her work."
+            },
+            {
+                "start": 913.44,
+                "end": 916.44,
+                "text": "She did cats, and fantastically opera."
+            },
+            {
+                "start": 916.44,
+                "end": 920.44,
+                "text": "I used to be on the board of the Royal Ballet in England, as you can see."
+            },
+            {
+                "start": 921.44,
+                "end": 925.44,
+                "text": "And, anyway, Jillian had lunch on that, said, how do you get to be a dancer?"
+            },
+            {
+                "start": 925.44,
+                "end": 928.44,
+                "text": "And she said it was interesting. When she was at school, she was really hopeless."
+            },
+            {
+                "start": 929.44,
+                "end": 934.44,
+                "text": "And the school in the 30s wrote to her parents that we think Jillian has a learning disorder."
+            },
+            {
+                "start": 934.44,
+                "end": 938.44,
+                "text": "She couldn't concentrate, she was fidgeting. I think now that she's had ADHD."
+            },
+            {
+                "start": 938.44,
+                "end": 943.44,
+                "text": "Wouldn't you? But this was the 1930s, and ADHD hadn't been invented at this point,"
+            },
+            {
+                "start": 943.44,
+                "end": 946.44,
+                "text": "so it wasn't an available condition, you know, people."
+            },
+            {
+                "start": 947.44,
+                "end": 948.44,
+                "text": "People."
+            },
+            {
+                "start": 949.44,
+                "end": 951.44,
+                "text": "People weren't aware, they could have that."
+            },
+            {
+                "start": 954.44,
+                "end": 959.44,
+                "text": "Anyway, she went to see this specialist, so this oak panel room,"
+            },
+            {
+                "start": 959.44,
+                "end": 964.44,
+                "text": "and she was there with her mother, and she was led and sat on this chair at the end,"
+            },
+            {
+                "start": 964.44,
+                "end": 968.44,
+                "text": "and she sat on her hands for 20 minutes, while this man talked to mother about all the problems Jillian was having at school."
+            },
+            {
+                "start": 969.44,
+                "end": 972.44,
+                "text": "And at the end of it, because she was disturbing people at home work,"
+            },
+            {
+                "start": 972.44,
+                "end": 974.44,
+                "text": "was always late, and so on, little kid of eight."
+            },
+            {
+                "start": 974.44,
+                "end": 978.44,
+                "text": "In the end, the doctor went and sat next to Jillian and said,"
+            },
+            {
+                "start": 978.44,
+                "end": 980.44,
+                "text": ", Jillian, I've listened to all these things, the mother's told me,"
+            },
+            {
+                "start": 980.44,
+                "end": 981.44,
+                "text": "I need to speak to her privately."
+            },
+            {
+                "start": 982.44,
+                "end": 987.44,
+                "text": "So she said, wait here, we'll be back, we won't be very long, and they went to the left."
+            },
+            {
+                "start": 987.44,
+                "end": 991.44,
+                "text": "But as they went out the room, he turned on the radio that was sitting on his desk."
+            },
+            {
+                "start": 992.44,
+                "end": 995.44,
+                "text": "And when they got out the room, he said to her mother, just stand and watch her."
+            },
+            {
+                "start": 995.44,
+                "end": 1000.44,
+                "text": "And the minute they left the room, she said she was on her feet moving to the music."
+            },
+            {
+                "start": 1001.44,
+                "end": 1004.44,
+                "text": "And they watched for a few minutes, and he turned to her mother, and he said,"
+            },
+            {
+                "start": 1004.44,
+                "end": 1007.44,
+                "text": "you know, Mrs. Lynn, Jillian isn't sick, she's a dancer."
+            },
+            {
+                "start": 1009.44,
+                "end": 1011.44,
+                "text": "Take her to a dance school."
+            },
+            {
+                "start": 1011.44,
+                "end": 1012.44,
+                "text": "I said, what happened?"
+            },
+            {
+                "start": 1012.44,
+                "end": 1013.44,
+                "text": "So she did."
+            },
+            {
+                "start": 1013.44,
+                "end": 1015.44,
+                "text": "I can't tell you how wonderful it was."
+            },
+            {
+                "start": 1015.44,
+                "end": 1018.44,
+                "text": "We walked in this room, and it was full of people like me."
+            },
+            {
+                "start": 1018.44,
+                "end": 1020.44,
+                "text": "People who couldn't sit still."
+            },
+            {
+                "start": 1020.44,
+                "end": 1023.44,
+                "text": "People who had to move to think."
+            },
+            {
+                "start": 1023.44,
+                "end": 1025.44,
+                "text": "Who had to move to think."
+            },
+            {
+                "start": 1025.44,
+                "end": 1028.44,
+                "text": "That it ballet, that it tap, that it jazz, that it modern, that it contemporary."
+            },
+            {
+                "start": 1029.44,
+                "end": 1031.44,
+                "text": "She was eventually auditioned for the Royal Ballet School."
+            },
+            {
+                "start": 1031.44,
+                "end": 1034.44,
+                "text": "She became a soloist, had a wonderful career at the Royal Ballet."
+            },
+            {
+                "start": 1034.44,
+                "end": 1039.44,
+                "text": "She eventually graduated from the Royal Ballet School, found her own company, the Jillian Dance Company,"
+            },
+            {
+                "start": 1039.44,
+                "end": 1040.44,
+                "text": "met Andrew Lloyd-Weber."
+            },
+            {
+                "start": 1040.44,
+                "end": 1043.44,
+                "text": "She's been responsible for some of the successful musical theatre productions in history."
+            },
+            {
+                "start": 1043.44,
+                "end": 1046.44,
+                "text": "She's given pleasure to millions, and she's a multi-millionaire."
+            },
+            {
+                "start": 1047.44,
+                "end": 1050.44,
+                "text": "Somebody else might have put on medication and told her to calm down."
+            },
+            {
+                "start": 1051.44,
+                "end": 1053.44,
+                "text": "Now, I think."
+            },
+            {
+                "start": 1059.44,
+                "end": 1064.44,
+                "text": "What I think it comes to this, our goal spoke the other night about ecology"
+            },
+            {
+                "start": 1064.44,
+                "end": 1068.44,
+                "text": "and the revolution that was triggered by Rachel Carson."
+            },
+            {
+                "start": 1068.44,
+                "end": 1074.44,
+                "text": "I believe our only hope for the future is to adopt a new conception of human ecology,"
+            },
+            {
+                "start": 1074.44,
+                "end": 1079.44,
+                "text": "one in which we start to reconstitute our conception of the richness of human capacity."
+            },
+            {
+                "start": 1079.44,
+                "end": 1084.44,
+                "text": "Our education system has mined our minds in the way that we strip mind the earth"
+            },
+            {
+                "start": 1085.44,
+                "end": 1087.44,
+                "text": "for a particular commodity."
+            },
+            {
+                "start": 1087.44,
+                "end": 1089.44,
+                "text": "And for the future, it won't serve us."
+            },
+            {
+                "start": 1089.44,
+                "end": 1093.44,
+                "text": "We have to rethink the fundamental principles on which we're educating our children."
+            },
+            {
+                "start": 1093.44,
+                "end": 1096.44,
+                "text": "There was a wonderful quote by Jonas Salk, who said,"
+            },
+            {
+                "start": 1096.44,
+                "end": 1101.44,
+                "text": "if you were to, if all the insects were to disappear from the earth,"
+            },
+            {
+                "start": 1101.44,
+                "end": 1104.44,
+                "text": "within 50 years, all life on earth would end."
+            },
+            {
+                "start": 1105.44,
+                "end": 1111.44,
+                "text": "If all human beings disappeared from the earth, within 50 years, all forms of life would flourish."
+            },
+            {
+                "start": 1111.44,
+                "end": 1113.44,
+                "text": "And he's right."
+            },
+            {
+                "start": 1114.44,
+                "end": 1118.44,
+                "text": "What Ted celebrates is the gift of the human imagination."
+            },
+            {
+                "start": 1118.44,
+                "end": 1122.44,
+                "text": "We have to be careful now that we use this gift wisely,"
+            },
+            {
+                "start": 1122.44,
+                "end": 1126.44,
+                "text": "and that we have heard some of the scenarios that we've talked about."
+            },
+            {
+                "start": 1126.44,
+                "end": 1131.44,
+                "text": "And the only way we'll do it is by seeing our creative capacities for the richness they are"
+            },
+            {
+                "start": 1131.44,
+                "end": 1134.44,
+                "text": "and seeing our children for the hope that they are."
+            },
+            {
+                "start": 1134.44,
+                "end": 1138.44,
+                "text": "And our task is to educate their whole being so they can face this future."
+            },
+            {
+                "start": 1138.44,
+                "end": 1142.44,
+                "text": "By the way, we may not see this future, but they will."
+            },
+            {
+                "start": 1142.44,
+                "end": 1145.44,
+                "text": "And our job is to help them make something of it."
+            },
+            {
+                "start": 1145.44,
+                "end": 1146.44,
+                "text": "Thank you very much."
+            },
+            {
+                "start": 1147.44,
+                "end": 1149.44,
+                "text": "Oh, here they are."
+            }
+        ],
+        "questions": {
+            "multiple_choice": [
+                {
+                    "question": "What has been on parade for the past four days?",
+                    "options": [
+                        "A. expertise",
+                        "B. disappeared",
+                        "C. Serena",
+                        "D. daughter's"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "question": "What is it about kids that we squander them?",
+                    "options": [
+                        "A. reason",
+                        "B. contention",
+                        "C. Epiphany",
+                        "D. 16"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "What is the third thing about intelligence?",
+                    "options": [
+                        "A. evidence",
+                        "B. it's distinct",
+                        "C. 2065",
+                        "D. heard yesterday"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "How many years would it take for all life on earth to end?",
+                    "options": [
+                        "A. useful",
+                        "B. English",
+                        "C. allowed",
+                        "D. 50"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "How do we think?",
+                    "options": [
+                        "A. final night",
+                        "B. they're",
+                        "C. kinesthetically",
+                        "D. insects"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What would you visit as an alien and say, what is it for?",
+                    "options": [
+                        "A. nobody",
+                        "B. series",
+                        "C. drawing",
+                        "D. education"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "Where was my son when he was four in England?",
+                    "options": [
+                        "A. tremendous talents",
+                        "B. t-shirt",
+                        "C. everywhere",
+                        "D. school"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What do we consider the three of them to be?",
+                    "options": [
+                        "A. Shakespeare",
+                        "B. talented",
+                        "C. capacity",
+                        "D. lead parts"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "question": "What did Jillian ask about becoming a dancer?",
+                    "options": [
+                        "A. sea pool",
+                        "B. career",
+                        "C. anyway Jillian",
+                        "D. human"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "I think math is what?",
+                    "options": [
+                        "A. important",
+                        "B. capacity",
+                        "C. job it's",
+                        "D. musical"
+                    ],
+                    "answer": "A"
+                }
+            ],
+            "cloze_test": {
+                "passage": "She was eventually ___(1)___ for the ___(2)___ School. She became a soloist, had a wonderful career at the Royal Ballet. She eventually graduated from the Royal Ballet School, found her own company, the Jillian Dance Company, met Andrew ___(3)___. She's been responsible for some of the successful musical theatre ___(4)___ in history. She's given pleasure to millions, and she's a ___(5)___. Somebody else might have put on ___(6)___ and told her to calm down. What I think it comes to this, our goal spoke the other night about ecology and the ___(7)___ that was triggered by Rachel Carson. I believe our only hope for the future is to adopt a new conception of human ecology, one in which we start to ___(8)___ our conception of the richness of human capacity. Our education system has mined our minds in the way that we strip mind the earth for a ___(9)___ commodity. And for the future, it ___(10)___ us. We have to rethink the fundamental principles on which we're educating our children. There was a wonderful quote by Jonas Salk, who said, if you were to, if all the insects were to disappear from the earth, within 50 years, all life on earth would end. If all human beings disappeared from the earth, within 50 years, all forms of life would flourish. What Ted celebrates is the gift of the human imagination.",
+                "questions": [
+                    {
+                        "number": 1,
+                        "options": [
+                            "A. auditioned",
+                            "B. ceiling she's",
+                            "C. required",
+                            "D. Epiphany"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 2,
+                        "options": [
+                            "A. anything original",
+                            "B. Royal Ballet",
+                            "C. commodity",
+                            "D. found"
+                        ],
+                        "answer": "B"
+                    },
+                    {
+                        "number": 3,
+                        "options": [
+                            "A. Lloyd-Weber",
+                            "B. rethink",
+                            "C. school",
+                            "D. travel"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 4,
+                        "options": [
+                            "A. productions",
+                            "B. beings",
+                            "C. student",
+                            "D. focus"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 5,
+                        "options": [
+                            "A. asked",
+                            "B. themes",
+                            "C. treat",
+                            "D. multi-millionaire"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 6,
+                        "options": [
+                            "A. medication",
+                            "B. happens",
+                            "C. eventually auditioned",
+                            "D. output"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 7,
+                        "options": [
+                            "A. revolution",
+                            "B. wonderful",
+                            "C. whole system",
+                            "D. we've"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 8,
+                        "options": [
+                            "A. reconstitute",
+                            "B. probably stayed benignly away",
+                            "C. hours",
+                            "D. shaft"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 9,
+                        "options": [
+                            "A. soloist",
+                            "B. hadn't",
+                            "C. particular",
+                            "D. learning"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 10,
+                        "options": [
+                            "A. little kid",
+                            "B. won't serve",
+                            "C. scenarios",
+                            "D. dealing"
+                        ],
+                        "answer": "B"
+                    }
+                ]
+            }
+        },
+        "vocabulary": [
+            {
+                "word": "shakespeare",
+                "ipa": "/ˈʃeɪkˌspir/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "Shakespeare"
+            },
+            {
+                "word": "presentations",
+                "ipa": "/ˌprɛzənˈteɪʃənz/",
+                "has_stress": true,
+                "cefr": "C2",
+                "meaning": "thuyết trình"
+            },
+            {
+                "word": "education",
+                "ipa": "/ˌɛʤəˈkeɪʃən/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "giáo dục"
+            },
+            {
+                "word": "whole",
+                "ipa": "/hoʊl/",
+                "has_stress": false,
+                "cefr": "B1",
+                "meaning": "trọn"
+            },
+            {
+                "word": "children",
+                "ipa": "/ˈʧɪldrən/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "những đứa trẻ"
+            },
+            {
+                "word": "time",
+                "ipa": "/taɪm/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "thời gian"
+            },
+            {
+                "word": "capacities",
+                "ipa": "/kəˈpæsɪtiz/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "năng lực"
+            },
+            {
+                "word": "stratford",
+                "ipa": "/ˈstrætfərd/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "Stratford"
+            },
+            {
+                "word": "professors",
+                "ipa": "/prəˈfɛsərz/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "giáo sư"
+            },
+            {
+                "word": "jillian",
+                "ipa": "/ˈʤɪljən/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "jillian"
+            },
+            {
+                "word": "ballet",
+                "ipa": "/bæˈleɪ/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "múa ba lê"
+            },
+            {
+                "word": "people",
+                "ipa": "/ˈpipəl/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "mọi người"
+            },
+            {
+                "word": "human",
+                "ipa": "/ˈjumən/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "nhân loại"
+            },
+            {
+                "word": "frankincense",
+                "ipa": "/ˈfræŋkənˌsɛns/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "trầm hương"
+            },
+            {
+                "word": "good",
+                "ipa": "/gʊd/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "Tốt"
+            }
+        ],
+        "video_url": "/uploads/SirKenRobinson_2006-light.mp4",
+        "full_text": "Good morning. How are you? It's been great, isn't it? I've been blown away by the whole thing. In fact, I'm leaving. There would be three themes having a running through the conference, which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all the people here. Just a variety of this and the range of it. The second is that it's put us in a place where we have no idea what's going to happen in terms of the future. No idea how this may play out. I have an interest in education. Actually, what I find is everybody has an interest in education. Don't you? I find this very interesting. If you did it at a dinner party and you say you're working in education, actually you're not often at dinner parties. If you're working in education, you're not asked. And you'll never ask back curiously. But if you are and you say to somebody, you can see the blood run from their face. They're like, oh my god, why me? My one night out all week. But if you ask for their education, they pin you to the wall. Because it's one of those things that goes deep with people. Am I right? Like religion and money and other things. So I have a big interest in education and I think we all do. We have a huge vested interest in it. Partly because it's education that's meant to take us into this future that we can't grasp. If you think of it, children starting school this year will be retiring in 2065. Nobody has a clue. Despite all the expertise that's been on parade for the past four days, what the world will look like in five years time. And yet we're meant to be educating them for it. So the unpredictability, I think, is extraordinary. And the third part of this is that we've all agreed nonetheless on the really extraordinary capacities that children have. Their capacities for innovation. I mean, Serena last night was a marvel. Wasn't she just seeing what she could do? And she's exceptional. But I think she's not, so to speak, exceptional in the whole of childhood. What you have there is a person of extraordinary dedication who found the talent. And my contention is all kids have tremendous talents and we squander them pretty ruthlessly. So I want to talk about education and I want to talk about creativity. My contention is that creativity now is as important in education as literacy. And we should treat it with the same status. Thank you. That was it. Thank you very much. So 15 minutes left. Well, I was born. No, the... I had a great story recently. I love telling it. Of a little girl who was in a drawing lesson, she was six and she was at the back drawing. And the teacher said, this little girl had to ever pay attention. And in this drawing lesson she did. And the teacher was fascinated. She went over to and she said, what are you drawing? And the girl said, I'm drawing a picture of God. And the teacher said, but nobody knows what God looks like. And the girl said, they will in a minute. OK. When? When my son was four in England, after he was four everywhere to be honest. I mean, really. We've been strict about it, wherever he went, he was four out here. But he was in the Nativity play. Do you remember the story? No, it was big. It was big story. Mel Gibson, at the sea pool, you may have seen it. Nativity too. But James got the part of Joseph, which we were thrilled about. We consider this three one of the lead parts. We had the place crammed full of agents in T-shirts. You know, James Robinson is Joseph. We had... He didn't have to speak. But you know the bit where the three kings come in. Now they come in bearing gifts. They bring gold, frankincense and meh. This really happened. We're sitting there. And they... I think just went out of sequence. Because we talked to little boy after it and said, you know, you're OK with that? And they said, yeah, why was that wrong? They just switched. I think it was it. Anyway, the three boys came in. Little four-year-olds with two towns on their heads. And they put these boxes down. The first boy said, I bring you gold. And the second boy said, I bring you meh. And the third boy said, frankincense. What's wrong with you? What's wrong with you? What's wrong with you? What's wrong with you? What's wrong with you? What these things have in common is that kids will take a chance. If they don't know, they'll have a go. Am I right? They're not frightened of being wrong. Now, I don't mean to say that being wrong is the same thing as being creative. What we do know is, if you're not prepared to be wrong, you'll never come up with anything original. If you're not prepared to be wrong. And by the time they get to be adults, most kids have lost that capacity. They have become frightened of being wrong. And we run our companies, by the way. We stigmatize mistakes. And we're now running national education systems where mistakes are the worst thing you can make. And the result is that we are educating people out of their creative capacities. Picasso once said this. He said that all children are born artists. The problem is to remain an artist as we grow up. I believe this passionately, that we don't grow into creativity. We grow out of it. Or rather, we get educated out of it. So why is this? I lived in Stratford, on Avon, until about five years ago. In fact, we moved from Stratford to Los Angeles. So you can imagine what a seamless transition, you know, this was, from... Actually, we lived in Post-Colson, in the field, where at Stratford, which is where Shakespeare's father was born. Are you struck by a new thought? I was. You don't think of Shakespeare having a father, do you? Do you? Because you don't think of Shakespeare being a child. Do Shakespeare being seven? I never thought of it. I mean, he was a seven at some point. He was in somebody's English class, wasn't he? Two different. How annoying would that be? Must try harder. Being sent to bed by his dad, don't you Shakespeare? Go to bed now, you know, to William Shakespeare, you know. And put the pencil down. And stop speaking like that. You know, it's... It's confusing everybody. Anyway, we moved from Stratford to Los Angeles. And I just want to say what about the transition? Actually, my son didn't want to come. I've got two kids. He was 21 now and my daughter's 16. He didn't want to come to Los Angeles. He loved it, but he had a girlfriend in England. This was the love of his life. Sarah, he'd known her for a month. Imagine they'd had their fourth anniversary. But it meant it. Because it's a long time when you're 16. Anyway, he was really upset on the plane. He said, I'll never find another girl like Sarah. And we were all the pleased about that, frankly. Because... She was the main reason we were leaving the country. But something strikes you when you move to America and when you travel around the world, every education system on Earth has the same hierarchy of subjects. Everyone doesn't matter where you go. You think it would be otherwise, but it isn't. At the top are mathematics and languages. Then the humanity isn't at the bottom of the arts. Everywhere on Earth. And in pretty much every system too, there's a hierarchy within the arts. Art and music are normally given the highest status in schools than drama and dance. There isn't an education system on the planet that teaches dance every day to children the way we teach them mathematics. Why? Why not? I think this is rather important. I think math is very important, but so is dance. Children dance all the time, if they're allowed to. We all do. We all have bodies, don't we? Did I miss a meeting? I mean, I think... Too few of what happens is as children grow up, we start to educate them progressively from the way stuff. And then we focus on their heads and slightly to one side. If you were to visit education as an alien and say, what's it for? Public education. I think you'd have to conclude if you look at the output, who really succeeds by this? Who does everything they should? Who gets all the brownie points? Who are the winners? I think you'd have to conclude the whole purpose of public education throughout the world is to produce university professors. Isn't it? There are the people who come out the top. Now, I used to be one. So there. You know. And I like university professors, but you know, we shouldn't help them up with the way they do. But I think that's the way they do. And I like university professors, but you know, we shouldn't help them up with the high watermark of all human achievement. They're just a form of life. You know, another form of life. But they're rather curious. And I say this out of affection for them. There's some curious about professors. In my experience, not all of them, but typically, they live in their heads. They live up there and slightly to one side. They're disembodied in a kind of literal way. They look upon their body as a form of transport for their heads. You know, it's... Don't they? It's a way of getting their head to meetings. If you want real evidence of out-of-body experiences, by the way, get yourself along to a residential conference for senior academics and pop into the discotek on the final night. And there you will see it. Brom men and women riding uncontrollably. Off the beat. Wait until it ends so they can go on right to paper about it. Now, our education system is predicated on the idea of academic ability. And there's a reason. The whole system was invented around the world. There were no public systems of education really before the 19th century. They all came into being to meet the needs of industrialism. So the hierarchy is reaching on two ideas. Number one, the most useful subjects for work are at the top. So you were probably stayed benignly away from things at school when you were a kid. Things you liked on the ground you would never get a job doing that. Is that right? Don't do music. You're not going to be a musician. Don't do art. You won't be an artist. Benign advice. Now, profoundly mistaken. The whole world is engulfed in revolution. And the second is academic ability, which has really come to dominate our view of intelligence because the universities designed the system in their image. If you think of it, the whole system of public education around the world is a protracted process of university entrance. And the consequence is that many highly talented, brilliant, creative people think they're not. Because they think they're a good at it school, wasn't valued, always actually stigmatized. And I think we can't afford to go on that way. In the next 30 years, according to UNESCO, more people worldwide will be graduating through education since the beginning of history. More people. And it's the combination of all the things we've talked about, technology and its transformation effect on work, and demography and the huge explosion in population. Suddenly, degrees aren't worth anything. Isn't that true? When I was a student, if you had a degree, you had a job. If you didn't have a job, it's because you didn't want one. And I didn't want one. Frankly, so. But now, kids with degrees are often heading home to carry on playing video games. Because you need an MA where the previous job required a BA, and now you need a PhD for the other. It's a process of academic inflation, and it indicates the whole structure of education is shifting beneath our feet. We need to radically rethink our view of intelligence. We know three things about intelligence. One, it's diverse. We think about the world in all the ways that we experience it. We think visually, we think in sound, we think kinesthetically. We think in abstract terms, we think in movement. Secondly, intelligence is dynamic. If you look at the interactions of a human brain, as we heard yesterday from a number of presentations, intelligence is wonderfully interactive. The brain isn't divided into compartments. In fact, creativity, which I define as the process of having original ideas that have value, more often than not, comes about through the interaction of different discipline-wise of seeing things. The brain is intense. By the way, there's a shaft of nerves that joins the two hours of the brain, called the corpus colosum. It's thick in women. Following off from Hellenius, I think this is probably why women are better at multitasking, because you are. On two, there's a raft of research, but I know it's my personal life. If my wife is cooking a meal at home, which is not often, thankfully. But if she's saying... No, she's good at something. But if she's cooking, she's dealing with people on the phone, she's talking to the kids, she's painting the ceiling, she's doing open heart surgery over here. If I'm cooking, the door is shut. The kids are out, the phones on the hook. If she comes in, I get annoyed. I say, Terry, please, I'm trying to fry an egg in here. You know, really? Give me a break. Actually, there was a philosophical thing. If a tree falls in a forest, and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt really recently, which said, if a man speaks his mind in a forest, and no woman hears him, is he still wrong? And the third thing about intelligence is, it's distinct. I'm doing a new book at the moment called Epiphany, which is based on a series of interviews with people about how they discovered their talent, and fascinating about how people got to be there. It's really prompted by a conversation I had with a wonderful woman who, most people have never heard of, she's called Jillian Lin, have you heard of her? She's a choreographer, and everybody knows her work. She did cats, and fantastically opera. I used to be on the board of the Royal Ballet in England, as you can see. And, anyway, Jillian had lunch on that, said, how do you get to be a dancer? And she said it was interesting. When she was at school, she was really hopeless. And the school in the 30s wrote to her parents that we think Jillian has a learning disorder. She couldn't concentrate, she was fidgeting. I think now that she's had ADHD. Wouldn't you? But this was the 1930s, and ADHD hadn't been invented at this point, so it wasn't an available condition, you know, people. People. People weren't aware, they could have that. Anyway, she went to see this specialist, so this oak panel room, and she was there with her mother, and she was led and sat on this chair at the end, and she sat on her hands for 20 minutes, while this man talked to mother about all the problems Jillian was having at school. And at the end of it, because she was disturbing people at home work, was always late, and so on, little kid of eight. In the end, the doctor went and sat next to Jillian and said,, Jillian, I've listened to all these things, the mother's told me, I need to speak to her privately. So she said, wait here, we'll be back, we won't be very long, and they went to the left. But as they went out the room, he turned on the radio that was sitting on his desk. And when they got out the room, he said to her mother, just stand and watch her. And the minute they left the room, she said she was on her feet moving to the music. And they watched for a few minutes, and he turned to her mother, and he said, you know, Mrs. Lynn, Jillian isn't sick, she's a dancer. Take her to a dance school. I said, what happened? So she did. I can't tell you how wonderful it was. We walked in this room, and it was full of people like me. People who couldn't sit still. People who had to move to think. Who had to move to think. That it ballet, that it tap, that it jazz, that it modern, that it contemporary. She was eventually auditioned for the Royal Ballet School. She became a soloist, had a wonderful career at the Royal Ballet. She eventually graduated from the Royal Ballet School, found her own company, the Jillian Dance Company, met Andrew Lloyd-Weber. She's been responsible for some of the successful musical theatre productions in history. She's given pleasure to millions, and she's a multi-millionaire. Somebody else might have put on medication and told her to calm down. Now, I think. What I think it comes to this, our goal spoke the other night about ecology and the revolution that was triggered by Rachel Carson. I believe our only hope for the future is to adopt a new conception of human ecology, one in which we start to reconstitute our conception of the richness of human capacity. Our education system has mined our minds in the way that we strip mind the earth for a particular commodity. And for the future, it won't serve us. We have to rethink the fundamental principles on which we're educating our children. There was a wonderful quote by Jonas Salk, who said, if you were to, if all the insects were to disappear from the earth, within 50 years, all life on earth would end. If all human beings disappeared from the earth, within 50 years, all forms of life would flourish. And he's right. What Ted celebrates is the gift of the human imagination. We have to be careful now that we use this gift wisely, and that we have heard some of the scenarios that we've talked about. And the only way we'll do it is by seeing our creative capacities for the richness they are and seeing our children for the hope that they are. And our task is to educate their whole being so they can face this future. By the way, we may not see this future, but they will. And our job is to help them make something of it. Thank you very much. Oh, here they are.",
+        "id": "323825cb-a3fc-4372-b784-ed464b4c28ff"
+    },
+    {
+        "filename": "What would happen if you didn't drink water_ - Mia Nacamulli.mp4",
+        "cefr_level": "B2",
+        "topic": "Health",
+        "transcript": [
+            {
+                "start": 0.0,
+                "end": 12.72,
+                "text": "Water is virtually everywhere, from soil, moisture, and ice caps to the cells inside our"
+            },
+            {
+                "start": 12.72,
+                "end": 14.56,
+                "text": "own bodies."
+            },
+            {
+                "start": 14.56,
+                "end": 20.76,
+                "text": "Depending on factors like location, fat index, age, and sex, the average human is between"
+            },
+            {
+                "start": 20.76,
+                "end": 24.080000000000002,
+                "text": "55 and 60% water."
+            },
+            {
+                "start": 24.08,
+                "end": 27.36,
+                "text": "At birth, human babies are even wetter."
+            },
+            {
+                "start": 27.36,
+                "end": 32.28,
+                "text": "Being 75% water, they are swimmingly similar to fish."
+            },
+            {
+                "start": 32.28,
+                "end": 37.32,
+                "text": "But their water composition drops to 65% by their first birthday."
+            },
+            {
+                "start": 37.32,
+                "end": 40.2,
+                "text": "So what role does water play in our bodies?"
+            },
+            {
+                "start": 40.2,
+                "end": 44.599999999999994,
+                "text": "And how much do we actually need to drink to stay healthy?"
+            },
+            {
+                "start": 44.599999999999994,
+                "end": 50.480000000000004,
+                "text": "The H2O in our bodies works to cushion and lubricate joints, regulate temperature, and"
+            },
+            {
+                "start": 50.480000000000004,
+                "end": 54.04,
+                "text": "to nourish the brain and spinal cord."
+            },
+            {
+                "start": 54.04,
+                "end": 60.68,
+                "text": "Water isn't only in our blood, and adults' brain and heart are almost three-quarters water."
+            },
+            {
+                "start": 60.68,
+                "end": 65.16,
+                "text": "That's roughly equivalent to the amount of moisture in a banana."
+            },
+            {
+                "start": 65.16,
+                "end": 73.0,
+                "text": "Lungs are more similar to an apple at 83%, and even seemingly dry human bones are 31%"
+            },
+            {
+                "start": 73.0,
+                "end": 74.32,
+                "text": "water."
+            },
+            {
+                "start": 74.32,
+                "end": 80.32,
+                "text": "If we are essentially made of water and surrounded by water, why do we still need to drink so much?"
+            },
+            {
+                "start": 80.32,
+                "end": 86.75999999999999,
+                "text": "Well, each day we lose 2-3 liters through our sweat, urine, and bowel movements, and"
+            },
+            {
+                "start": 86.75999999999999,
+                "end": 88.44,
+                "text": "even just from breathing."
+            },
+            {
+                "start": 88.44,
+                "end": 92.52,
+                "text": "While these functions are essential to our survival, we need to compensate for the fluid"
+            },
+            {
+                "start": 92.52,
+                "end": 94.16,
+                "text": "loss."
+            },
+            {
+                "start": 94.16,
+                "end": 99.8,
+                "text": "Maintaining a balanced water level is essential to avoid dehydration or overhydration, both"
+            },
+            {
+                "start": 99.8,
+                "end": 103.28,
+                "text": "of which can have devastating effects on overall health."
+            },
+            {
+                "start": 103.28,
+                "end": 108.96,
+                "text": "At first detection of low water levels, sensory receptors in the brain's hypothalamus signal"
+            },
+            {
+                "start": 108.96,
+                "end": 111.88,
+                "text": "the release of anti-diuretic hormone."
+            },
+            {
+                "start": 111.88,
+                "end": 118.24,
+                "text": "When it reaches the kidneys, it creates aquaporins, special channels that enable blood to absorb"
+            },
+            {
+                "start": 118.24,
+                "end": 123.36,
+                "text": "and retain more water, leading to concentrated dark urine."
+            },
+            {
+                "start": 123.36,
+                "end": 129.24,
+                "text": "Increased dehydration can cause notable drops in energy, mood, skin moisture, and blood"
+            },
+            {
+                "start": 129.24,
+                "end": 133.12,
+                "text": "pressure, as well as signs of cognitive impairment."
+            },
+            {
+                "start": 133.12,
+                "end": 138.79999999999998,
+                "text": "A dehydrated brain works harder to accomplish the same amount as a normal brain, and it"
+            },
+            {
+                "start": 138.8,
+                "end": 143.12,
+                "text": "even temporarily shrinks because of its lack of water."
+            },
+            {
+                "start": 143.12,
+                "end": 149.24,
+                "text": "Overhydration or hyponatremia is usually caused by overconsumption of water in a short"
+            },
+            {
+                "start": 149.24,
+                "end": 151.0,
+                "text": "amount of time."
+            },
+            {
+                "start": 151.0,
+                "end": 156.08,
+                "text": "Athletes are often the victims of overhydration because of complications in regulating water"
+            },
+            {
+                "start": 156.08,
+                "end": 159.36,
+                "text": "levels in extreme physical conditions."
+            },
+            {
+                "start": 159.36,
+                "end": 164.92000000000002,
+                "text": "Whereas the dehydrated brain amps up the production of anti-diuretic hormone, the overhydrated"
+            },
+            {
+                "start": 164.92,
+                "end": 169.51999999999998,
+                "text": "brain slows or even stops releasing it into the blood."
+            },
+            {
+                "start": 169.51999999999998,
+                "end": 174.07999999999998,
+                "text": "Sodium electrolytes in the body become diluted, causing cells to swell."
+            },
+            {
+                "start": 174.07999999999998,
+                "end": 180.07999999999998,
+                "text": "In severe cases, the kidneys can't keep up with the resulting volumes of dilute urine."
+            },
+            {
+                "start": 180.07999999999998,
+                "end": 186.32,
+                "text": "Water intoxication then occurs, possibly causing headache, vomiting, and in rare instances,"
+            },
+            {
+                "start": 186.32,
+                "end": 188.16,
+                "text": "seizures or death."
+            },
+            {
+                "start": 188.16,
+                "end": 190.39999999999998,
+                "text": "But that's a pretty extreme situation."
+            },
+            {
+                "start": 190.4,
+                "end": 195.4,
+                "text": "On a normal day-to-day basis, maintaining a well-hydrated system is easy to manage"
+            },
+            {
+                "start": 195.4,
+                "end": 199.56,
+                "text": "for those of us fortunate enough to have access to clean drinking water."
+            },
+            {
+                "start": 199.56,
+                "end": 204.32,
+                "text": "For a long time, conventional wisdom said that we should drink 8 glasses a day."
+            },
+            {
+                "start": 204.32,
+                "end": 206.84,
+                "text": "That estimate has since been fine-tuned."
+            },
+            {
+                "start": 206.84,
+                "end": 211.4,
+                "text": "Now the consensus is that the amount of water we need to imbibe depends largely on our"
+            },
+            {
+                "start": 211.4,
+                "end": 213.4,
+                "text": "weight and environment."
+            },
+            {
+                "start": 213.4,
+                "end": 219.88,
+                "text": "The recommended daily intake varies from between 2.5 to 3.7 liters of water for men and"
+            },
+            {
+                "start": 219.88,
+                "end": 226.56,
+                "text": "about 2 to 2.7 liters for women, a range that is pushed up or down if we are healthy,"
+            },
+            {
+                "start": 226.56,
+                "end": 229.64,
+                "text": "active, old, or overheating."
+            },
+            {
+                "start": 229.64,
+                "end": 234.72,
+                "text": "While water is the healthiest hydrator, other beverages, even those with caffeine like coffee"
+            },
+            {
+                "start": 234.72,
+                "end": 237.56,
+                "text": "or tea, replenish fluids as well."
+            },
+            {
+                "start": 237.56,
+                "end": 242.72,
+                "text": "And water within food makes up about a fifth of our daily H2O intake."
+            },
+            {
+                "start": 242.72,
+                "end": 249.07999999999998,
+                "text": "Fruits and vegetables like strawberries, cucumbers, and even broccoli are over 90% water and can"
+            },
+            {
+                "start": 249.08,
+                "end": 254.28,
+                "text": "supplement liquid intake while providing valuable nutrients and fiber."
+            },
+            {
+                "start": 254.28,
+                "end": 257.96000000000004,
+                "text": "Drinking well might also have various long-term benefits."
+            },
+            {
+                "start": 257.96000000000004,
+                "end": 262.44,
+                "text": "Studies have shown that optimal hydration can lower the chance of stroke, help manage"
+            },
+            {
+                "start": 262.44,
+                "end": 267.88,
+                "text": "diabetes, and potentially reduce the risk of certain types of cancer."
+            },
+            {
+                "start": 267.88,
+                "end": 272.44,
+                "text": "No matter what, getting the right amount of liquid makes a world of difference in how"
+            },
+            {
+                "start": 272.44,
+                "end": 275.56,
+                "text": "you'll feel, think, and function day to day."
+            }
+        ],
+        "questions": {
+            "multiple_choice": [
+                {
+                    "question": "What percentage of water does a fish have?",
+                    "options": [
+                        "A. release",
+                        "B. extreme physical conditions",
+                        "C. 75% water",
+                        "D. harder"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "What type of wisdom said that we should drink 8 glasses a day?",
+                    "options": [
+                        "A. conventional",
+                        "B. 2-3 liters",
+                        "C. cases",
+                        "D. Water intoxication"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "question": "Water is what kind of everywhere?",
+                    "options": [
+                        "A. bowel movements",
+                        "B. virtually",
+                        "C. well-hydrated system",
+                        "D. coffee"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "How do we drink to do what?",
+                    "options": [
+                        "A. hydration",
+                        "B. electrolytes",
+                        "C. stay healthy",
+                        "D. kidneys can't keep"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "Sensors in what part of the brain signal the release of anti-diuretic hormone?",
+                    "options": [
+                        "A. pushed",
+                        "B. benefits",
+                        "C. hypothalamus",
+                        "D. severe"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "question": "Coffee and tea are examples of what type of hydrator?",
+                    "options": [
+                        "A. bodies",
+                        "B. beverages",
+                        "C. seemingly dry human bones",
+                        "D. swimmingly similar"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "What can cause significant drops in energy, mood, skin moisture, and blood pressure?",
+                    "options": [
+                        "A. dehydration",
+                        "B. healthy active old",
+                        "C. overheating",
+                        "D. overall"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "question": "What does H2O do to joints?",
+                    "options": [
+                        "A. everywhere",
+                        "B. lubricate",
+                        "C. three-quarters",
+                        "D. temporarily"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "question": "What causes us to lose 2-3 liters a day?",
+                    "options": [
+                        "A. movements",
+                        "B. conditions",
+                        "C. enable blood",
+                        "D. overheating"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "question": "What kind of volumes of dilute urine can't the kidneys keep up with?",
+                    "options": [
+                        "A. resulting",
+                        "B. 8 glasses",
+                        "C. soil moisture",
+                        "D. overall health"
+                    ],
+                    "answer": "A"
+                }
+            ],
+            "cloze_test": {
+                "passage": "Well, each day we lose 2-3 liters through our sweat, urine, and bowel ___(1)___, and even just from breathing. While these ___(2)___ are essential to our survival, we need to compensate for the fluid loss. Maintaining a balanced water level is essential to avoid ___(3)___ or ___(4)___, both of which can have devastating effects on overall health. At first detection of low water levels, sensory receptors in the brain's hypothalamus signal the release of ___(5)___ hormone. When it reaches the kidneys, it creates aquaporins, special channels that enable blood to absorb and retain more water, leading to ___(6)___ dark urine. Increased dehydration can cause notable drops in energy, mood, skin moisture, and blood pressure, as well as signs of cognitive impairment. A ___(7)___ brain works harder to accomplish the same amount as a normal brain, and it even temporarily shrinks because of its lack of water. Overhydration or hyponatremia is usually caused by ___(8)___ of water in a short amount of time. Athletes are often the victims of overhydration because of ___(9)___ in regulating water levels in extreme physical conditions. Whereas the dehydrated brain amps up the production of anti-diuretic hormone, the ___(10)___ brain slows or even stops releasing it into the blood. Sodium electrolytes in the body become diluted, causing cells to swell. In severe cases, the kidneys can't keep up with the resulting volumes of dilute urine. Water intoxication then occurs, possibly causing headache, vomiting, and in rare instances, seizures or death. On a normal day-to-day basis, maintaining a well-hydrated system is easy to manage for those of us fortunate enough to have access to clean drinking water.",
+                "questions": [
+                    {
+                        "number": 1,
+                        "options": [
+                            "A. fluids",
+                            "B. movements",
+                            "C. That's",
+                            "D. dehydrated"
+                        ],
+                        "answer": "B"
+                    },
+                    {
+                        "number": 2,
+                        "options": [
+                            "A. composition",
+                            "B. concentrated",
+                            "C. functions",
+                            "D. retain"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 3,
+                        "options": [
+                            "A. cause",
+                            "B. possibly",
+                            "C. dehydration",
+                            "D. women"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 4,
+                        "options": [
+                            "A. glasses",
+                            "B. women",
+                            "C. urine",
+                            "D. overhydration"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 5,
+                        "options": [
+                            "A. temperature",
+                            "B. water play",
+                            "C. anti-diuretic",
+                            "D. varies"
+                        ],
+                        "answer": "C"
+                    },
+                    {
+                        "number": 6,
+                        "options": [
+                            "A. concentrated",
+                            "B. certain types",
+                            "C. essential",
+                            "D. dehydrated brain amps"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 7,
+                        "options": [
+                            "A. dehydrated",
+                            "B. surrounded",
+                            "C. equivalent",
+                            "D. potentially reduce"
+                        ],
+                        "answer": "A"
+                    },
+                    {
+                        "number": 8,
+                        "options": [
+                            "A. you'll feel",
+                            "B. within",
+                            "C. function day",
+                            "D. overconsumption"
+                        ],
+                        "answer": "D"
+                    },
+                    {
+                        "number": 9,
+                        "options": [
+                            "A. lubricate",
+                            "B. complications",
+                            "C. dehydration",
+                            "D. depends"
+                        ],
+                        "answer": "B"
+                    },
+                    {
+                        "number": 10,
+                        "options": [
+                            "A. possibly",
+                            "B. overhydrated",
+                            "C. 2 to 2.7 liters",
+                            "D. almost"
+                        ],
+                        "answer": "B"
+                    }
+                ]
+            }
+        },
+        "vocabulary": [
+            {
+                "word": "water",
+                "ipa": "/ˈwɔtər/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "Nước"
+            },
+            {
+                "word": "overhydration",
+                "ipa": "/overhydration/",
+                "has_stress": false,
+                "cefr": "C2",
+                "meaning": "thừa nước"
+            },
+            {
+                "word": "dehydration",
+                "ipa": "/ˌdihaɪˈdreɪʃən/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "mất nước"
+            },
+            {
+                "word": "overconsumption",
+                "ipa": "/ˈoʊvərkənˌsəmpʃən/",
+                "has_stress": true,
+                "cefr": "C2",
+                "meaning": "tiêu thụ quá mức"
+            },
+            {
+                "word": "complications",
+                "ipa": "/ˌkɑmpləˈkeɪʃənz/",
+                "has_stress": true,
+                "cefr": "C2",
+                "meaning": "biến chứng"
+            },
+            {
+                "word": "amount",
+                "ipa": "/əˈmaʊnt/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "số lượng"
+            },
+            {
+                "word": "dehydrated",
+                "ipa": "/dɪˈhaɪdreɪtəd/",
+                "has_stress": true,
+                "cefr": "B2",
+                "meaning": "mất nước"
+            },
+            {
+                "word": "time",
+                "ipa": "/taɪm/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "thời gian"
+            },
+            {
+                "word": "hypothalamus",
+                "ipa": "/hypothalamus/",
+                "has_stress": false,
+                "cefr": "C1",
+                "meaning": "vùng dưới đồi"
+            },
+            {
+                "word": "hyponatremia",
+                "ipa": "/hyponatremia/",
+                "has_stress": false,
+                "cefr": "C1",
+                "meaning": "hạ natri máu"
+            },
+            {
+                "word": "overhydrated",
+                "ipa": "/overhydrated/",
+                "has_stress": false,
+                "cefr": "C1",
+                "meaning": "thừa nước"
+            },
+            {
+                "word": "intoxication",
+                "ipa": "/ˌɪnˌtɑksəˈkeɪʃən/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "sự say sưa"
+            },
+            {
+                "word": "recommended",
+                "ipa": "/ˌrɛkəˈmɛndɪd/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "khuyến khích"
+            },
+            {
+                "word": "strawberries",
+                "ipa": "/ˈstrɔˌbɛriz/",
+                "has_stress": true,
+                "cefr": "C1",
+                "meaning": "dâu tây"
+            },
+            {
+                "word": "moisture",
+                "ipa": "/ˈmɔɪsʧər/",
+                "has_stress": true,
+                "cefr": "B1",
+                "meaning": "độ ẩm"
+            }
+        ],
+        "video_url": "/uploads/What would happen if you didn't drink water_ - Mia Nacamulli.mp4",
+        "full_text": "Water is virtually everywhere, from soil, moisture, and ice caps to the cells inside our own bodies. Depending on factors like location, fat index, age, and sex, the average human is between 55 and 60% water. At birth, human babies are even wetter. Being 75% water, they are swimmingly similar to fish. But their water composition drops to 65% by their first birthday. So what role does water play in our bodies? And how much do we actually need to drink to stay healthy? The H2O in our bodies works to cushion and lubricate joints, regulate temperature, and to nourish the brain and spinal cord. Water isn't only in our blood, and adults' brain and heart are almost three-quarters water. That's roughly equivalent to the amount of moisture in a banana. Lungs are more similar to an apple at 83%, and even seemingly dry human bones are 31% water. If we are essentially made of water and surrounded by water, why do we still need to drink so much? Well, each day we lose 2-3 liters through our sweat, urine, and bowel movements, and even just from breathing. While these functions are essential to our survival, we need to compensate for the fluid loss. Maintaining a balanced water level is essential to avoid dehydration or overhydration, both of which can have devastating effects on overall health. At first detection of low water levels, sensory receptors in the brain's hypothalamus signal the release of anti-diuretic hormone. When it reaches the kidneys, it creates aquaporins, special channels that enable blood to absorb and retain more water, leading to concentrated dark urine. Increased dehydration can cause notable drops in energy, mood, skin moisture, and blood pressure, as well as signs of cognitive impairment. A dehydrated brain works harder to accomplish the same amount as a normal brain, and it even temporarily shrinks because of its lack of water. Overhydration or hyponatremia is usually caused by overconsumption of water in a short amount of time. Athletes are often the victims of overhydration because of complications in regulating water levels in extreme physical conditions. Whereas the dehydrated brain amps up the production of anti-diuretic hormone, the overhydrated brain slows or even stops releasing it into the blood. Sodium electrolytes in the body become diluted, causing cells to swell. In severe cases, the kidneys can't keep up with the resulting volumes of dilute urine. Water intoxication then occurs, possibly causing headache, vomiting, and in rare instances, seizures or death. But that's a pretty extreme situation. On a normal day-to-day basis, maintaining a well-hydrated system is easy to manage for those of us fortunate enough to have access to clean drinking water. For a long time, conventional wisdom said that we should drink 8 glasses a day. That estimate has since been fine-tuned. Now the consensus is that the amount of water we need to imbibe depends largely on our weight and environment. The recommended daily intake varies from between 2.5 to 3.7 liters of water for men and about 2 to 2.7 liters for women, a range that is pushed up or down if we are healthy, active, old, or overheating. While water is the healthiest hydrator, other beverages, even those with caffeine like coffee or tea, replenish fluids as well. And water within food makes up about a fifth of our daily H2O intake. Fruits and vegetables like strawberries, cucumbers, and even broccoli are over 90% water and can supplement liquid intake while providing valuable nutrients and fiber. Drinking well might also have various long-term benefits. Studies have shown that optimal hydration can lower the chance of stroke, help manage diabetes, and potentially reduce the risk of certain types of cancer. No matter what, getting the right amount of liquid makes a world of difference in how you'll feel, think, and function day to day.",
+        "id": "9facf47b-f817-4bde-ba7b-83abe4a24120"
+    }
+]

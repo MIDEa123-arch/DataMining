@@ -4,6 +4,7 @@ from textblob import TextBlob
 from collections import Counter
 import eng_to_ipa as ipa
 from deep_translator import GoogleTranslator
+from services.cefr_vocab import cefr_weight, estimate_word_cefr
 
 # Tải tài nguyên NLTK cần thiết cho TextBlob
 try:
@@ -15,24 +16,6 @@ except LookupError:
     nltk.download('punkt', quiet=True)
     nltk.download('averaged_perceptron_tagger_eng', quiet=True)
     nltk.download('punkt_tab', quiet=True)
-
-def estimate_word_cefr(word: str) -> str:
-    """
-    Estimate CEFR level based on word length and character complexity as a heuristic.
-    """
-    length = len(word)
-    if length <= 5:
-        return "A1"
-    elif length <= 6:
-        return "A2"
-    elif length <= 8:
-        return "B1"
-    elif length <= 10:
-        return "B2"
-    elif length <= 12:
-        return "C1"
-    else:
-        return "C2"
 
 def extract_vocabulary(text: str, top_n: int = 20) -> list:
     """
@@ -59,16 +42,7 @@ def extract_vocabulary(text: str, top_n: int = 20) -> list:
             cefr_level = estimate_word_cefr(word)
             
             # Trọng số ưu tiên từ khó (C2, C1)
-            cefr_weight = {
-                "A1": 1.0, 
-                "A2": 1.2, 
-                "B1": 2.5, 
-                "B2": 5.0, 
-                "C1": 8.0, 
-                "C2": 15.0
-            }.get(cefr_level, 1.0)
-            
-            final_score = count * cefr_weight
+            final_score = count * cefr_weight(cefr_level)
             word_scores.append((final_score, word, cefr_level))
             
         # Sắp xếp theo final_score giảm dần

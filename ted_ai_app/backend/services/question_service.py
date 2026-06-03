@@ -3,6 +3,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import random
 import re
 import string
+from services.cefr_vocab import CEFR_RANK, estimate_text_cefr
 
 # ======== Model chuyên biệt cho Question Generation ========
 QG_MODEL_NAME = "valhalla/t5-base-qg-hl"   # Fine-tuned trên SQuAD cho việc sinh câu hỏi
@@ -62,11 +63,26 @@ def extract_answer_candidates(sentence):
     candidates = []
     seen = set()
     
+    def cefr_priority_bonus(level):
+        if level in ("C1", "C2"):
+            return 3
+        if level == "B2":
+            return 2
+        if level == "B1":
+            return 1
+        return 0
+
     def add(text, ctype, priority):
         key = text.lower().strip()
         if key and key not in seen and len(key) > 1:
+            cefr = estimate_text_cefr(text)
             seen.add(key)
-            candidates.append({"text": text.strip(), "type": ctype, "priority": priority})
+            candidates.append({
+                "text": text.strip(),
+                "type": ctype,
+                "priority": priority + cefr_priority_bonus(cefr),
+                "cefr": cefr,
+            })
     
     # 1. Số liệu / phần trăm / đơn vị đo lường (ưu tiên CAO)
     numbers = re.findall(
@@ -110,7 +126,10 @@ def extract_answer_candidates(sentence):
             p = 2 if clean[0].isupper() else 1
             add(clean, "noun", p)
     
-    candidates.sort(key=lambda x: x["priority"], reverse=True)
+    candidates.sort(
+        key=lambda x: (x["priority"], CEFR_RANK.get(x.get("cefr", "A1"), 0)),
+        reverse=True,
+    )
     return candidates
 
 
@@ -136,16 +155,27 @@ def find_distractors(answer_text, answer_type, all_candidates, count=3):
     """Tìm đáp án sai từ các candidate khác trong bài.
     Ưu tiên cùng loại (type) với đáp án đúng."""
     answer_lower = answer_text.lower()
+    answer_cefr = estimate_text_cefr(answer_text)
     
+    same_type_and_level = [
+        c["text"] for c in all_candidates
+        if c["text"].lower() != answer_lower
+        and c["type"] == answer_type
+        and c.get("cefr") == answer_cefr
+    ]
     same_type = [c["text"] for c in all_candidates
                  if c["text"].lower() != answer_lower and c["type"] == answer_type]
+    same_level = [
+        c["text"] for c in all_candidates
+        if c["text"].lower() != answer_lower and c.get("cefr") == answer_cefr
+    ]
     diff_type = [c["text"] for c in all_candidates
                  if c["text"].lower() != answer_lower and c["type"] != answer_type]
     
     # Loại trùng lặp
     seen = {answer_lower}
     pool = []
-    for d in same_type + diff_type:
+    for d in same_type_and_level + same_type + same_level + diff_type:
         dl = d.lower()
         if dl not in seen and dl not in answer_lower and answer_lower not in dl:
             seen.add(dl)
@@ -295,7 +325,10 @@ def generate_cloze_test(sentences, sent_candidates, all_candidates, num_blanks=1
         sent_cands = [c for c in sent_candidates.get(s, []) if c["priority"] >= 3]
         if sent_cands:
             # Chọn ứng viên tốt nhất trong câu này
-            sent_cands.sort(key=lambda x: x["priority"], reverse=True)
+            sent_cands.sort(
+                key=lambda x: (x["priority"], CEFR_RANK.get(x.get("cefr", "A1"), 0)),
+                reverse=True,
+            )
             cands_by_sent.append(sent_cands)
             
     selected = []
@@ -329,7 +362,10 @@ def generate_cloze_test(sentences, sent_candidates, all_candidates, num_blanks=1
         passage_candidates = []
         for s in best_passage_sents:
             passage_candidates.extend([c for c in sent_candidates.get(s, []) if c["priority"] >= 3])
-        passage_candidates.sort(key=lambda x: x["priority"], reverse=True)
+        passage_candidates.sort(
+            key=lambda x: (x["priority"], CEFR_RANK.get(x.get("cefr", "A1"), 0)),
+            reverse=True,
+        )
         for c in passage_candidates:
             if len(selected) >= num_blanks:
                 break
