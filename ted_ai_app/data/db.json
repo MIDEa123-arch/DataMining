@@ -493,216 +493,255 @@
         "questions": {
             "multiple_choice": [
                 {
-                    "question": "What kind of eyes did Grandma have?",
+                    "question": "How many steps closer did Little Red Riding Hood take?",
                     "options": [
-                        "A. already",
-                        "B. big eyes",
-                        "C. chased",
-                        "D. night camp"
+                        "A. swallowed Little Red Riding Hood",
+                        "B. Little Red Riding Hood learned",
+                        "C. Little Red Riding Hood took one",
+                        "D. Little Red Riding Hood arrived"
                     ],
-                    "answer": "B"
+                    "answer": "C",
+                    "answer_text": "Little Red Riding Hood took one",
+                    "context": "This is the story of Little Red Riding Hood. Little Red Riding Hood was very startled. Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma. Little Red Riding Hood took another step closer to the bed. Little Red Riding Hood took one more step closer."
                 },
                 {
-                    "question": "What was Red Riding Hood's nickname?",
+                    "question": "What surprised Little Red Riding Hood?",
                     "options": [
-                        "A. outside",
-                        "B. different",
-                        "C. Little",
-                        "D. hurried inside"
+                        "A. Little Red Riding Hood came tumbling",
+                        "B. Little Red Riding Hood took",
+                        "C. swallowed Little Red Riding Hood",
+                        "D. heard Little Red Riding Hood shriek"
                     ],
-                    "answer": "C"
+                    "answer": "D",
+                    "answer_text": "heard Little Red Riding Hood shriek",
+                    "context": "Little Red Riding Hood was very startled. Said Little Red Riding Hood, she didn't know that the wolf was bad. Little Red Riding Hood shrieked and tried to run, but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal. When he heard Little Red Riding Hood shriek of surprise, he hurried inside and he saw the wolf with his huge round belly. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed."
                 },
                 {
-                    "question": "Who do you avoid talking to along the way?",
+                    "question": "What did Little Red Riding Hood do when the wolf swallowed her?",
                     "options": [
-                        "A. strangers",
-                        "B. Grandmother's",
-                        "C. swallowed",
-                        "D. lesson"
+                        "A. Little Red Riding Hood arrived",
+                        "B. Little Red Riding Hood shrieked",
+                        "C. Little Red Riding Hood took",
+                        "D. Little Red Riding Hood came tumbling"
                     ],
-                    "answer": "A"
+                    "answer": "D",
+                    "answer_text": "Little Red Riding Hood came tumbling",
+                    "context": "Little Red Riding Hood was very startled. Said Little Red Riding Hood, she didn't know that the wolf was bad. Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma. Little Red Riding Hood shrieked and tried to run, but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed."
                 },
                 {
-                    "question": "What did he have in his mouth?",
+                    "question": "What did Little Red Riding Hood promise?",
                     "options": [
-                        "A. grandma's",
-                        "B. sharp teeth",
-                        "C. another",
-                        "D. house"
+                        "A. Little Red Riding Hood learned",
+                        "B. Little Red Riding Hood took",
+                        "C. Little Red Riding Hood arrived",
+                        "D. Little Red Riding Hood promised"
                     ],
-                    "answer": "B"
+                    "answer": "D",
+                    "answer_text": "Little Red Riding Hood promised",
+                    "context": "And so everyone in the village called her Little Red Riding Hood. She put on her red cloak and she pulled up her red hood and she took the basket of food into the forest. Little Red Riding Hood promised and she skipped down the path and into the woods. Little Red Riding Hood did not have to worry about getting lost in the forest, because she knew the way to Grandmother's house very well. Said Little Red Riding Hood, she didn't know that the wolf was bad."
                 },
                 {
-                    "question": "What kind of forest did the girl live near?",
+                    "question": "What did Little Red Riding Hood see along the way?",
                     "options": [
-                        "A. big forest",
-                        "B. everyone",
-                        "C. forgotten",
-                        "D. better"
+                        "A. beautiful wild flowers growing near",
+                        "B. beautiful red cloak",
+                        "C. big forest",
+                        "D. village near"
                     ],
-                    "answer": "A"
+                    "answer": "A",
+                    "answer_text": "beautiful wild flowers growing near",
+                    "context": "Little Red Riding Hood promised and she skipped down the path and into the woods. But along the way, she saw some beautiful wild flowers growing near the path. And she skipped off down the path."
                 },
                 {
-                    "question": "What was Little Red Riding Hood's mother's name?",
+                    "question": "Who found Grandma lying in bed?",
                     "options": [
-                        "A. upside",
-                        "B. grabbed",
-                        "C. went outside",
-                        "D. Grandmother"
+                        "A. Little Red Riding Hood took",
+                        "B. Little Red Riding Hood promised",
+                        "C. Little Red Riding Hood came tumbling",
+                        "D. Little Red Riding Hood arrived"
                     ],
-                    "answer": "D"
+                    "answer": "D",
+                    "answer_text": "Little Red Riding Hood arrived",
+                    "context": "The sneaky wolf opened the door very quietly and found grandma sleeping her bed. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma. Little Red Riding Hood took another step closer to the bed. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed."
                 },
                 {
-                    "question": "What did everyone in the village call her?",
+                    "question": "How did Little Red Riding Hood react to the wolf?",
                     "options": [
-                        "A. grabbed",
-                        "B. Little Red Riding Hood",
-                        "C. Don't",
-                        "D. never ever talked"
+                        "A. Little Red Riding Hood took",
+                        "B. Little Red Riding Hood shrieked",
+                        "C. swallowed Little Red Riding Hood",
+                        "D. Little Red Riding Hood came tumbling"
                     ],
-                    "answer": "B"
+                    "answer": "B",
+                    "answer_text": "Little Red Riding Hood shrieked",
+                    "context": "Little Red Riding Hood was very startled. Said Little Red Riding Hood, she didn't know that the wolf was bad. Little Red Riding Hood shrieked and tried to run, but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal. When he heard Little Red Riding Hood shriek of surprise, he hurried inside and he saw the wolf with his huge round belly. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed."
                 },
                 {
-                    "question": "What did the three of them chase the big bad wolf out of the cottage?",
+                    "question": "How did Little Red Riding Hood learn from the wolf?",
                     "options": [
-                        "A. lived",
-                        "B. wolf's",
-                        "C. voice",
-                        "D. big bad wolf"
+                        "A. Little Red Riding Hood came tumbling",
+                        "B. Little Red Riding Hood took",
+                        "C. Little Red Riding Hood promised",
+                        "D. Little Red Riding Hood learned"
                     ],
-                    "answer": "D"
+                    "answer": "D",
+                    "answer_text": "Little Red Riding Hood learned",
+                    "context": "This is the story of Little Red Riding Hood. And so everyone in the village called her Little Red Riding Hood. Little Red Riding Hood did not have to worry about getting lost in the forest, because she knew the way to Grandmother's house very well. Said Little Red Riding Hood, she didn't know that the wolf was bad. Little Red Riding Hood learned her lesson and she never, ever talked to strangers again."
                 },
                 {
-                    "question": "What did the sneaky wolf do when he opened the door?",
+                    "question": "Who did everyone in the village call her?",
                     "options": [
-                        "A. along",
-                        "B. found grandma sleeping",
-                        "C. big bad wolf standing",
-                        "D. never seen"
+                        "A. Little Red Riding Hood",
+                        "B. red hood",
+                        "C. red cloak",
+                        "D. big red hood"
                     ],
-                    "answer": "B"
+                    "answer": "A",
+                    "answer_text": "Little Red Riding Hood",
+                    "context": "This is the story of Little Red Riding Hood. And so everyone in the village called her Little Red Riding Hood. Little Red Riding Hood was very startled. Little Red Riding Hood took another step closer to the bed. Little Red Riding Hood took one more step closer."
                 },
                 {
-                    "question": "What house did Little Red Riding Hood know the way to?",
+                    "question": "Who did Little Red Riding Hood warn not to talk to along the way?",
                     "options": [
-                        "A. hungry wolf grabbed",
-                        "B. swallowed poor grandma",
-                        "C. Grandmother's",
-                        "D. shrieked"
+                        "A. village near",
+                        "B. any strangers along",
+                        "C. never ever talked",
+                        "D. sweet girl"
                     ],
-                    "answer": "C"
+                    "answer": "B",
+                    "answer_text": "any strangers along",
+                    "context": "She put on her red cloak and she pulled up her red hood and she took the basket of food into the forest. Don't talk to any strangers along the way. Little Red Riding Hood promised and she skipped down the path and into the woods."
                 }
             ],
             "cloze_test": {
-                "passage": "And she had already ___(1)___ her mother's words about talking to strangers. Where are you going on this ___(2)___? I'm going to my ___(3)___ cottage on the other side of the forest. She isn't feeling very well, so ___(4)___ her these basket of food and these flowers. He smiled and showed his mouthful of ___(5)___. The big, bad wolf was quite hungry and he was not interested in the basket of food. The big, bad wolf stomach grumbled and growled with hunger. As quick as he could, he ran through the forest all the way to ___(6)___ cottage. The ___(7)___ the door very quietly and found grandma sleeping her bed. He picked up the old woman, opened his great big mouth and he ___(8)___ poor grandma in one gulp. Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin. He put on ___(9)___ and her night camp and he waited for the little girl to arrive with her flowers and basket of food. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. She said, Mother told me you weren't feeling well.",
+                "passage": "She ___(1)___ very well, so ___(2)___ her these basket of food and these flowers. What a ___(3)___ you are. He smiled and showed his mouthful of ___(4)___. The big, bad wolf was ___(5)___ and he was not interested in the basket of food. And she skipped off down the path. The big, bad ___(6)___ and growled with hunger. And suddenly he had an idea. As quick as he could, he ran through the forest all the way to ___(7)___. The ___(8)___ the door very quietly and ___(9)___ her bed. He picked up the old woman, opened his ___(10)___ and he swallowed poor grandma in one gulp. Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin. He put on Grandmother's glasses and her night camp and he waited for the little girl to arrive with her flowers and basket of food. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. She said, Mother told me you weren't feeling well.",
                 "questions": [
                     {
                         "number": 1,
                         "options": [
-                            "A. woodsman",
-                            "B. beautiful",
-                            "C. forgotten",
-                            "D. night"
+                            "A. isn't feeling",
+                            "B. weren't feeling well",
+                            "C. Don't talk",
+                            "D. didn't know"
                         ],
-                        "answer": "C"
+                        "answer": "A",
+                        "answer_text": "isn't feeling"
                     },
                     {
                         "number": 2,
                         "options": [
-                            "A. fine day",
-                            "B. quietly",
-                            "C. sneaky wolf opened",
-                            "D. never ever talked"
+                            "A. I'm bringing",
+                            "B. any strangers along",
+                            "C. isn't feeling",
+                            "D. step closer"
                         ],
-                        "answer": "A"
+                        "answer": "A",
+                        "answer_text": "I'm bringing"
                     },
                     {
                         "number": 3,
                         "options": [
-                            "A. grandma's",
-                            "B. Little",
-                            "C. lying",
-                            "D. getting"
+                            "A. fine day",
+                            "B. little girl",
+                            "C. sweet girl",
+                            "D. sweet little girl"
                         ],
-                        "answer": "A"
+                        "answer": "C",
+                        "answer_text": "sweet girl"
                     },
                     {
                         "number": 4,
                         "options": [
-                            "A. everyone",
-                            "B. I'm bringing",
-                            "C. big eyes",
-                            "D. feeling"
+                            "A. sharp teeth",
+                            "B. quite hungry",
+                            "C. big teeth",
+                            "D. wolf's mouth"
                         ],
-                        "answer": "B"
+                        "answer": "A",
+                        "answer_text": "sharp teeth"
                     },
                     {
                         "number": 5,
                         "options": [
-                            "A. big eyes",
-                            "B. sharp teeth",
-                            "C. mother's",
-                            "D. tumbling"
+                            "A. hungry wolf grabbed",
+                            "B. quite hungry",
+                            "C. great big mouth",
+                            "D. food into"
                         ],
-                        "answer": "B"
+                        "answer": "B",
+                        "answer_text": "quite hungry"
                     },
                     {
                         "number": 6,
                         "options": [
-                            "A. learned",
-                            "B. Grandmother's",
-                            "C. Hood's",
-                            "D. grumbled"
+                            "A. wolf turned",
+                            "B. wolf stomach grumbled",
+                            "C. wolf's mouth",
+                            "D. hungry wolf grabbed"
                         ],
-                        "answer": "B"
+                        "answer": "B",
+                        "answer_text": "wolf stomach grumbled"
                     },
                     {
                         "number": 7,
                         "options": [
                             "A. Grandmother's cottage",
-                            "B. sneaky wolf opened",
-                            "C. big bad wolf turned",
-                            "D. round"
+                            "B. Grandmother's house",
+                            "C. see Grandma",
+                            "D. found grandma sleeping"
                         ],
-                        "answer": "B"
+                        "answer": "A",
+                        "answer_text": "Grandmother's cottage"
                     },
                     {
                         "number": 8,
                         "options": [
-                            "A. swallowed",
-                            "B. lesson",
-                            "C. behind",
-                            "D. food into"
+                            "A. sneaky wolf opened",
+                            "B. wolf climbed into",
+                            "C. wolf turned",
+                            "D. wolf ran"
                         ],
-                        "answer": "A"
+                        "answer": "A",
+                        "answer_text": "sneaky wolf opened"
                     },
                     {
                         "number": 9,
                         "options": [
-                            "A. never",
-                            "B. huge round belly",
-                            "C. woodsman happened",
-                            "D. Grandmother's glasses"
+                            "A. found grandma sleeping",
+                            "B. found Grandma lying",
+                            "C. see Grandma",
+                            "D. grandma's cottage"
                         ],
-                        "answer": "D"
+                        "answer": "A",
+                        "answer_text": "found grandma sleeping"
+                    },
+                    {
+                        "number": 10,
+                        "options": [
+                            "A. big eyes",
+                            "B. big teeth",
+                            "C. great big mouth",
+                            "D. big ears"
+                        ],
+                        "answer": "C",
+                        "answer_text": "great big mouth"
                     }
                 ]
+            },
+            "meta": {
+                "mcq_count": 10,
+                "cloze_count": 10,
+                "qa_validation": false,
+                "note": "No template. Relaxed filters so T5 can actually return questions."
             }
         },
         "vocabulary": [
             {
-                "word": "wolf",
-                "ipa": "/wʊlf/",
-                "has_stress": false,
-                "cefr": "B2",
-                "meaning": "chó sói"
-            },
-            {
-                "word": "cottage",
-                "ipa": "/ˈkɑtɪʤ/",
+                "word": "forest",
+                "ipa": "/ˈfɔrɪst/",
                 "has_stress": true,
-                "cefr": "B2",
-                "meaning": "ngôi nhà tranh"
+                "cefr": "A2",
+                "meaning": "rừng"
             },
             {
                 "word": "little",
@@ -712,25 +751,32 @@
                 "meaning": "nhỏ bé"
             },
             {
-                "word": "hood",
-                "ipa": "/hʊd/",
-                "has_stress": false,
-                "cefr": "B2",
-                "meaning": "Mui xe"
-            },
-            {
-                "word": "forest",
-                "ipa": "/ˈfɔrɪst/",
-                "has_stress": true,
-                "cefr": "A2",
-                "meaning": "rừng"
-            },
-            {
                 "word": "basket",
                 "ipa": "/ˈbæskət/",
                 "has_stress": true,
                 "cefr": "A2",
                 "meaning": "rổ"
+            },
+            {
+                "word": "wolf",
+                "ipa": "/wʊlf/",
+                "has_stress": false,
+                "cefr": "B2",
+                "meaning": "chó sói"
+            },
+            {
+                "word": "stranger",
+                "ipa": "/ˈstreɪnʤər/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "người lạ"
+            },
+            {
+                "word": "path",
+                "ipa": "/pæθ/",
+                "has_stress": false,
+                "cefr": "A2",
+                "meaning": "con đường"
             },
             {
                 "word": "food",
@@ -740,18 +786,18 @@
                 "meaning": "đồ ăn"
             },
             {
-                "word": "gulp",
-                "ipa": "/gəlp/",
-                "has_stress": false,
-                "cefr": "B2",
-                "meaning": "nuốt nước miếng"
+                "word": "village",
+                "ipa": "/ˈvɪlɪʤ/",
+                "has_stress": true,
+                "cefr": "A2",
+                "meaning": "làng bản"
             },
             {
-                "word": "woodsman",
-                "ipa": "/ˈwʊdzmæn/",
-                "has_stress": true,
-                "cefr": "B1",
-                "meaning": "người thợ rừng"
+                "word": "voice",
+                "ipa": "/vɔɪs/",
+                "has_stress": false,
+                "cefr": "A2",
+                "meaning": "tiếng nói"
             },
             {
                 "word": "girl",
@@ -782,1133 +828,22 @@
                 "meaning": "bà"
             },
             {
-                "word": "stranger",
-                "ipa": "/ˈstreɪnʤər/",
-                "has_stress": true,
-                "cefr": "A2",
-                "meaning": "người lạ"
+                "word": "mouth",
+                "ipa": "/maʊθ/",
+                "has_stress": false,
+                "cefr": "A1",
+                "meaning": "miệng"
             },
             {
-                "word": "path",
-                "ipa": "/pæθ/",
-                "has_stress": false,
-                "cefr": "A2",
-                "meaning": "con đường"
+                "word": "closer",
+                "ipa": "/ˈkloʊzər/",
+                "has_stress": true,
+                "cefr": "A1",
+                "meaning": "gần hơn"
             }
         ],
         "video_url": "/uploads/(60) Little Red Riding Hood - Fairy Tales - Gigglebox - YouTube.mp4",
         "full_text": "Kigabawks! This is the story of Little Red Riding Hood. Once upon a time, there was a little girl who lived in a village near a big forest. Her grandmother had made her a beautiful red cloak with a big red hood, which she wore every time she went outside. And so everyone in the village called her Little Red Riding Hood. One day, Little Red Riding Hood's mother said, Grandmother isn't feeling very well. Will you take this basket of food through the forest to her cottage? Yes, mother. Said Little Red Riding Hood. I sure would love to see Grandma. She put on her red cloak and she pulled up her red hood and she took the basket of food into the forest. Remember? Her mother called after her. Don't talk to any strangers along the way. I won't. Little Red Riding Hood promised and she skipped down the path and into the woods. Little Red Riding Hood did not have to worry about getting lost in the forest, because she knew the way to Grandmother's house very well. But along the way, she saw some beautiful wild flowers growing near the path. I bet Grandma would really love these. She said to herself and she stopped to pick a few. Hello, Little Girl. Said a deep, growling voice from behind her. Little Red Riding Hood was very startled. She spun around and saw a big, bad wolf standing in the shadows between two trees. Hello. Said Little Red Riding Hood, she didn't know that the wolf was bad. And she had already forgotten her mother's words about talking to strangers. Where are you going on this fine day? Ask the big, bad wolf. I'm going to my grandma's cottage on the other side of the forest. Said Little Red Riding Hood. She isn't feeling very well, so I'm bringing her these basket of food and these flowers. What a sweet girl you are. Said the big, bad wolf. He smiled and showed his mouthful of sharp teeth. The big, bad wolf was quite hungry and he was not interested in the basket of food. I had better be going. Said Little Red Riding Hood. Bye. And she skipped off down the path. The big, bad wolf stomach grumbled and growled with hunger. And suddenly he had an idea. As quick as he could, he ran through the forest all the way to Grandmother's cottage. The sneaky wolf opened the door very quietly and found grandma sleeping her bed. He picked up the old woman, opened his great big mouth and he swallowed poor grandma in one gulp. Then the big, bad wolf climbed into the bed and pulled the blanket up to his chin. He put on Grandmother's glasses and her night camp and he waited for the little girl to arrive with her flowers and basket of food. When Little Red Riding Hood arrived at the cottage, she opened the door quietly and found Grandma lying in bed. Hello Grandma. She said, Mother told me you weren't feeling well. So I brought some food and some flowers. Do you like them? What a sweet little girl you are. Said the wolf in his fake grandma voice. Come closer, my dear. Little Red Riding Hood took a step closer and she noticed that something looked a little different about Grandma. My. She said, What big eyes you have Grandma. All the better to see you with. Said the big, bad wolf. Come closer, my dear. Little Red Riding Hood took another step closer to the bed. My. She said, What big ears you have Grandma. All the better to hear you with. Reply the wolf. Come closer, my dear. Little Red Riding Hood took one more step closer. My. What big teeth you have Grandma. She said in surprise, All the better to eat you with. Growl the big, bad wolf. He jumped out of the bed and as he opened his great big mouth. Little Red Riding Hood shrieked and tried to run, but the hungry wolf grabbed her up and swallowed Little Red Riding Hood in just one goal. Outside the cottage, a woodsman happened to be walking through the forest. When he heard Little Red Riding Hood shriek of surprise, he hurried inside and he saw the wolf with his huge round belly. The woodsman grabbed the big, bad wolf, turned him upside down and shook him by his feet. Little Red Riding Hood came tumbling out of the wolf's mouth and Grandma followed. The three of them chased the big, bad wolf out of the cottage, out of the forest and over the hill. The big, bad wolf ran for his life and was never seen again. Little Red Riding Hood learned her lesson and she never, ever talked to strangers again. The end.",
-        "id": "dec9a38a-384e-4936-9708-9ae866d54674"
-    },
-    {
-        "filename": "(60) The Three Little Pigs - Fairy Tale Barn l The Big Bad Wolf Will Blow Down the House! - Little Fox - YouTube.mp4",
-        "cefr_level": "A2",
-        "topic": "Entertainment",
-        "transcript": [
-            {
-                "start": 0.0,
-                "end": 7.0,
-                "text": "Little Bob"
-            },
-            {
-                "start": 9.0,
-                "end": 11.0,
-                "text": "Fairy Tail Bar"
-            },
-            {
-                "start": 11.0,
-                "end": 13.0,
-                "text": "The Three Little Pigs"
-            },
-            {
-                "start": 13.0,
-                "end": 15.0,
-                "text": "Episode 1"
-            },
-            {
-                "start": 15.0,
-                "end": 18.0,
-                "text": "The Old Bar"
-            },
-            {
-                "start": 26.0,
-                "end": 27.0,
-                "text": "Hello!"
-            },
-            {
-                "start": 27.0,
-                "end": 29.0,
-                "text": "My name is Omar"
-            },
-            {
-                "start": 31.0,
-                "end": 36.0,
-                "text": "And this is my very special barn"
-            },
-            {
-                "start": 41.0,
-                "end": 43.0,
-                "text": "You'll learn it secret soon"
-            },
-            {
-                "start": 44.0,
-                "end": 48.0,
-                "text": "But first, let's meet Polly and Jack"
-            },
-            {
-                "start": 50.0,
-                "end": 52.0,
-                "text": "They live on the farm"
-            },
-            {
-                "start": 61.0,
-                "end": 63.0,
-                "text": "The Old Bar"
-            },
-            {
-                "start": 75.0,
-                "end": 76.0,
-                "text": "Ah!"
-            },
-            {
-                "start": 76.0,
-                "end": 79.0,
-                "text": "Everyone ate breakfast"
-            },
-            {
-                "start": 79.0,
-                "end": 81.0,
-                "text": "Now it's my turn to eat"
-            },
-            {
-                "start": 81.0,
-                "end": 83.0,
-                "text": "Yay!"
-            },
-            {
-                "start": 84.0,
-                "end": 86.0,
-                "text": "Oh oh!"
-            },
-            {
-                "start": 86.0,
-                "end": 89.0,
-                "text": "What's Polly doing?"
-            },
-            {
-                "start": 93.0,
-                "end": 95.0,
-                "text": "Add my way!"
-            },
-            {
-                "start": 100.0,
-                "end": 102.0,
-                "text": "Polly!"
-            },
-            {
-                "start": 102.0,
-                "end": 104.0,
-                "text": "No running in the coop"
-            },
-            {
-                "start": 105.0,
-                "end": 107.0,
-                "text": "You'll wake up the chance"
-            },
-            {
-                "start": 109.0,
-                "end": 111.0,
-                "text": "No, I won't"
-            },
-            {
-                "start": 114.0,
-                "end": 116.0,
-                "text": "Polly!"
-            },
-            {
-                "start": 119.0,
-                "end": 121.0,
-                "text": "Polly!"
-            },
-            {
-                "start": 126.0,
-                "end": 128.0,
-                "text": "Polly!"
-            },
-            {
-                "start": 128.0,
-                "end": 130.0,
-                "text": "Polly will come up and check"
-            },
-            {
-                "start": 133.0,
-                "end": 135.0,
-                "text": "Polly!"
-            },
-            {
-                "start": 135.0,
-                "end": 137.0,
-                "text": "No running in the coop"
-            },
-            {
-                "start": 138.0,
-                "end": 140.0,
-                "text": "I want to be a fast runner"
-            },
-            {
-                "start": 141.0,
-                "end": 143.0,
-                "text": "So I have to practice"
-            },
-            {
-                "start": 152.0,
-                "end": 154.0,
-                "text": "Polly, watch out for Jack"
-            },
-            {
-                "start": 157.0,
-                "end": 160.0,
-                "text": "Jack, watch out for the nests"
-            },
-            {
-                "start": 171.0,
-                "end": 173.0,
-                "text": "Jack, you knocked over the handseggs"
-            },
-            {
-                "start": 176.0,
-                "end": 177.0,
-                "text": "Sorry!"
-            },
-            {
-                "start": 179.0,
-                "end": 180.0,
-                "text": "That's it!"
-            },
-            {
-                "start": 180.0,
-                "end": 182.0,
-                "text": "You two need jobs"
-            },
-            {
-                "start": 184.0,
-                "end": 186.0,
-                "text": "Hmm..."
-            },
-            {
-                "start": 186.0,
-                "end": 189.0,
-                "text": "The Old Bar needs fixing"
-            },
-            {
-                "start": 189.0,
-                "end": 191.0,
-                "text": "Yuck!"
-            },
-            {
-                "start": 191.0,
-                "end": 194.0,
-                "text": "That's a lot of work!"
-            },
-            {
-                "start": 194.0,
-                "end": 196.0,
-                "text": "Yes, it is"
-            },
-            {
-                "start": 196.0,
-                "end": 198.0,
-                "text": "First, you both can play with the nests"
-            },
-            {
-                "start": 198.0,
-                "end": 201.0,
-                "text": "First, you both can clean it"
-            },
-            {
-                "start": 202.0,
-                "end": 204.0,
-                "text": "Now go"
-            },
-            {
-                "start": 208.0,
-                "end": 210.0,
-                "text": "And don't hurry back!"
-            },
-            {
-                "start": 210.0,
-                "end": 212.0,
-                "text": "Hunk!"
-            },
-            {
-                "start": 219.0,
-                "end": 221.0,
-                "text": "Fairy Tail Barn"
-            },
-            {
-                "start": 221.0,
-                "end": 223.0,
-                "text": "The three little pigs"
-            },
-            {
-                "start": 223.0,
-                "end": 225.0,
-                "text": "Episode 2"
-            },
-            {
-                "start": 225.0,
-                "end": 226.0,
-                "text": "Omar"
-            },
-            {
-                "start": 226.0,
-                "end": 228.0,
-                "text": "Who?"
-            },
-            {
-                "start": 236.0,
-                "end": 239.0,
-                "text": "Look who's coming to my barn"
-            },
-            {
-                "start": 240.0,
-                "end": 243.0,
-                "text": "It's Polly and Jack"
-            },
-            {
-                "start": 243.0,
-                "end": 246.0,
-                "text": "I have a surprise for them"
-            },
-            {
-                "start": 252.0,
-                "end": 253.0,
-                "text": "Ugh!"
-            },
-            {
-                "start": 253.0,
-                "end": 255.0,
-                "text": "This barn is dusty!"
-            },
-            {
-                "start": 257.0,
-                "end": 259.0,
-                "text": "It's dirty too!"
-            },
-            {
-                "start": 265.0,
-                "end": 267.0,
-                "text": "Here's a broom"
-            },
-            {
-                "start": 267.0,
-                "end": 269.0,
-                "text": "Now you can sweep"
-            },
-            {
-                "start": 270.0,
-                "end": 272.0,
-                "text": "That's not fair!"
-            },
-            {
-                "start": 272.0,
-                "end": 275.0,
-                "text": "Many told us to clean"
-            },
-            {
-                "start": 275.0,
-                "end": 277.0,
-                "text": "I don't like cleaning"
-            },
-            {
-                "start": 278.0,
-                "end": 280.0,
-                "text": "Me neither"
-            },
-            {
-                "start": 281.0,
-                "end": 283.0,
-                "text": "Hoot!"
-            },
-            {
-                "start": 283.0,
-                "end": 285.0,
-                "text": "Hoot!"
-            },
-            {
-                "start": 288.0,
-                "end": 289.0,
-                "text": "Hoot!"
-            },
-            {
-                "start": 289.0,
-                "end": 291.0,
-                "text": "And I will live here"
-            },
-            {
-                "start": 292.0,
-                "end": 294.0,
-                "text": "Who are you?"
-            },
-            {
-                "start": 295.0,
-                "end": 298.0,
-                "text": "Many told us not to talk to strangers"
-            },
-            {
-                "start": 302.0,
-                "end": 304.0,
-                "text": "I'm Omar"
-            },
-            {
-                "start": 304.0,
-                "end": 307.0,
-                "text": "Who are you?"
-            },
-            {
-                "start": 307.0,
-                "end": 309.0,
-                "text": "I'm Jack"
-            },
-            {
-                "start": 311.0,
-                "end": 315.0,
-                "text": "And who are you?"
-            },
-            {
-                "start": 316.0,
-                "end": 319.0,
-                "text": "Your barn is dirty Omar"
-            },
-            {
-                "start": 320.0,
-                "end": 323.0,
-                "text": "That's not nice, Polly"
-            },
-            {
-                "start": 323.0,
-                "end": 326.0,
-                "text": "Many told us to be polite"
-            },
-            {
-                "start": 328.0,
-                "end": 331.0,
-                "text": "Never mind"
-            },
-            {
-                "start": 332.0,
-                "end": 336.0,
-                "text": "Who are you?"
-            },
-            {
-                "start": 341.0,
-                "end": 344.0,
-                "text": "Fine! I'm Polly"
-            },
-            {
-                "start": 346.0,
-                "end": 349.0,
-                "text": "It's time to get to work"
-            },
-            {
-                "start": 361.0,
-                "end": 363.0,
-                "text": "What's happening?"
-            },
-            {
-                "start": 363.0,
-                "end": 366.0,
-                "text": "The walls are shaking"
-            },
-            {
-                "start": 366.0,
-                "end": 369.0,
-                "text": "The air is sparkling"
-            },
-            {
-                "start": 369.0,
-                "end": 372.0,
-                "text": "I'm scared"
-            },
-            {
-                "start": 378.0,
-                "end": 380.0,
-                "text": "Who are we?"
-            },
-            {
-                "start": 380.0,
-                "end": 383.0,
-                "text": "This isn't the barn"
-            },
-            {
-                "start": 384.0,
-                "end": 385.0,
-                "text": "Oh!"
-            },
-            {
-                "start": 385.0,
-                "end": 389.0,
-                "text": "The barn turned into a straw house"
-            },
-            {
-                "start": 391.0,
-                "end": 393.0,
-                "text": "Let me in"
-            },
-            {
-                "start": 393.0,
-                "end": 397.0,
-                "text": "For a blow down your house"
-            },
-            {
-                "start": 400.0,
-                "end": 404.0,
-                "text": "Fairy tale barn"
-            },
-            {
-                "start": 404.0,
-                "end": 406.0,
-                "text": "The three little pigs"
-            },
-            {
-                "start": 406.0,
-                "end": 409.0,
-                "text": "Episode three"
-            },
-            {
-                "start": 409.0,
-                "end": 411.0,
-                "text": "The wolf"
-            },
-            {
-                "start": 417.0,
-                "end": 419.0,
-                "text": "Oh boy!"
-            },
-            {
-                "start": 419.0,
-                "end": 422.0,
-                "text": "Polly and Jack have a problem"
-            },
-            {
-                "start": 423.0,
-                "end": 427.0,
-                "text": "A big bad wolf problem"
-            },
-            {
-                "start": 434.0,
-                "end": 440.0,
-                "text": "Little pig, little pig, glad me in"
-            },
-            {
-                "start": 440.0,
-                "end": 444.0,
-                "text": "Pigs! We're not pigs"
-            },
-            {
-                "start": 444.0,
-                "end": 448.0,
-                "text": "And we won't let you in"
-            },
-            {
-                "start": 449.0,
-                "end": 453.0,
-                "text": "And I'll blow your house down"
-            },
-            {
-                "start": 463.0,
-                "end": 466.0,
-                "text": "This house is made of straw"
-            },
-            {
-                "start": 466.0,
-                "end": 469.0,
-                "text": "He can blow it down"
-            },
-            {
-                "start": 471.0,
-                "end": 473.0,
-                "text": "Help us Omar"
-            },
-            {
-                "start": 473.0,
-                "end": 476.0,
-                "text": "What should we do?"
-            },
-            {
-                "start": 478.0,
-                "end": 481.0,
-                "text": "We can find the answer"
-            },
-            {
-                "start": 481.0,
-                "end": 485.0,
-                "text": "What can the wolf blow down?"
-            },
-            {
-                "start": 485.0,
-                "end": 488.0,
-                "text": "He can't blow down"
-            },
-            {
-                "start": 488.0,
-                "end": 490.0,
-                "text": "What?"
-            },
-            {
-                "start": 493.0,
-                "end": 497.0,
-                "text": "Hey! My coat is made of wood"
-            },
-            {
-                "start": 502.0,
-                "end": 505.0,
-                "text": "The walls are shaking again"
-            },
-            {
-                "start": 509.0,
-                "end": 514.0,
-                "text": "We're in a coop now"
-            },
-            {
-                "start": 518.0,
-                "end": 521.0,
-                "text": "It's made of wood"
-            },
-            {
-                "start": 521.0,
-                "end": 524.0,
-                "text": "We're safe in here"
-            },
-            {
-                "start": 531.0,
-                "end": 535.0,
-                "text": "I can blow that down"
-            },
-            {
-                "start": 539.0,
-                "end": 543.0,
-                "text": "Let's make a burrow in the ground"
-            },
-            {
-                "start": 558.0,
-                "end": 561.0,
-                "text": "We're safe in this burrow now"
-            },
-            {
-                "start": 562.0,
-                "end": 567.0,
-                "text": "No! The wolf is still there"
-            },
-            {
-                "start": 572.0,
-                "end": 576.0,
-                "text": "He's digging into the burrow"
-            },
-            {
-                "start": 576.0,
-                "end": 581.0,
-                "text": "Will Polly and Jack stop the big bad wolf?"
-            },
-            {
-                "start": 581.0,
-                "end": 585.0,
-                "text": "Will he get them?"
-            },
-            {
-                "start": 592.0,
-                "end": 596.0,
-                "text": "The three little pigs"
-            },
-            {
-                "start": 596.0,
-                "end": 601.0,
-                "text": "Episode four, goodbye"
-            },
-            {
-                "start": 606.0,
-                "end": 611.0,
-                "text": "Polly and Jack are trapped in the burrow"
-            },
-            {
-                "start": 611.0,
-                "end": 614.0,
-                "text": "And here comes the wolf"
-            },
-            {
-                "start": 614.0,
-                "end": 617.0,
-                "text": "What will they do?"
-            },
-            {
-                "start": 617.0,
-                "end": 620.0,
-                "text": "The wolf is in the burrow"
-            },
-            {
-                "start": 621.0,
-                "end": 626.0,
-                "text": "I'll stop him"
-            },
-            {
-                "start": 627.0,
-                "end": 632.0,
-                "text": "All King dirt with my big feet"
-            },
-            {
-                "start": 642.0,
-                "end": 647.0,
-                "text": "I can't see! There's dirt in my eyes"
-            },
-            {
-                "start": 648.0,
-                "end": 650.0,
-                "text": "That was close"
-            },
-            {
-                "start": 650.0,
-                "end": 652.0,
-                "text": "Good work, Jack"
-            },
-            {
-                "start": 670.0,
-                "end": 675.0,
-                "text": "We need a new house right now"
-            },
-            {
-                "start": 678.0,
-                "end": 681.0,
-                "text": "What about a brick house?"
-            },
-            {
-                "start": 681.0,
-                "end": 686.0,
-                "text": "Yes, a brick house is strong"
-            },
-            {
-                "start": 687.0,
-                "end": 691.0,
-                "text": "I'm not a brick house"
-            },
-            {
-                "start": 691.0,
-                "end": 695.0,
-                "text": "I'm not a brick house"
-            },
-            {
-                "start": 695.0,
-                "end": 699.0,
-                "text": "I'm not a brick house"
-            },
-            {
-                "start": 699.0,
-                "end": 704.0,
-                "text": "I'm not a brick house"
-            },
-            {
-                "start": 704.0,
-                "end": 709.0,
-                "text": "Let me in"
-            },
-            {
-                "start": 709.0,
-                "end": 713.0,
-                "text": "No! We will not let you in"
-            },
-            {
-                "start": 713.0,
-                "end": 718.0,
-                "text": "We will blow down your house"
-            },
-            {
-                "start": 725.0,
-                "end": 729.0,
-                "text": "Fah! Nice try"
-            },
-            {
-                "start": 744.0,
-                "end": 748.0,
-                "text": "This brick house is too strong"
-            },
-            {
-                "start": 748.0,
-                "end": 753.0,
-                "text": "I can't blow it down"
-            },
-            {
-                "start": 755.0,
-                "end": 760.0,
-                "text": "Hooray! The wolf left"
-            },
-            {
-                "start": 760.0,
-                "end": 764.0,
-                "text": "That was scary"
-            },
-            {
-                "start": 774.0,
-                "end": 779.0,
-                "text": "Good work"
-            },
-            {
-                "start": 779.0,
-                "end": 785.0,
-                "text": "Huh? We're back in the barn"
-            },
-            {
-                "start": 785.0,
-                "end": 789.0,
-                "text": "The floor is clean"
-            },
-            {
-                "start": 789.0,
-                "end": 794.0,
-                "text": "Polly, Jack, it's time for lunch"
-            },
-            {
-                "start": 794.0,
-                "end": 796.0,
-                "text": "We have to go now"
-            },
-            {
-                "start": 796.0,
-                "end": 798.0,
-                "text": "That was fun"
-            },
-            {
-                "start": 798.0,
-                "end": 802.0,
-                "text": "Yes! Goodbye, Omar"
-            },
-            {
-                "start": 803.0,
-                "end": 808.0,
-                "text": "Goodbye, come back soon"
-            },
-            {
-                "start": 817.0,
-                "end": 821.0,
-                "text": "Little Fox"
-            }
-        ],
-        "questions": {
-            "multiple_choice": [
-                {
-                    "question": "Who has a big bad wolf problem?",
-                    "options": [
-                        "A. coming",
-                        "B. Polly",
-                        "C. won't",
-                        "D. Sorry"
-                    ],
-                    "answer": "B"
-                },
-                {
-                    "question": "What will you do to your house?",
-                    "options": [
-                        "A. shaking",
-                        "B. Goodbye Omar Goodbye",
-                        "C. Three",
-                        "D. I'll blow"
-                    ],
-                    "answer": "D"
-                },
-                {
-                    "question": "Who is coming to my barn?",
-                    "options": [
-                        "A. walls",
-                        "B. sweep",
-                        "C. barn It's Polly",
-                        "D. Never"
-                    ],
-                    "answer": "C"
-                },
-                {
-                    "question": "What did I see in my eyes?",
-                    "options": [
-                        "A. There's dirt",
-                        "B. goodbye",
-                        "C. big feet",
-                        "D. coop You'll wake"
-                    ],
-                    "answer": "A"
-                },
-                {
-                    "question": "What did the wolf do?",
-                    "options": [
-                        "A. wolf left",
-                        "B. Three",
-                        "C. let's",
-                        "D. Fairy Tail Barn"
-                    ],
-                    "answer": "A"
-                },
-                {
-                    "question": "Where are Polly and Jack?",
-                    "options": [
-                        "A. trapped",
-                        "B. Never",
-                        "C. Goodbye Omar Goodbye",
-                        "D. brick house"
-                    ],
-                    "answer": "A"
-                },
-                {
-                    "question": "What do you have to do to get back to the nest?",
-                    "options": [
-                        "A. polite",
-                        "B. don't hurry",
-                        "C. You'll",
-                        "D. strangers I'm Omar"
-                    ],
-                    "answer": "B"
-                },
-                {
-                    "question": "Who did many people tell us not to talk to?",
-                    "options": [
-                        "A. sparkling I'm scared",
-                        "B. strangers",
-                        "C. dirty",
-                        "D. hurry"
-                    ],
-                    "answer": "B"
-                },
-                {
-                    "question": "What did you knock over?",
-                    "options": [
-                        "A. eat Yay",
-                        "B. handseggs",
-                        "C. practice",
-                        "D. cleaning"
-                    ],
-                    "answer": "B"
-                },
-                {
-                    "question": "What kind of dirt can't I see?",
-                    "options": [
-                        "A. secret soon",
-                        "B. watch",
-                        "C. polite",
-                        "D. King dirt"
-                    ],
-                    "answer": "D"
-                }
-            ],
-            "cloze_test": {
-                "passage": "Little Bob Fairy Tail Bar The ___(1)___ 1 The Old Bar Hello! My name is Omar And this is my very ___(2)___ it secret soon But first, let's meet Polly and Jack They live on the farm The Old Bar Ah! Everyone ate ___(3)___ Now it's my turn to eat Yay! No running in the ___(4)___ up the chance No, I won't Polly! No running in the coop I want to be a fast runner So I have to practice Polly, watch out for Jack Jack, watch out for the nests Jack, you knocked over the ___(5)___ Sorry! Yes, it is First, you both can play with the nests First, you both can clean it Now go And ___(6)___ back! ___(7)___ The three little pigs Episode 2 Omar Who? Look who's coming to my ___(8)___ and Jack I have a surprise for them Ugh! Here's a broom Now you can ___(9)___ not fair! Many told us to clean I don't like cleaning Me ___(10)___! And I will live here Who are you? Many told us not to talk to strangers I'm Omar Who are you? Your barn is dirty Omar That's not nice, Polly Many told us to be polite Never mind Who are you? I'm Polly It's time to get to work What's happening?",
-                "questions": [
-                    {
-                        "number": 1,
-                        "options": [
-                            "A. special barn You'll learn",
-                            "B. We're",
-                            "C. He's digging into",
-                            "D. Three Little Pigs Episode"
-                        ],
-                        "answer": "D"
-                    },
-                    {
-                        "number": 2,
-                        "options": [
-                            "A. knocked",
-                            "B. secret soon",
-                            "C. special barn You'll learn",
-                            "D. I'm Polly It's time"
-                        ],
-                        "answer": "C"
-                    },
-                    {
-                        "number": 3,
-                        "options": [
-                            "A. What's",
-                            "B. let's",
-                            "C. breakfast",
-                            "D. answer"
-                        ],
-                        "answer": "C"
-                    },
-                    {
-                        "number": 4,
-                        "options": [
-                            "A. straw house",
-                            "B. coop You'll wake",
-                            "C. Everyone ate breakfast",
-                            "D. King dirt"
-                        ],
-                        "answer": "B"
-                    },
-                    {
-                        "number": 5,
-                        "options": [
-                            "A. don't hurry",
-                            "B. handseggs",
-                            "C. Goodbye Omar Goodbye",
-                            "D. learn"
-                        ],
-                        "answer": "B"
-                    },
-                    {
-                        "number": 6,
-                        "options": [
-                            "A. Jack stop",
-                            "B. I'm Polly It's time",
-                            "C. don't hurry",
-                            "D. let's"
-                        ],
-                        "answer": "C"
-                    },
-                    {
-                        "number": 7,
-                        "options": [
-                            "A. Fairy Tail Barn",
-                            "B. burrow",
-                            "C. sweep",
-                            "D. secret soon"
-                        ],
-                        "answer": "A"
-                    },
-                    {
-                        "number": 8,
-                        "options": [
-                            "A. eat Yay",
-                            "B. strangers",
-                            "C. barn It's Polly",
-                            "D. There's dirt"
-                        ],
-                        "answer": "C"
-                    },
-                    {
-                        "number": 9,
-                        "options": [
-                            "A. chance",
-                            "B. sweep That's",
-                            "C. let's",
-                            "D. shaking"
-                        ],
-                        "answer": "B"
-                    },
-                    {
-                        "number": 10,
-                        "options": [
-                            "A. happening",
-                            "B. answer",
-                            "C. neither Hoot",
-                            "D. brick"
-                        ],
-                        "answer": "C"
-                    }
-                ]
-            }
-        },
-        "vocabulary": [
-            {
-                "word": "wolf",
-                "ipa": "/wʊlf/",
-                "has_stress": false,
-                "cefr": "B2",
-                "meaning": "chó sói"
-            },
-            {
-                "word": "barn",
-                "ipa": "/bɑrn/",
-                "has_stress": false,
-                "cefr": "B2",
-                "meaning": "chuồng ngựa"
-            },
-            {
-                "word": "brick",
-                "ipa": "/brɪk/",
-                "has_stress": false,
-                "cefr": "B1",
-                "meaning": "gạch"
-            },
-            {
-                "word": "house",
-                "ipa": "/haʊs/",
-                "has_stress": false,
-                "cefr": "A1",
-                "meaning": "căn nhà"
-            },
-            {
-                "word": "little",
-                "ipa": "/ˈlɪtəl/",
-                "has_stress": true,
-                "cefr": "A1",
-                "meaning": "nhỏ bé"
-            },
-            {
-                "word": "burrow",
-                "ipa": "/bəroʊ/",
-                "has_stress": false,
-                "cefr": "A2",
-                "meaning": "đào hang"
-            },
-            {
-                "word": "straw",
-                "ipa": "/strɔ/",
-                "has_stress": false,
-                "cefr": "B1",
-                "meaning": "rơm"
-            },
-            {
-                "word": "dirt",
-                "ipa": "/dərt/",
-                "has_stress": false,
-                "cefr": "B1",
-                "meaning": "bụi bẩn"
-            },
-            {
-                "word": "pig",
-                "ipa": "/pɪg/",
-                "has_stress": false,
-                "cefr": "A1",
-                "meaning": "con lợn"
-            },
-            {
-                "word": "coop",
-                "ipa": "/kup/",
-                "has_stress": false,
-                "cefr": "A1",
-                "meaning": "chuồng"
-            },
-            {
-                "word": "work",
-                "ipa": "/wərk/",
-                "has_stress": false,
-                "cefr": "A1",
-                "meaning": "công việc"
-            },
-            {
-                "word": "dusty",
-                "ipa": "/ˈdəsti/",
-                "has_stress": true,
-                "cefr": "B1",
-                "meaning": "bụi bặm"
-            },
-            {
-                "word": "tale",
-                "ipa": "/teɪl/",
-                "has_stress": false,
-                "cefr": "B1",
-                "meaning": "câu chuyện"
-            },
-            {
-                "word": "goodbye",
-                "ipa": "/ˌgʊdˈbaɪ/",
-                "has_stress": true,
-                "cefr": "B1",
-                "meaning": "tạm biệt"
-            },
-            {
-                "word": "foot",
-                "ipa": "/fʊt/",
-                "has_stress": false,
-                "cefr": "B1",
-                "meaning": "chân"
-            }
-        ],
-        "video_url": "/uploads/(60) The Three Little Pigs - Fairy Tale Barn l The Big Bad Wolf Will Blow Down the House! - Little Fox - YouTube.mp4",
-        "full_text": "Little Bob Fairy Tail Bar The Three Little Pigs Episode 1 The Old Bar Hello! My name is Omar And this is my very special barn You'll learn it secret soon But first, let's meet Polly and Jack They live on the farm The Old Bar Ah! Everyone ate breakfast Now it's my turn to eat Yay! Oh oh! What's Polly doing? Add my way! Polly! No running in the coop You'll wake up the chance No, I won't Polly! Polly! Polly! Polly will come up and check Polly! No running in the coop I want to be a fast runner So I have to practice Polly, watch out for Jack Jack, watch out for the nests Jack, you knocked over the handseggs Sorry! That's it! You two need jobs Hmm... The Old Bar needs fixing Yuck! That's a lot of work! Yes, it is First, you both can play with the nests First, you both can clean it Now go And don't hurry back! Hunk! Fairy Tail Barn The three little pigs Episode 2 Omar Who? Look who's coming to my barn It's Polly and Jack I have a surprise for them Ugh! This barn is dusty! It's dirty too! Here's a broom Now you can sweep That's not fair! Many told us to clean I don't like cleaning Me neither Hoot! Hoot! Hoot! And I will live here Who are you? Many told us not to talk to strangers I'm Omar Who are you? I'm Jack And who are you? Your barn is dirty Omar That's not nice, Polly Many told us to be polite Never mind Who are you? Fine! I'm Polly It's time to get to work What's happening? The walls are shaking The air is sparkling I'm scared Who are we? This isn't the barn Oh! The barn turned into a straw house Let me in For a blow down your house Fairy tale barn The three little pigs Episode three The wolf Oh boy! Polly and Jack have a problem A big bad wolf problem Little pig, little pig, glad me in Pigs! We're not pigs And we won't let you in And I'll blow your house down This house is made of straw He can blow it down Help us Omar What should we do? We can find the answer What can the wolf blow down? He can't blow down What? Hey! My coat is made of wood The walls are shaking again We're in a coop now It's made of wood We're safe in here I can blow that down Let's make a burrow in the ground We're safe in this burrow now No! The wolf is still there He's digging into the burrow Will Polly and Jack stop the big bad wolf? Will he get them? The three little pigs Episode four, goodbye Polly and Jack are trapped in the burrow And here comes the wolf What will they do? The wolf is in the burrow I'll stop him All King dirt with my big feet I can't see! There's dirt in my eyes That was close Good work, Jack We need a new house right now What about a brick house? Yes, a brick house is strong I'm not a brick house I'm not a brick house I'm not a brick house I'm not a brick house Let me in No! We will not let you in We will blow down your house Fah! Nice try This brick house is too strong I can't blow it down Hooray! The wolf left That was scary Good work Huh? We're back in the barn The floor is clean Polly, Jack, it's time for lunch We have to go now That was fun Yes! Goodbye, Omar Goodbye, come back soon Little Fox",
-        "id": "93a6b9f0-51d4-4092-a70e-27ff40bf5584"
+        "id": "3c0f398b-3abf-41ee-9ac4-3a5ae6f1d393"
     }
 ]

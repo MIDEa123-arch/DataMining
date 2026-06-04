@@ -6,6 +6,7 @@ from collections import Counter
 
 import nltk
 from textblob import TextBlob
+from services.cefr_vocab import estimate_word_cefr
 
 model_path = os.path.join(
     os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
@@ -13,6 +14,9 @@ model_path = os.path.join(
     "hybrid_bundle_v2.pkl",
 )
 cefr_model = None
+CHUNK_SIZE_WORDS = 130
+CHUNK_OVERLAP_WORDS = 25
+MAX_REPEAT_RUN = 2
 
 ACADEMIC_WORDS = {
     "analysis", "approach", "area", "assume", "available", "concept", "consistent",
@@ -55,21 +59,6 @@ def _ensure_nltk_resources():
             nltk.data.find(path)
         except LookupError:
             nltk.download(name, quiet=True)
-
-
-def _estimate_word_cefr(word: str) -> str:
-    length = len(word)
-    if length <= 5:
-        return "A1"
-    if length <= 6:
-        return "A2"
-    if length <= 8:
-        return "B1"
-    if length <= 10:
-        return "B2"
-    if length <= 12:
-        return "C1"
-    return "C2"
 
 
 def _syllable_count(word: str) -> int:
@@ -144,6 +133,46 @@ def _word_tokens(text: str) -> list[str]:
     return re.findall(r"[A-Za-z']+", text)
 
 
+def _dedupe_repeated_words(text: str, max_repeat: int = MAX_REPEAT_RUN) -> str:
+    tokens = re.findall(r"[A-Za-z']+|[^A-Za-z'\s]+|\s+", text or "")
+    output = []
+    last_word = None
+    repeat_count = 0
+
+    for token in tokens:
+        if re.fullmatch(r"[A-Za-z']+", token):
+            key = token.lower()
+            if key == last_word:
+                repeat_count += 1
+            else:
+                last_word = key
+                repeat_count = 1
+            if repeat_count <= max_repeat:
+                output.append(token)
+        else:
+            output.append(token)
+
+    return re.sub(r"\s+", " ", "".join(output)).strip()
+
+
+def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE_WORDS, overlap: int = CHUNK_OVERLAP_WORDS) -> list[str]:
+    text = _dedupe_repeated_words(text)
+    words = _word_tokens(text)
+    if len(words) <= chunk_size:
+        return [text] if text else []
+
+    chunks = []
+    step = max(chunk_size - overlap, 1)
+    for start in range(0, len(words), step):
+        chunk_words = words[start:start + chunk_size]
+        if len(chunk_words) < 40 and chunks:
+            break
+        chunks.append(" ".join(chunk_words))
+        if start + chunk_size >= len(words):
+            break
+    return chunks
+
+
 def _pos_tags(text: str) -> list[tuple[str, str]]:
     try:
         return TextBlob(text).tags
@@ -198,7 +227,7 @@ def extract_features(text: str) -> np.ndarray:
     content_unique = len(set(content_words))
     content_lexical_diversity = content_unique / content_word_count if content_word_count else 0.0
 
-    cefr_labels = [_estimate_word_cefr(w) for w in lower_words]
+    cefr_labels = [estimate_word_cefr(w) for w in lower_words]
     cefr_counts = Counter(cefr_labels)
 
     pct_scale = 100.0
@@ -319,7 +348,7 @@ def extract_features(text: str) -> np.ndarray:
     return feature_vector
 
 
-def predict_cefr(text: str) -> str:
+def _predict_chunk_probabilities(text: str) -> np.ndarray:
     if cefr_model is None:
         load_cefr_model()
     if cefr_model is None:
@@ -343,15 +372,49 @@ def predict_cefr(text: str) -> str:
     )
     X = np.concatenate([X_feats, X_word, X_char], axis=1)
 
-    print("Feature shape:", X.shape)
-    print("Expected features:", len(feature_cols))
-
     model_probs = [m.predict_proba(X) for m in cefr_model["xgb_models"]]
     model_probs.append(cefr_model["lr"].predict_proba(X))
     probs = np.mean(model_probs, axis=0)[0]
+    return probs
 
-    print("Prediction probabilities:", probs)
 
+def _predict_text_probabilities(text: str) -> np.ndarray:
+    chunks = _chunk_text(text)
+    if not chunks:
+        chunks = [text or ""]
+
+    chunk_probs = [_predict_chunk_probabilities(chunk) for chunk in chunks]
+    return np.mean(chunk_probs, axis=0)
+
+
+def predict_cefr(text: str) -> str:
+    probs = _predict_text_probabilities(text)
     label_index = int(np.argmax(probs))
     label = cefr_model["encoder"].inverse_transform([label_index])[0]
     return str(label)
+
+
+def predict_cefr_scores(text: str) -> dict[str, float]:
+    probs = _predict_text_probabilities(text)
+    labels = cefr_model["encoder"].inverse_transform(np.arange(len(probs)))
+    return {str(label): float(prob) for label, prob in zip(labels, probs)}
+
+
+def predict_cefr_chunk_scores(text: str) -> list[dict[str, object]]:
+    chunks = _chunk_text(text)
+    if not chunks:
+        return []
+
+    results = []
+    for index, chunk in enumerate(chunks, start=1):
+        probs = _predict_chunk_probabilities(chunk)
+        labels = cefr_model["encoder"].inverse_transform(np.arange(len(probs)))
+        scores = {str(label): float(prob) for label, prob in zip(labels, probs)}
+        label = max(scores, key=scores.get)
+        results.append({
+            "chunk": index,
+            "word_count": len(_word_tokens(chunk)),
+            "label": label,
+            "scores": scores,
+        })
+    return results

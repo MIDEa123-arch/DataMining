@@ -59,23 +59,8 @@ def lookup_word_cefr(word: str):
     return load_cefr_vocab().get(normalize_vocab_key(word))
 
 
-def estimate_by_length(word: str) -> str:
-    length = len(word)
-    if length <= 5:
-        return "A1"
-    if length <= 6:
-        return "A2"
-    if length <= 8:
-        return "B1"
-    if length <= 10:
-        return "B2"
-    if length <= 12:
-        return "C1"
-    return "C2"
-
-
 def estimate_word_cefr(word: str) -> str:
-    return lookup_word_cefr(word) or estimate_by_length(word)
+    return lookup_word_cefr(word) or "A1"
 
 
 def estimate_text_cefr(text: str) -> str:

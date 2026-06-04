@@ -27,7 +27,7 @@ def _process_uploaded_video(file_path: str, filename: str):
     cefr_level = predict_cefr(full_text)
     topic = predict_topic(full_text)
     questions = generate_questions(full_text)
-    vocabulary = extract_vocabulary(full_text, top_n=15)
+    vocabulary = extract_vocabulary(full_text, top_n=15, target_cefr=cefr_level)
 
     record = {
         "filename": filename,

@@ -7,7 +7,6 @@ labels_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__fil
 topic_model = None
 topic_labels = []
 
-# Mapping defined by user
 TOPIC_MAP = {
     "Computers & Internet": "Technology",
     "Education & Reference": "Education",
@@ -18,7 +17,7 @@ TOPIC_MAP = {
     "Entertainment & Music": "Entertainment",
     "Politics & Government": "Politics",
     "Family & Relationships": "Society",
-    "Society & Culture": "Society"
+    "Society & Culture": "Society",
 }
 
 def load_topic_model():
@@ -47,27 +46,18 @@ def load_topic_model():
 def predict_topic(text: str) -> str:
     load_topic_model()
     
-    # Fallback if model missing
     if topic_model is None:
-        return "Technology" # Default
+        raise RuntimeError("Topic model is not loaded; cannot predict topic.")
         
     try:
-        # Assuming topic_model is a scikit-learn pipeline (TFIDF + LinearSVC)
         prediction_idx = topic_model.predict([text])[0]
         
-        # Determine the raw label
         if isinstance(prediction_idx, str):
             raw_label = prediction_idx
+        elif 0 <= int(prediction_idx) < len(topic_labels):
+            raw_label = topic_labels[int(prediction_idx)]
         else:
-            # If it's an integer index, map it
-            if 0 <= int(prediction_idx) < len(topic_labels):
-                raw_label = topic_labels[int(prediction_idx)]
-            else:
-                raw_label = str(prediction_idx)
-                
-        # Map to standard category using user's map
-        mapped_label = TOPIC_MAP.get(raw_label, "Society")
-        return mapped_label
+            raw_label = str(prediction_idx)
+        return TOPIC_MAP.get(raw_label, raw_label)
     except Exception as e:
-        print(f"Error predicting topic: {e}")
-        return "Society"
+        raise RuntimeError(f"Error predicting topic: {e}") from e
