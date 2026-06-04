@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,37 +14,33 @@
     </header>
 
     <main class="container">
-        <!-- ================= HOME VIEW ================= -->
         <section id="home-view" class="view-section">
             <div class="hero-section">
                 <h1>Học Tiếng Anh qua TED Talks</h1>
-                <p>Khám phá các video theo chủ đề và kiểm tra trình độ của bạn</p>
-                <div class="upload-box card" style="margin-top: 1.5rem; display: inline-flex;">
+                <p>Tải nhiều video, hệ thống xử lý tuần tự rồi gán chủ đề, CEFR, câu hỏi và từ vựng.</p>
+                <div class="upload-box card">
                     <input type="file" id="video-upload" accept="video/mp4,video/x-m4v,video/*" multiple>
                     <button id="btn-process" class="btn primary">Upload & Phân tích AI</button>
                 </div>
-                <div id="loading" class="hidden" style="margin-top: 1rem;">
+                <div id="upload-queue" class="upload-queue hidden"></div>
+                <div id="loading" class="hidden">
                     <div class="spinner"></div>
-                    <span id="loading-text">AI đang phân tích (Whisper → CEFR → Topic → T5)... Xin chờ một lát.</span>
+                    <span id="loading-text">AI đang phân tích... Xin chờ một lát.</span>
                 </div>
             </div>
 
-            <div id="topics-container" class="topics-container">
-                <!-- Topics will be dynamically rendered here -->
-            </div>
+            <div id="topics-container" class="topics-container"></div>
         </section>
 
-        <!-- ================= LEARNING VIEW ================= -->
         <section id="learning-view" class="view-section hidden">
             <div class="back-nav">
                 <button id="btn-back-home" class="btn secondary">← Quay lại danh mục</button>
-                <h2 id="learning-title" style="margin: 0; margin-left: 1rem; color: var(--primary);">Đang học...</h2>
+                <h2 id="learning-title">Đang học...</h2>
+                <button id="btn-delete-current" class="btn danger hidden">Xóa video</button>
             </div>
 
-            <!-- Player + Transcript -->
             <div id="player-section" style="margin-top: 1rem;">
                 <div class="layout-grid">
-                    <!-- Video -->
                     <div class="video-container card">
                         <video id="video-player" controls>
                             <source src="" type="video/mp4">
@@ -57,29 +53,26 @@
                         </div>
                     </div>
 
-                    <!-- Transcript -->
                     <div class="transcript-container card">
                         <div class="transcript-header">
                             <h3>Transcript</h3>
-                            <button id="btn-full-transcript" class="btn secondary" style="padding:4px 10px; font-size:0.78rem;">View Full Text</button>
+                            <button id="btn-full-transcript" class="btn secondary" style="padding:4px 10px; font-size:0.78rem;">Xem toàn văn</button>
                         </div>
                         <div id="transcript-box" class="transcript-box"></div>
                     </div>
                 </div>
 
-                <!-- Full Text -->
                 <div id="full-transcript-section" class="hidden full-transcript-panel">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
                         <h3 style="margin:0;">Full Transcript</h3>
-                        <button class="btn secondary" style="padding:4px 10px; font-size:0.78rem;" onclick="document.getElementById('full-transcript-section').classList.add('hidden')">Close</button>
+                        <button class="btn secondary" style="padding:4px 10px; font-size:0.78rem;" onclick="document.getElementById('full-transcript-section').classList.add('hidden')">Đóng</button>
                     </div>
                     <p id="full-transcript-text"></p>
                 </div>
             </div>
 
-            <!-- Questions & Vocab -->
             <div id="questions-section" class="card" style="margin-top: 1.5rem;">
-                <h2>Practice Materials</h2>
+                <h2>Luyện tập</h2>
                 <div class="tabs">
                     <button class="tab-btn active" data-tab="mcq">Reading Comprehension</button>
                     <button class="tab-btn" data-tab="cloze">Cloze Test (Điền từ)</button>

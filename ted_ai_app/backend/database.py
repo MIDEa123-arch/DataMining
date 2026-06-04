@@ -1,7 +1,7 @@
 import os
 import json
 import uuid
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 DB_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "db.json")
 
@@ -70,4 +70,14 @@ def get_video_by_id(video_id: str):
     for v in db:
         if v.get("id") == video_id:
             return v
+    return None
+
+def delete_video_record(video_id: str) -> Optional[Dict[str, Any]]:
+    """Delete a video record and return it, or None if it does not exist."""
+    db = read_db()
+    for index, video in enumerate(db):
+        if video.get("id") == video_id:
+            deleted = db.pop(index)
+            write_db(db)
+            return deleted
     return None

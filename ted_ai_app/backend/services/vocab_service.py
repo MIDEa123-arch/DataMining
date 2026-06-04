@@ -11,11 +11,31 @@ try:
     nltk.data.find('corpora/brown')
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('taggers/averaged_perceptron_tagger_eng')
+    nltk.data.find('corpora/wordnet')
 except LookupError:
     nltk.download('brown', quiet=True)
     nltk.download('punkt', quiet=True)
     nltk.download('averaged_perceptron_tagger_eng', quiet=True)
     nltk.download('punkt_tab', quiet=True)
+    nltk.download('wordnet', quiet=True)
+
+lemmatizer = nltk.stem.WordNetLemmatizer()
+
+
+def _wordnet_pos(tag: str):
+    if tag.startswith('JJ'):
+        return 'a'
+    if tag.startswith('NN'):
+        return 'n'
+    return 'n'
+
+
+def _is_real_dictionary_word(word: str) -> bool:
+    try:
+        from nltk.corpus import wordnet
+        return bool(wordnet.synsets(word))
+    except Exception:
+        return True
 
 def extract_vocabulary(text: str, top_n: int = 20) -> list:
     """
@@ -31,8 +51,14 @@ def extract_vocabulary(text: str, top_n: int = 20) -> list:
             # Bỏ qua từ quá ngắn, hoặc chứa số, hoặc các dấu câu
             if len(w) < 4 or any(c.isdigit() for c in w) or not w.isalpha():
                 continue
+            # Loại tên riêng/nhân vật như Jack, Polly để tránh dịch sai nghĩa.
+            if tag.startswith('NNP'):
+                continue
             if tag.startswith('NN') or tag.startswith('JJ'):
-                valid_words.append(w)
+                lemma = lemmatizer.lemmatize(w, _wordnet_pos(tag))
+                if not _is_real_dictionary_word(lemma):
+                    continue
+                valid_words.append(lemma)
                 
         # Tính tần suất xuất hiện
         freq = Counter(valid_words)
