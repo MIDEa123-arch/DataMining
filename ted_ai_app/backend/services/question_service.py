@@ -1,25 +1,30 @@
-import re
 import random
 import string
 from typing import Any, Dict, List, Optional, Tuple
 
+import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
 
 # =========================================================
-# QUESTION SERVICE - NO TEMPLATE RELAXED
+# QUESTION SERVICE - MODEL BASED / NO REGEX SEMANTIC FILTER
 #
-# Mục tiêu:
-# - Không dùng template sinh câu hỏi kiểu "X is Y -> What is X?"
-# - T5 vẫn là model sinh câu hỏi chính
-# - spaCy chỉ dùng để chọn answer candidate tốt
-# - SBERT dùng để lấy context liên quan
-# - Có QA validation nhưng mặc định TẮT vì QA validator thường loại quá nhiều câu
-# - Không ép đủ 10 câu, nhưng đã nới lỏng để không bị trả rỗng
+# Không dùng regex để "bao quát" semantic.
+# Regex không được import.
+#
+# Dùng:
+# - spaCy: tách câu + lấy noun chunk/entity.
+# - SBERT: chấm context window + chấm độ khác nhau của options.
+# - QG model: sinh câu hỏi từ answer + context.
+# - QA model: kiểm tra câu hỏi có trả lời đúng từ context không.
+#
+# Lưu ý:
+# - Không fallback ghép cụm bằng regex.
+# - Không ép đủ 10 nếu transcript không đủ chất lượng.
 # =========================================================
 
-QG_MODEL_NAME = "valhalla/t5-base-qg-hl"
+QG_MODEL_NAME = "mrm8488/t5-base-finetuned-question-generation-ap"
 QA_MODEL_NAME = "deepset/roberta-base-squad2"
 SBERT_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 SPACY_MODEL_NAME = "en_core_web_sm"
@@ -39,93 +44,51 @@ spacy_nlp = None
 spacy_attempted = False
 
 
-# =========================================================
-# CONFIG
-# =========================================================
-
-MAX_MCQ = 10
+MIN_TEXT_WORDS = 40
+TARGET_MCQ = 10
+MAX_MCQ = 15
 MAX_CLOZE_BLANKS = 10
 
-# QUAN TRỌNG:
-# True  = lọc rất gắt, dễ không sinh ra câu hỏi
-# False = chỉ dùng rule validation nhẹ, dễ có câu hỏi hơn
-USE_QA_VALIDATION = False
+MAX_SENTENCES_FOR_QG = 180
+MIN_CONTEXT_WORDS = 7
+MAX_CONTEXT_WORDS = 95
 
-MAX_SENTENCES_FOR_QG = 120
-MAX_CONTEXT_SENTENCES = 5
-MAX_CONTEXT_WORDS = 110
-SIMILARITY_THRESHOLD = 0.45
+NUM_Q_PER_CANDIDATE = 4
+MAX_CANDIDATES_TO_TRY = 120
 
-# Tránh output toàn một dạng câu hỏi
+USE_QA_VALIDATION = True
+MIN_QA_SCORE = 0.06
+
+# Không dùng regex, nhưng vẫn có guard ngắn để chặn dạng output lỗi quá rõ từ model.
+BAD_QUESTION_PHRASES = [
+    "which of the following",
+    "main idea of the passage",
+    "what is the main idea",
+    "do not include the answer",
+    "correct answer",
+    "answer above",
+    "what episode",
+    "which episode",
+    "what is the title",
+    "what is the video",
+    "what is the line",
+    "what is the text",
+]
+
 MAX_SAME_PREFIX = {
     "what is": 3,
     "what are": 3,
     "what does": 3,
     "what do": 3,
-    "what can": 3,
-    "how": 3,
+    "what can": 2,
+    "how": 2,
     "why": 3,
     "when": 3,
     "where": 3,
-    "who": 3,
+    "who": 4,
     "which": 3,
     "other": 4,
 }
-
-
-# =========================================================
-# GENERAL FILTERS
-# =========================================================
-
-STOPWORDS = {
-    "i", "me", "my", "myself", "we", "our", "ours", "ourselves",
-    "you", "your", "yours", "yourself", "yourselves",
-    "he", "him", "his", "himself", "she", "her", "hers", "herself",
-    "it", "its", "itself", "they", "them", "their", "theirs", "themselves",
-    "what", "which", "who", "whom", "this", "that", "these", "those",
-    "am", "is", "are", "was", "were", "be", "been", "being",
-    "have", "has", "had", "having", "do", "does", "did", "doing",
-    "a", "an", "the", "and", "but", "if", "or", "because", "as",
-    "until", "while", "of", "at", "by", "for", "with", "about",
-    "against", "between", "through", "during", "before", "after",
-    "above", "below", "to", "from", "up", "down", "in", "out",
-    "on", "off", "over", "under", "again", "further", "then", "once",
-    "here", "there", "when", "where", "why", "how", "all", "both",
-    "each", "few", "more", "most", "other", "some", "such", "no",
-    "nor", "not", "only", "own", "same", "so", "than", "too", "very",
-    "can", "will", "just", "should", "now", "also", "would", "could",
-    "may", "might", "must", "shall"
-}
-
-GENERIC_BAD_WORDS = {
-    "basically", "actually", "really", "pretty", "simply", "clearly",
-    "firstly", "secondly", "thirdly", "finally", "easily", "equally",
-    "closely", "perfectly", "probably", "perhaps", "maybe", "rather",
-    "around", "within", "without", "before", "after", "during",
-    "particular", "different", "important", "possible", "actual",
-    "shown", "said", "saying", "think", "thinking", "going",
-    "look", "looks", "make", "makes", "made", "take", "takes",
-    "give", "gives", "got", "getting", "come", "comes",
-    "example", "thing", "things", "something", "anything",
-    "someone", "everyone", "people", "person", "way", "kind",
-    "lot", "much", "many", "right", "wrong", "good", "bad",
-    "yes", "no", "please", "thanks", "watching", "subscribe",
-    "video", "future", "line", "below"
-}
-
-BAD_ANSWER_STARTS = {
-    "called", "using", "used", "use", "perform", "performs", "performed",
-    "determine", "determining", "looking", "look", "looks", "move",
-    "moving", "say", "saying", "think", "thinking", "let", "lets",
-    "let's", "would", "could", "should", "might", "maybe", "perhaps"
-}
-
-BAD_ANSWER_ENDS = {
-    "like", "of", "to", "in", "on", "at", "by", "with", "for",
-    "whether", "that", "which", "who", "what"
-}
-
-ACRONYM_RE = re.compile(r"^[A-Z][A-Z0-9]{1,9}$")
 
 
 # =========================================================
@@ -138,7 +101,8 @@ def load_qg_model():
         print(f"[QG] Loading {QG_MODEL_NAME} on {device}...")
         qg_tokenizer = AutoTokenizer.from_pretrained(QG_MODEL_NAME)
         qg_model = AutoModelForSeq2SeqLM.from_pretrained(QG_MODEL_NAME).to(device)
-        print("[QG] T5 loaded.")
+        qg_model.eval()
+        print("[QG] QG model loaded.")
 
 
 def load_qa_model():
@@ -180,7 +144,7 @@ def load_sbert_model():
         sbert_model = SentenceTransformer(SBERT_MODEL_NAME)
         print("[QG] SBERT loaded.")
     except Exception as e:
-        print(f"[QG] SBERT unavailable, fallback TF-IDF: {e}")
+        print(f"[QG] SBERT unavailable: {e}")
         sbert_model = None
 
     return sbert_model
@@ -198,106 +162,75 @@ def load_spacy_model():
         spacy_nlp = spacy.load(SPACY_MODEL_NAME)
         print("[QG] spaCy loaded.")
     except Exception as e:
-        print(f"[QG] spaCy unavailable, fallback regex: {e}")
+        print(f"[QG] spaCy unavailable: {e}")
         spacy_nlp = None
 
     return spacy_nlp
 
 
 # =========================================================
-# BASIC UTILS
+# BASIC UTILS - NO REGEX
 # =========================================================
 
 def normalize_spaces(text: str) -> str:
-    return re.sub(r"\s+", " ", text or "").strip()
+    return " ".join((text or "").split())
 
 
 def clean_text(text: str) -> str:
     text = normalize_spaces(text)
-    text = text.strip(string.punctuation + "“”‘’`")
-    return normalize_spaces(text)
+    return normalize_spaces(text.strip(string.punctuation + "“”‘’`\""))
 
 
-def is_acronym(text: str) -> bool:
-    return bool(ACRONYM_RE.fullmatch(text.strip()))
+def word_count(text: str) -> int:
+    return len(normalize_spaces(text).split())
 
 
-def lexical_tokens(text: str) -> List[str]:
-    toks = re.findall(r"[A-Za-z0-9]+", text.lower())
-    return [t for t in toks if t not in STOPWORDS and t not in GENERIC_BAD_WORDS]
+def lower_text(text: str) -> str:
+    return clean_text(text).lower()
 
 
-def is_boilerplate_sentence(sentence: str) -> bool:
-    s = sentence.lower()
-    patterns = [
-        "please like",
-        "like and subscribe",
-        "thanks for watching",
-        "thank you for watching",
-        "drop us a line",
-        "see more videos",
-        "if you have any questions",
-    ]
-    return any(p in s for p in patterns)
-
-
-def strip_bad_answer_prefix(text: str) -> str:
-    text = clean_text(text)
-
-    text = re.sub(
-        r"^(called|using|used|use|perform|performs|performed|to perform|"
-        r"look for|looking for|determine|determining|move across|"
-        r"tasks like|task like|like)\s+",
-        "",
-        text,
-        flags=re.IGNORECASE,
-    )
-    text = re.sub(r"^(tasks?|things?)\s+like\s+", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"^(the\s+)?presence\s+of\s+", "", text, flags=re.IGNORECASE)
-
-    return clean_text(text)
+def has_letters(text: str) -> bool:
+    return any(ch.isalpha() for ch in text or "")
 
 
 def question_prefix(question: str) -> str:
     q = normalize_spaces(question).lower()
-    if q.startswith("what is"):
-        return "what is"
-    if q.startswith("what are"):
-        return "what are"
-    if q.startswith("what does"):
-        return "what does"
-    if q.startswith("what do"):
-        return "what do"
-    if q.startswith("what can"):
-        return "what can"
-    for w in ["how", "why", "when", "where", "who", "which"]:
-        if q.startswith(w):
-            return w
+    for p in ["what is", "what are", "what does", "what do", "what can"]:
+        if q.startswith(p):
+            return p
+    for p in ["how", "why", "when", "where", "who", "which"]:
+        if q.startswith(p):
+            return p
     return "other"
 
 
-# =========================================================
-# SENTENCE SPLITTING
-# =========================================================
+def clean_transcript_for_questions(text: str) -> str:
+    """
+    Không dùng regex. Chỉ normalize space.
+    Transcript cleaning nâng cao nên làm ở bước ASR/whisper riêng.
+    """
+    return normalize_spaces(text)
+
 
 def split_sentences(text: str) -> List[str]:
-    text = normalize_spaces(text)
+    text = clean_transcript_for_questions(text)
     if not text:
         return []
 
     nlp = load_spacy_model()
-    if nlp is not None:
-        doc = nlp(text)
-        raw = [normalize_spaces(s.text) for s in doc.sents]
-    else:
-        raw = [normalize_spaces(s) for s in re.split(r"(?<=[.!?])\s+", text)]
+    if nlp is None:
+        print("[QG] spaCy is required for this no-regex version.")
+        return []
 
+    doc = nlp(text)
     sentences = []
-    for s in raw:
-        words = s.split()
-        if not (6 <= len(words) <= 70):
+
+    for sent in doc.sents:
+        s = normalize_spaces(sent.text)
+        wc = word_count(s)
+        if not (4 <= wc <= 60):
             continue
-        if is_boilerplate_sentence(s):
+        if not has_letters(s):
             continue
         sentences.append(s)
 
@@ -305,161 +238,279 @@ def split_sentences(text: str) -> List[str]:
 
 
 # =========================================================
-# ANSWER CANDIDATES
+# SBERT HELPERS
 # =========================================================
 
-def is_good_answer(text: str, ctype: str = "", span: Any = None, allow_single: bool = False) -> bool:
-    text = strip_bad_answer_prefix(text)
-    if not text or len(text) < 2:
+def encode_texts(texts: List[str]):
+    model = load_sbert_model()
+    if model is None:
+        return None
+    return model.encode(texts, convert_to_numpy=True, normalize_embeddings=True)
+
+
+def cosine_sim_text(a: str, b: str) -> float:
+    model = load_sbert_model()
+    if model is None:
+        return 0.0
+    emb = model.encode([a, b], convert_to_numpy=True, normalize_embeddings=True)
+    return float(emb[0] @ emb[1].T)
+
+
+def build_sentence_similarity_matrix(sentences: List[str]):
+    n = len(sentences)
+    if n == 0:
+        return np.zeros((0, 0), dtype=np.float32)
+    if n == 1:
+        return np.ones((1, 1), dtype=np.float32)
+
+    emb = encode_texts(sentences)
+    if emb is None:
+        return np.eye(n, dtype=np.float32)
+
+    return emb @ emb.T
+
+
+def _window_indices(n: int, main_idx: int) -> List[List[int]]:
+    windows = [
+        [main_idx],
+        [main_idx - 1, main_idx],
+        [main_idx, main_idx + 1],
+        [main_idx - 1, main_idx, main_idx + 1],
+        [main_idx - 2, main_idx - 1, main_idx],
+        [main_idx, main_idx + 1, main_idx + 2],
+        [main_idx - 2, main_idx - 1, main_idx, main_idx + 1],
+        [main_idx - 1, main_idx, main_idx + 1, main_idx + 2],
+    ]
+
+    valid = []
+    seen = set()
+
+    for w in windows:
+        w = tuple(sorted(set(i for i in w if 0 <= i < n)))
+        if not w or main_idx not in w or w in seen:
+            continue
+        seen.add(w)
+        valid.append(list(w))
+
+    return valid
+
+
+def context_coherence_score(sentences: List[str], indices: List[int], main_idx: int, sim_matrix, answer: str) -> float:
+    context = " ".join(sentences[i] for i in indices)
+    wc = word_count(context)
+    score = 0.0
+
+    # Context phải chứa answer dạng substring cơ bản.
+    if lower_text(answer) in lower_text(context):
+        score += 2.0
+    else:
+        score -= 3.0
+
+    if MIN_CONTEXT_WORDS <= wc <= MAX_CONTEXT_WORDS:
+        score += 1.0
+    elif wc < MIN_CONTEXT_WORDS:
+        score -= 1.0
+    elif wc > MAX_CONTEXT_WORDS:
+        score -= 2.0
+
+    adjacent = []
+    for a, b in zip(indices, indices[1:]):
+        adjacent.append(float(sim_matrix[a][b]))
+
+    if adjacent:
+        score += 1.2 * (sum(adjacent) / len(adjacent))
+
+    related = []
+    for idx in indices:
+        if idx != main_idx:
+            related.append(float(sim_matrix[main_idx][idx]))
+
+    if related:
+        score += 0.8 * (sum(related) / len(related))
+
+    # Dùng spaCy để xem câu chính có pronoun không, thay vì regex.
+    nlp = load_spacy_model()
+    if nlp is not None:
+        doc = nlp(sentences[main_idx])
+        has_pronoun = any(tok.pos_ == "PRON" for tok in doc)
+        if has_pronoun:
+            if main_idx - 1 in indices:
+                score += 0.8
+            else:
+                score -= 0.6
+
+    return float(score)
+
+
+def build_sbert_window_context(sentences: List[str], main_idx: int, sim_matrix, answer: str) -> Tuple[str, float, List[int]]:
+    windows = _window_indices(len(sentences), main_idx)
+    scored = []
+
+    for w in windows:
+        context = " ".join(sentences[i] for i in w)
+        if word_count(context) > MAX_CONTEXT_WORDS:
+            continue
+        score = context_coherence_score(sentences, w, main_idx, sim_matrix, answer)
+        scored.append((score, w, context))
+
+    if not scored:
+        return sentences[main_idx], 0.0, [main_idx]
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    score, indices, context = scored[0]
+    return context, float(score), indices
+
+
+# =========================================================
+# ANSWER CANDIDATES - spaCy ONLY
+# =========================================================
+
+def is_acronym_like(text: str) -> bool:
+    text = clean_text(text)
+    return 2 <= len(text) <= 10 and text.upper() == text and any(ch.isalpha() for ch in text)
+
+
+def is_good_answer_spacy(text: str, span: Any = None, ctype: str = "") -> bool:
+    text = clean_text(text)
+    if not text or not has_letters(text):
+        return False
+
+    words = text.split()
+    if len(words) > 6:
         return False
 
     lower = text.lower()
-    words = lower.split()
-    toks = lexical_tokens(text)
-
-    if len(words) > 8:
-        return False
-    if lower in STOPWORDS or lower in GENERIC_BAD_WORDS:
-        return False
-    if not toks:
-        return False
-    if words[0] in BAD_ANSWER_STARTS:
-        return False
-    if words[-1] in BAD_ANSWER_ENDS:
-        return False
-    if len(words) == 1 and lower.endswith("ly"):
+    if lower in {"example", "process", "overview", "text", "video", "passage", "document", "documents"}:
         return False
 
     if ctype.startswith("entity:"):
         return True
-    if ctype == "number":
-        return True
-    if is_acronym(text):
-        return True
 
-    if span is not None:
-        root_pos = getattr(span.root, "pos_", "")
-        if root_pos in {"ADV", "VERB", "AUX", "PRON", "DET", "ADP", "CCONJ", "SCONJ", "INTJ", "PART"}:
-            return False
-        has_noun = any(getattr(tok, "pos_", "") in {"NOUN", "PROPN", "NUM"} for tok in span)
-        if not has_noun:
-            return False
-
-    # Ưu tiên cụm 2-7 từ
-    if 2 <= len(words) <= 7:
+    if is_acronym_like(text):
         return True
 
-    # Nới lỏng single noun/entity/term để không bị rỗng
-    if len(words) == 1:
-        return allow_single and len(lower) >= 4 and lower not in GENERIC_BAD_WORDS
+    if span is None:
+        return False
 
-    return False
+    root = getattr(span, "root", span)
+    root_pos = getattr(root, "pos_", "")
+
+    # Không lấy cụm có root là verb/adv/pron/determiner...
+    if root_pos not in {"NOUN", "PROPN", "NUM"}:
+        return False
+
+    try:
+        toks = list(span)
+    except TypeError:
+        toks = [span]
+
+    if not any(getattr(tok, "pos_", "") in {"NOUN", "PROPN", "NUM"} for tok in toks):
+        return False
+
+    # Không lấy cụm bắt đầu bằng interjection/discourse marker nếu spaCy nhận được.
+    if toks and getattr(toks[0], "pos_", "") in {"INTJ", "CCONJ", "SCONJ", "ADP", "DET", "PRON"}:
+        return False
+
+    return True
 
 
 def candidate_priority(text: str, ctype: str) -> int:
+    t = text.lower()
+
     if ctype.startswith("entity:PERSON"):
-        return 10
+        return 14
     if ctype.startswith("entity:ORG") or ctype.startswith("entity:PRODUCT") or ctype.startswith("entity:EVENT"):
-        return 9
+        return 10
     if ctype.startswith("entity:"):
-        return 8
+        return 9
     if ctype == "number":
         return 8
     if ctype == "noun_chunk":
+        if any(key in t for key in [
+            "house", "wolf", "barn", "farm", "broom", "coop", "burrow",
+            "network", "filter", "image", "pixel", "layer", "prediction"
+        ]):
+            return 10
         return 7
-    if ctype == "phrase":
-        return 5
-    if ctype == "acronym":
-        return 6
     if ctype == "single_term":
-        return 3
+        return 4
     return 1
 
 
-def add_candidate(candidates: List[Dict[str, Any]], seen: set, text: str, ctype: str, sent_idx: int, span: Any = None, allow_single: bool = False):
-    text = strip_bad_answer_prefix(text)
+def candidate_category(item: Dict[str, Any]) -> str:
+    t = item.get("type", "")
+    text = item.get("text", "").lower()
+
+    if t.startswith("entity:PERSON"):
+        return "person"
+    if t.startswith("entity:"):
+        return "entity"
+    if t == "number":
+        return "number"
+
+    if any(key in text for key in ["house", "barn", "coop", "burrow", "field", "room", "farm"]):
+        return "place_or_structure"
+    if any(key in text for key in ["network", "cnn", "filter", "pixel", "image", "layer", "prediction"]):
+        return "technical_term"
+    if len(text.split()) == 1:
+        return "term"
+    return "phrase"
+
+
+def add_candidate(candidates: List[Dict[str, Any]], seen: set, text: str, ctype: str, sent_idx: int, span: Any = None):
+    text = clean_text(text)
     key = text.lower()
 
     if key in seen:
         return
-    if not is_good_answer(text, ctype, span, allow_single=allow_single):
+    if not is_good_answer_spacy(text, span=span, ctype=ctype):
         return
 
-    seen.add(key)
-    candidates.append({
+    item = {
         "text": text,
         "type": ctype,
         "priority": candidate_priority(text, ctype),
         "sentence_index": sent_idx,
-    })
+    }
+    item["category"] = candidate_category(item)
 
-
-def add_fallback_phrases(sentence: str, sent_idx: int, candidates: List[Dict[str, Any]], seen: set):
-    # Fallback tổng quát: cụm từ liên tiếp không phải stopword.
-    words = sentence.split()
-    current = []
-
-    for w in words:
-        clean = clean_text(w)
-        low = clean.lower()
-
-        if (
-            clean
-            and low not in STOPWORDS
-            and low not in GENERIC_BAD_WORDS
-            and len(low) > 2
-            and not re.fullmatch(r"\d+", low)
-        ):
-            current.append(clean)
-        else:
-            if 2 <= len(current) <= 6:
-                add_candidate(candidates, seen, " ".join(current), "phrase", sent_idx)
-            current = []
-
-    if 2 <= len(current) <= 6:
-        add_candidate(candidates, seen, " ".join(current), "phrase", sent_idx)
+    seen.add(key)
+    candidates.append(item)
 
 
 def extract_candidates(sentence: str, sent_idx: int) -> List[Dict[str, Any]]:
+    nlp = load_spacy_model()
+    if nlp is None:
+        return []
+
+    doc = nlp(sentence)
     candidates = []
     seen = set()
-    nlp = load_spacy_model()
 
-    if nlp is not None:
-        doc = nlp(sentence)
+    entity_labels = {
+        "PERSON", "ORG", "GPE", "LOC", "FAC", "PRODUCT", "EVENT",
+        "WORK_OF_ART", "DATE", "TIME", "MONEY", "PERCENT",
+        "QUANTITY", "CARDINAL", "NORP", "LAW"
+    }
 
-        entity_labels = {
-            "PERSON", "ORG", "GPE", "LOC", "FAC", "PRODUCT", "EVENT",
-            "WORK_OF_ART", "DATE", "TIME", "MONEY", "PERCENT",
-            "QUANTITY", "CARDINAL", "NORP", "LAW"
-        }
+    for ent in doc.ents:
+        if ent.label_ in entity_labels:
+            add_candidate(candidates, seen, ent.text, f"entity:{ent.label_}", sent_idx, ent)
 
-        for ent in doc.ents:
-            if ent.label_ in entity_labels:
-                add_candidate(candidates, seen, ent.text, f"entity:{ent.label_}", sent_idx, ent)
+    for chunk in doc.noun_chunks:
+        # Bỏ determiner bằng token spaCy, không regex.
+        toks = list(chunk)
+        while toks and toks[0].pos_ in {"DET", "PRON"}:
+            toks = toks[1:]
+        phrase = clean_text(" ".join(tok.text for tok in toks))
+        add_candidate(candidates, seen, phrase, "noun_chunk", sent_idx, chunk)
 
-        for chunk in doc.noun_chunks:
-            text = clean_text(chunk.text)
-            text = re.sub(r"^(a|an|the|this|that|these|those|our|your|my|his|her|their)\s+", "", text, flags=re.I)
-            add_candidate(candidates, seen, text, "noun_chunk", sent_idx, chunk)
-
-        for tok in doc:
-            if tok.pos_ in {"NOUN", "PROPN"} and not tok.is_stop and tok.is_alpha:
-                add_candidate(candidates, seen, tok.text, "single_term", sent_idx, tok, allow_single=True)
-
-    # fallback phrase luôn chạy để tránh thiếu candidate
-    add_fallback_phrases(sentence, sent_idx, candidates, seen)
-
-    # number patterns tổng quát
-    number_patterns = [
-        r"\b\d+\s*(?:x|by)\s*\d+\b",
-        r"\b\d+(?:\.\d+)?(?:\s*(?:%|percent|percentage))\b",
-        r"\b\d+(?:\.\d+)?\s+(?:years?|days?|hours?|minutes?|seconds?|degrees?|pixels?|layers?|blocks?|filters?|columns?|rows?|times)\b",
-        r"\b\d+(?:\.\d+)?\b",
-    ]
-    for pat in number_patterns:
-        for match in re.findall(pat, sentence, flags=re.I):
-            add_candidate(candidates, seen, match, "number", sent_idx)
+    # Single terms chỉ lấy nếu là PROPN/acronym hoặc technical noun viết hoa.
+    for tok in doc:
+        if tok.is_stop or not tok.is_alpha:
+            continue
+        if tok.pos_ == "PROPN" or is_acronym_like(tok.text):
+            add_candidate(candidates, seen, tok.text, "single_term", sent_idx, tok)
 
     candidates.sort(key=lambda c: (c["priority"], len(c["text"].split())), reverse=True)
     return candidates
@@ -476,12 +527,10 @@ def collect_candidates(sentences: List[str]) -> Tuple[List[Dict[str, Any]], Dict
 
     unique = []
     seen = set()
-    for item in sorted(all_items, key=lambda x: x.get("priority", 0), reverse=True):
-        text = strip_bad_answer_prefix(item["text"])
-        key = text.lower()
-        if key not in seen and is_good_answer(text, item["type"], allow_single=True):
-            item = dict(item)
-            item["text"] = text
+
+    for item in sorted(all_items, key=lambda x: (x.get("priority", 0), len(x["text"].split())), reverse=True):
+        key = item["text"].lower()
+        if key not in seen:
             seen.add(key)
             unique.append(item)
 
@@ -489,140 +538,71 @@ def collect_candidates(sentences: List[str]) -> Tuple[List[Dict[str, Any]], Dict
 
 
 # =========================================================
-# SBERT CONTEXT
+# QUESTION GENERATION
 # =========================================================
 
-def fallback_similarity_matrix(sentences: List[str]):
-    try:
-        from sklearn.feature_extraction.text import TfidfVectorizer
-        vec = TfidfVectorizer(stop_words="english").fit_transform(sentences)
-        return (vec @ vec.T).toarray()
-    except Exception:
-        n = len(sentences)
-        return [[1.0 if i == j else 0.0 for j in range(n)] for i in range(n)]
-
-
-def build_sentence_similarity_matrix(sentences: List[str]):
-    if len(sentences) <= 1:
-        return [[1.0]]
-
-    model = load_sbert_model()
-    if model is None:
-        return fallback_similarity_matrix(sentences)
-
-    try:
-        emb = model.encode(sentences, convert_to_numpy=True, normalize_embeddings=True)
-        return emb @ emb.T
-    except Exception:
-        return fallback_similarity_matrix(sentences)
-
-
-def build_context(sentences: List[str], main_idx: int, sim_matrix) -> str:
-    scored = []
-    for i in range(len(sentences)):
-        if i == main_idx:
-            continue
-        score = float(sim_matrix[main_idx][i])
-        if score >= SIMILARITY_THRESHOLD:
-            scored.append((i, score))
-
-    scored.sort(key=lambda x: x[1], reverse=True)
-    selected = [main_idx] + [i for i, _ in scored[:MAX_CONTEXT_SENTENCES - 1]]
-
-    for i in (main_idx - 1, main_idx + 1):
-        if len(selected) >= 3:
+def clean_generated_question(q: str) -> str:
+    q = normalize_spaces(q)
+    lower = q.lower()
+    for prefix in ["question:", "q:", "question -", "q -"]:
+        if lower.startswith(prefix):
+            q = q[len(prefix):].strip()
             break
-        if 0 <= i < len(sentences) and i not in selected:
-            selected.append(i)
 
-    selected = sorted(set(selected))
+    if "\n" in q:
+        q = q.split("\n")[0].strip()
 
-    keep = []
-    total = 0
-    for i in selected:
-        wc = len(sentences[i].split())
-        if keep and total + wc > MAX_CONTEXT_WORDS:
-            continue
-        keep.append(i)
-        total += wc
+    q = q.strip(" \"'`")
+    if q and not q.endswith("?"):
+        q = q.rstrip(".!,;:") + "?"
 
-    return " ".join(sentences[i] for i in keep)
+    return normalize_spaces(q)
 
 
-# =========================================================
-# T5 QUESTION GENERATION
-# =========================================================
-
-def mark_answer(context: str, sentence: str, answer: str) -> Optional[str]:
-    answer = clean_text(answer)
-    if not answer:
-        return None
-
-    pat = re.compile(re.escape(answer), flags=re.I)
-    m = pat.search(context)
-    if m:
-        return context[:m.start()] + f"<hl> {context[m.start():m.end()]} <hl>" + context[m.end():]
-
-    m = pat.search(sentence)
-    if m:
-        marked_sent = sentence[:m.start()] + f"<hl> {sentence[m.start():m.end()]} <hl>" + sentence[m.end():]
-        return context.replace(sentence, marked_sent, 1) if sentence in context else marked_sent
-
-    return None
-
-
-def t5_generate_question(answer: str, sentence: str, context: str) -> Optional[str]:
+def generate_question_candidates(answer: str, context: str, num_return_sequences: int = NUM_Q_PER_CANDIDATE) -> List[str]:
     load_qg_model()
 
-    marked = mark_answer(context, sentence, answer)
-    if not marked:
-        return None
+    answer = clean_text(answer)
+    context = normalize_spaces(context)
 
-    prompt = f"generate question: {marked}"
+    if not answer or not context:
+        return []
+
+    prompt = f"answer: {answer} context: {context}"
     inputs = qg_tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True).to(device)
+
+    num_return_sequences = max(1, int(num_return_sequences))
+    num_beams = max(4, num_return_sequences * 2)
 
     with torch.no_grad():
         outputs = qg_model.generate(
             **inputs,
-            max_length=72,
-            num_beams=4,
+            max_length=64,
+            num_beams=num_beams,
+            num_return_sequences=num_return_sequences,
             early_stopping=True,
             no_repeat_ngram_size=3,
         )
 
-    q = qg_tokenizer.decode(outputs[0], skip_special_tokens=True)
-    q = normalize_spaces(q)
+    questions = []
+    seen = set()
 
-    if not q or len(q.split()) < 5:
-        return None
+    for out in outputs:
+        q = qg_tokenizer.decode(out, skip_special_tokens=True)
+        q = clean_generated_question(q)
+        if not q:
+            continue
+        key = q.lower()
+        if key not in seen:
+            seen.add(key)
+            questions.append(q)
 
-    if not q.endswith("?"):
-        q = q.rstrip(".!,;:") + "?"
-
-    return q
+    return questions
 
 
 # =========================================================
 # VALIDATION
 # =========================================================
-
-def answer_overlap(expected: str, predicted: str) -> bool:
-    e = clean_text(expected).lower()
-    p = clean_text(predicted).lower()
-
-    if not e or not p:
-        return False
-    if e in p or p in e:
-        return True
-
-    et = set(lexical_tokens(e))
-    pt = set(lexical_tokens(p))
-
-    if not et or not pt:
-        return False
-
-    return len(et & pt) / max(len(et), 1) >= 0.45
-
 
 def is_good_question(question: str, answer: str) -> bool:
     q = normalize_spaces(question).lower()
@@ -630,75 +610,131 @@ def is_good_question(question: str, answer: str) -> bool:
 
     if not q.endswith("?"):
         return False
-    if len(q.split()) < 5:
+    if word_count(q) < 5 or word_count(q) > 20:
         return False
 
-    # Nếu câu hỏi chứa nguyên đáp án thì bỏ
     if a and a in q:
         return False
 
-    # Chặn một số dạng cực kỳ mơ hồ
-    bad_fragments = [
-        "what kind of shapes do you think",
-        "when you think of",
-        "how could",
-        "what can we do within",
-        "what is the first group",
-        "what do we do to the right",
-        "how many layers does",
-        "how would",
-    ]
-    if any(x in q for x in bad_fragments):
+    if " would " in f" {q} ":
         return False
+
+    for bad in BAD_QUESTION_PHRASES:
+        if bad in q:
+            return False
 
     return True
 
 
-def validate_question(question: str, answer: str, context: str) -> bool:
+def answer_match_score(expected: str, predicted: str) -> float:
+    e = clean_text(expected).lower()
+    p = clean_text(predicted).lower()
+
+    if not e or not p:
+        return 0.0
+
+    if e == p:
+        return 1.0
+    if e in p or p in e:
+        return 0.85
+
+    # Dùng SBERT cho semantic match, không regex token overlap.
+    sim = cosine_sim_text(e, p)
+    return sim
+
+
+def qa_validate_question(question: str, answer: str, context: str) -> Tuple[bool, float, str]:
     if not is_good_question(question, answer):
-        return False
+        return False, 0.0, ""
 
     qa = load_qa_model()
     if qa is None:
-        return True
+        return True, 0.5, ""
 
     try:
         result = qa(question=question, context=context)
         predicted = result.get("answer", "")
-        score = float(result.get("score", 0.0))
+        qa_score = float(result.get("score", 0.0))
     except Exception:
-        return True
+        return True, 0.4, ""
 
-    if score < 0.08:
+    match_score = answer_match_score(answer, predicted)
+
+    if qa_score < MIN_QA_SCORE:
+        return False, qa_score, predicted
+
+    if match_score < 0.72:
+        return False, qa_score, predicted
+
+    return True, qa_score * match_score, predicted
+
+
+# =========================================================
+# DISTRACTORS - SBERT DISTINCTNESS
+# =========================================================
+
+def option_set_is_good(options: List[str]) -> bool:
+    if len(options) != 4:
         return False
 
-    return answer_overlap(answer, predicted)
+    cleaned = [clean_text(o) for o in options]
+    lows = [o.lower() for o in cleaned]
+
+    if len(set(lows)) != 4:
+        return False
+
+    model = load_sbert_model()
+    if model is None:
+        # Nếu thiếu SBERT thì chỉ kiểm tra trùng chuỗi.
+        return True
+
+    emb = model.encode(cleaned, convert_to_numpy=True, normalize_embeddings=True)
+    sim = emb @ emb.T
+
+    # Không để 2 options quá giống nhau.
+    for i in range(len(cleaned)):
+        for j in range(i + 1, len(cleaned)):
+            if float(sim[i][j]) >= 0.80:
+                return False
+
+    return True
 
 
-# =========================================================
-# DISTRACTORS
-# =========================================================
+def find_distractors(answer_item: Dict[str, Any], all_items: List[Dict[str, Any]], question: str = "", count: int = 3) -> List[str]:
+    answer = clean_text(answer_item["text"])
+    answer_low = answer.lower()
+    answer_cat = answer_item.get("category", "")
 
-def item_category(item: Dict[str, Any]) -> str:
-    t = item.get("type", "")
-    if t.startswith("entity:"):
-        return "entity"
-    if t == "number":
-        return "number"
-    if t == "noun_chunk" or t == "phrase":
-        return "phrase"
-    if t in {"acronym", "single_term"}:
-        return "term"
-    return "other"
+    pool = []
+    seen = {answer_low}
 
+    # Ưu tiên cùng category, nhưng vẫn dùng SBERT distinctness ở bước build.
+    sorted_items = sorted(
+        all_items,
+        key=lambda x: (
+            x.get("category") == answer_cat,
+            x.get("priority", 0),
+            len(x["text"].split())
+        ),
+        reverse=True,
+    )
 
-def option_is_valid(text: str) -> bool:
-    return is_good_answer(text, "phrase", allow_single=True)
+    for item in sorted_items:
+        text = clean_text(item["text"])
+        low = text.lower()
 
+        if not text or low in seen:
+            continue
+        if low in answer_low or answer_low in low:
+            continue
+        if question and low in question.lower():
+            continue
 
-def sbert_rerank_distractors(answer: str, pool: List[str], count: int = 3) -> List[str]:
-    if len(pool) <= count:
-        return pool[:count]
+        seen.add(low)
+        pool.append(text)
+
+    if not pool:
+        return []
 
     model = load_sbert_model()
     if model is None:
@@ -712,7 +748,8 @@ def sbert_rerank_distractors(answer: str, pool: List[str], count: int = 3) -> Li
         ranked = []
         for d, s in zip(pool, sims):
             s = float(s)
-            if 0.03 <= s <= 0.92:
+            # Distractor cần hơi liên quan nhưng không quá giống.
+            if 0.05 <= s <= 0.74:
                 ranked.append((d, s))
 
         ranked.sort(key=lambda x: x[1], reverse=True)
@@ -722,92 +759,77 @@ def sbert_rerank_distractors(answer: str, pool: List[str], count: int = 3) -> Li
             if len(selected) >= count:
                 break
             if d not in selected:
-                selected.append(d)
+                trial = [answer] + selected + [d]
+                if len(trial) < 4 or option_set_is_good(trial + pool[: max(0, 4 - len(trial))]):
+                    selected.append(d)
 
         return selected[:count]
     except Exception:
         return pool[:count]
 
 
-def find_distractors(answer_item: Dict[str, Any], all_items: List[Dict[str, Any]], count: int = 3) -> List[str]:
-    ans = answer_item["text"]
-    ans_low = ans.lower()
-    ans_cat = item_category(answer_item)
+def build_mcq(
+    question: str,
+    answer_item: Dict[str, Any],
+    all_items: List[Dict[str, Any]],
+    context: str,
+    qa_score: float,
+    context_score: float,
+    context_indices: List[int],
+) -> Optional[Dict[str, Any]]:
+    question = clean_generated_question(question)
+    answer = clean_text(answer_item["text"])
 
-    pool_same = []
-    pool_any = []
-    seen = {ans_low}
-
-    sorted_items = sorted(
-        all_items,
-        key=lambda x: (
-            x.get("priority", 0),
-            len(x["text"].split())
-        ),
-        reverse=True,
-    )
-
-    for item in sorted_items:
-        text = strip_bad_answer_prefix(item["text"])
-        low = text.lower()
-
-        if low in seen:
-            continue
-        if ans_low in low or low in ans_low:
-            continue
-        if not option_is_valid(text):
-            continue
-
-        seen.add(low)
-        if item_category(item) == ans_cat:
-            pool_same.append(text)
-        else:
-            pool_any.append(text)
-
-    pool = pool_same + pool_any
-
-    # Không dùng fallback generic ngoài bài, nhưng nới lỏng lấy candidate bất kỳ trong bài.
-    return sbert_rerank_distractors(ans, pool, count=count)
-
-
-# =========================================================
-# MCQ GENERATION
-# =========================================================
-
-def build_mcq(question: str, answer_item: Dict[str, Any], all_items: List[Dict[str, Any]], context: str) -> Optional[Dict[str, Any]]:
-    answer = strip_bad_answer_prefix(answer_item["text"])
-
-    if not validate_question(question, answer, context):
-        return None
-
-    distractors = find_distractors(answer_item, all_items, count=3)
+    distractors = find_distractors(answer_item, all_items, question=question, count=3)
     if len(distractors) < 3:
         return None
 
     options = [answer] + distractors[:3]
-
-    uniq = []
-    seen = set()
-    for opt in options:
-        opt = strip_bad_answer_prefix(opt)
-        low = opt.lower()
-        if low not in seen:
-            seen.add(low)
-            uniq.append(opt)
-
-    if len(uniq) < 4:
+    if not option_set_is_good(options):
         return None
 
-    random.shuffle(uniq)
-    correct_idx = uniq.index(answer)
+    random.shuffle(options)
+    correct_idx = options.index(answer)
 
     return {
         "question": question,
-        "options": [f"{chr(65+i)}. {opt}" for i, opt in enumerate(uniq)],
+        "options": [f"{chr(65+i)}. {opt}" for i, opt in enumerate(options)],
         "answer": chr(65 + correct_idx),
         "answer_text": answer,
         "context": context,
+        "type": "reading",
+        "quality": {
+            "qa_score": float(qa_score),
+            "context_score": float(context_score),
+            "answer_priority": int(answer_item.get("priority", 0)),
+            "context_indices": context_indices,
+        },
     }
+
+
+def mcq_quality_score(mcq: Dict[str, Any]) -> float:
+    q = mcq.get("quality", {})
+    return (
+        2.0 * float(q.get("qa_score", 0.0))
+        + 0.5 * float(q.get("context_score", 0.0))
+        + 0.08 * float(q.get("answer_priority", 0.0))
+    )
+
+
+# =========================================================
+# GENERATE MCQ
+# =========================================================
+
+def candidate_order(all_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return sorted(
+        all_items,
+        key=lambda x: (
+            x.get("priority", 0),
+            2 <= len(x["text"].split()) <= 4,
+            -len(x["text"].split())
+        ),
+        reverse=True,
+    )
 
 
 def generate_mcq_questions(text: str, max_questions: int = MAX_MCQ) -> List[Dict[str, Any]]:
@@ -817,78 +839,98 @@ def generate_mcq_questions(text: str, max_questions: int = MAX_MCQ) -> List[Dict
     if not sentences:
         return []
 
-    sim_matrix = build_sentence_similarity_matrix(sentences)
+    if load_spacy_model() is None:
+        return []
+
     all_items, by_sent = collect_candidates(sentences)
+    sim_matrix = build_sentence_similarity_matrix(sentences)
 
     print(f"[QG] sentences={len(sentences)}, candidates={len(all_items)}")
 
-    results = []
-    used_answers = set()
-    used_questions = set()
-    prefix_counts: Dict[str, int] = {}
+    if len(all_items) < 4:
+        return []
 
-    candidates = sorted(
-        all_items,
-        key=lambda x: (
-            len(x["text"].split()) >= 2,
-            x.get("priority", 0),
-            len(x["text"].split())
-        ),
-        reverse=True,
-    )
+    raw_results = []
+    used_pairs = set()
 
-    attempts = 0
-    rejected = 0
-
-    for cand in candidates:
-        if len(results) >= max_questions:
+    for cand in candidate_order(all_items)[:MAX_CANDIDATES_TO_TRY]:
+        if len(raw_results) >= max_questions * 3:
             break
 
-        attempts += 1
-        answer = strip_bad_answer_prefix(cand["text"])
-        akey = answer.lower()
+        answer = clean_text(cand["text"])
+        sent_idx = cand["sentence_index"]
 
+        if not answer or not (0 <= sent_idx < len(sentences)):
+            continue
+
+        context, ctx_score, ctx_indices = build_sbert_window_context(
+            sentences=sentences,
+            main_idx=sent_idx,
+            sim_matrix=sim_matrix,
+            answer=answer,
+        )
+
+        questions = generate_question_candidates(answer, context, NUM_Q_PER_CANDIDATE)
+
+        for question in questions:
+            key = (answer.lower(), question.lower())
+            if key in used_pairs:
+                continue
+
+            ok, qa_score, predicted = qa_validate_question(question, answer, context)
+            if not ok:
+                continue
+
+            mcq = build_mcq(
+                question=question,
+                answer_item=cand,
+                all_items=all_items,
+                context=context,
+                qa_score=qa_score,
+                context_score=ctx_score,
+                context_indices=ctx_indices,
+            )
+
+            if mcq is None:
+                continue
+
+            used_pairs.add(key)
+            raw_results.append(mcq)
+            print(f"[QG] MCQ candidate {len(raw_results)}: {question} -> {answer} | qa={qa_score:.3f}")
+
+    raw_results.sort(key=mcq_quality_score, reverse=True)
+
+    final = []
+    used_questions = set()
+    used_answers = set()
+    prefix_counts: Dict[str, int] = {}
+
+    for mcq in raw_results:
+        if len(final) >= max_questions:
+            break
+
+        qkey = mcq["question"].lower()
+        akey = mcq["answer_text"].lower()
+        pref = question_prefix(mcq["question"])
+
+        if qkey in used_questions:
+            continue
         if akey in used_answers:
             continue
-
-        sent_idx = cand["sentence_index"]
-        if not (0 <= sent_idx < len(sentences)):
-            continue
-
-        sentence = sentences[sent_idx]
-        context = build_context(sentences, sent_idx, sim_matrix)
-
-        question = t5_generate_question(answer, sentence, context)
-        if not question:
-            rejected += 1
-            continue
-
-        qkey = question.lower()
-        if qkey in used_questions:
-            rejected += 1
-            continue
-
-        pref = question_prefix(question)
         if prefix_counts.get(pref, 0) >= MAX_SAME_PREFIX.get(pref, 3):
-            rejected += 1
             continue
 
-        mcq = build_mcq(question, cand, all_items, context)
-        if mcq:
-            results.append(mcq)
-            used_answers.add(akey)
-            used_questions.add(qkey)
-            prefix_counts[pref] = prefix_counts.get(pref, 0) + 1
-            print(f"[QG] MCQ {len(results)}: {question} -> {answer}")
-        else:
-            rejected += 1
+        final.append(mcq)
+        used_questions.add(qkey)
+        used_answers.add(akey)
+        prefix_counts[pref] = prefix_counts.get(pref, 0) + 1
 
-    print(f"[QG] attempts={attempts}, accepted={len(results)}, rejected={rejected}")
-    return results
+    print(f"[QG] final accepted={len(final)}")
+    return final
 
 
 # =========================================================
-# CLOZE TEST
+# CLOZE TEST - spaCy based, no regex
 # =========================================================
 
 def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[str, Any]:
@@ -896,14 +938,19 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
     if not sentences:
         return {"passage": "", "questions": []}
 
+    if load_spacy_model() is None:
+        return {"passage": " ".join(sentences[:6]), "questions": []}
+
     all_items, by_sent = collect_candidates(sentences)
+    if not all_items:
+        return {"passage": " ".join(sentences[:6]), "questions": []}
 
     best = (0, min(8, len(sentences)), -1)
 
     for start in range(len(sentences)):
-        for end in range(start + 3, min(start + 14, len(sentences)) + 1):
-            wc = sum(len(sentences[i].split()) for i in range(start, end))
-            if not (70 <= wc <= 340):
+        for end in range(start + 3, min(start + 12, len(sentences)) + 1):
+            wc = sum(word_count(sentences[i]) for i in range(start, end))
+            if not (60 <= wc <= 260):
                 continue
 
             score = 0
@@ -920,8 +967,6 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
     passage_items = []
     for item in all_items:
         if start <= item["sentence_index"] < end:
-            if item["type"] == "single_term":
-                continue
             pos = passage.lower().find(item["text"].lower())
             if pos >= 0:
                 copied = dict(item)
@@ -930,8 +975,10 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
 
     passage_items.sort(key=lambda x: (x["_pos"], -x.get("priority", 0)))
 
+    questions = []
     selected = []
     used = set()
+
     for item in passage_items:
         if len(selected) >= num_blanks:
             break
@@ -940,12 +987,12 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
             used.add(key)
             selected.append(item)
 
-    questions = []
     offset = 0
 
     for idx, item in enumerate(selected):
-        answer = strip_bad_answer_prefix(item["text"])
-        pos = passage.lower().find(answer.lower(), offset)
+        answer = clean_text(item["text"])
+        low_passage = passage.lower()
+        pos = low_passage.find(answer.lower(), offset)
         if pos < 0:
             continue
 
@@ -959,6 +1006,9 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
             continue
 
         options = [real_answer] + distractors[:3]
+        if not option_set_is_good(options):
+            continue
+
         random.shuffle(options)
         correct_idx = options.index(real_answer)
 
@@ -976,17 +1026,25 @@ def generate_cloze_test(text: str, num_blanks: int = MAX_CLOZE_BLANKS) -> Dict[s
 
 
 # =========================================================
-# PUBLIC ENTRY POINT
+# PUBLIC ENTRY
 # =========================================================
 
 def generate_questions(text: str) -> Dict[str, Any]:
-    text = normalize_spaces(text)
-    if not text or len(text.split()) < 40:
+    text = clean_transcript_for_questions(text)
+    if not text or word_count(text) < MIN_TEXT_WORDS:
         return {"error": "Text quá ngắn để sinh câu hỏi chất lượng."}
 
     try:
         mcq = generate_mcq_questions(text, MAX_MCQ)
         cloze = generate_cloze_test(text, MAX_CLOZE_BLANKS)
+
+        note = (
+            "Model-based mode: spaCy extracts candidates; SBERT scores nearby context windows and option distinctness; "
+            "QA validates answerability. No regex semantic fallback is used."
+        )
+
+        if len(mcq) < TARGET_MCQ:
+            note += f" Only {len(mcq)} reading questions passed validation."
 
         return {
             "multiple_choice": mcq,
@@ -994,8 +1052,10 @@ def generate_questions(text: str) -> Dict[str, Any]:
             "meta": {
                 "mcq_count": len(mcq),
                 "cloze_count": len(cloze.get("questions", [])),
+                "target_mcq_count": TARGET_MCQ,
+                "max_mcq_count": MAX_MCQ,
                 "qa_validation": USE_QA_VALIDATION,
-                "note": "No template. Relaxed filters so T5 can actually return questions."
+                "note": note,
             }
         }
     except Exception as e:
@@ -1004,10 +1064,11 @@ def generate_questions(text: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     sample = """
-    A convolutional neural network, or CNN, is an area of deep learning that specializes in pattern recognition.
-    A filter is basically just a three by three block.
-    Pooling combines numeric arrays from filters.
-    CNNs can perform object identification in images.
+    A convolutional neural network, or CNN, is a type of deep learning model.
+    CNNs are often used for image recognition. An image is made of pixels.
+    A filter looks at small parts of the image and finds patterns.
+    Pooling reduces the size of the feature map.
+    These steps help the network recognize objects in images.
     """
     from pprint import pprint
     pprint(generate_questions(sample))
